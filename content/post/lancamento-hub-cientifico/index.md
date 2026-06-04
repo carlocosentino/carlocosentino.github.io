@@ -3,7 +3,7 @@ title: "Novo hub científico no ar"
 summary: "Lançamento da página agregadora da produção científica e da atuação acadêmica de Carlo Cosentino, reunindo publicações, linhas de pesquisa e remissões aos demais canais científicos."
 date: 2026-06-04
 authors:
-  - admin
+  - me
 tags:
   - Hub científico
   - Produção acadêmica
