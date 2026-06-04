@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Hub científico de Carlo Cosentino — Hugo Blox (Academic CV)",
   "private": true,
-  "packageManager": "pnpm@9.0.0",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.0",
     "@tailwindcss/typography": "^0.5.19",
