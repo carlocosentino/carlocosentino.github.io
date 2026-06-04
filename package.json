@@ -1,14 +1,9 @@
 {
-  "name": "site",
+  "name": "carlocosentino-hub",
   "version": "1.0.0",
-  "description": "[![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/academic-cv?utm_source=github&utm_medium=readme&utm_content=preview)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "Hub científico de Carlo Cosentino — Hugo Blox (Academic CV)",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.0",
     "@tailwindcss/typography": "^0.5.19",
