@@ -1,0 +1,8 @@
+# Linguagens do sítio
+pt:
+  locale: pt-BR
+  label: "Português"
+en:
+  locale: en-us
+  label: "English"
+  contentDir: content/en

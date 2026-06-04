@@ -1,0 +1,73 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Carlo Cosentino
+  given: Carlo Benito
+  family: Cosentino Filho
+status:
+  icon: "⚖️"
+role: Professor Adjunto · Faculdade de Direito do Recife · UFPE
+bio: |
+  Professor Adjunto da Faculdade de Direito do Recife – UFPE. Doutor em Direito pela UFPE. Pesquisa em impactos das tecnologias da informação e da comunicação nas relações de trabalho.
+
+affiliations:
+  - name: Universidade Federal de Pernambuco
+    url: https://www.ufpe.br
+  - name: Programa de Pós-Graduação em Direito (PPGD/UFPE)
+    url: https://www.ufpe.br/ppgd
+  - name: Grupo de Pesquisa Direito do Trabalho e Teoria Social Crítica
+
+links:
+  - icon: at-symbol
+    url: mailto:carlo.cosentino@ufpe.br
+    label: E-mail institucional
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0002-7661-4688
+    label: ORCID
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=8O4wNSUAAAAJ
+    label: Google Scholar
+  - icon: academicons/lattes
+    url: http://lattes.cnpq.br/9403069473693221
+    label: Currículo Lattes
+  - icon: academicons/academia
+    url: https://ufpe.academia.edu/CarloCosentino
+    label: Academia.edu
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Carlo-Cosentino-3
+    label: ResearchGate
+
+interests:
+  - Plataformização do trabalho
+  - Neotaylorismo digital
+  - Sindicalismo contemporâneo
+  - Reforma trabalhista
+  - Teoria social crítica das relações de trabalho
+
+education:
+  - degree: Doutorado em Direito
+    institution: Universidade Federal de Pernambuco (PPGD/UFPE)
+    end: 2017-06-30
+    summary: |
+      Pesquisa voltada à reconfiguração das relações de trabalho na era digital, a partir das contribuições da teoria social crítica.
+  - degree: Mestrado em Direito
+    institution: Universidade Federal de Pernambuco (PPGD/UFPE)
+    end: 2012-03-01
+
+experience:
+  - role: Professor Adjunto · Direito do Trabalho e Legislação Social
+    org: Faculdade de Direito do Recife (UFPE)
+    url: https://sigaa.ufpe.br/sigaa/public/docente/portal.jsf?siape=3109155
+    start: 2019-04-01
+    summary: |
+      Docência na graduação e no Programa de Pós-Graduação em Direito (PPGD/UFPE). Coordenação do Grupo de Pesquisa Direito do Trabalho e Teoria Social Crítica e do projeto de pesquisa Impactos da Revolução Informacional e do Desenvolvimento Tecnológico no Direito do Trabalho.
+  - role: Presidente
+    org: SINPROES-PE
+    summary: |
+      Sindicato dos Professores das Instituições de Ensino Superior Privadas do Recife e Região Metropolitana.
+  - role: Advogado · sócio
+    org: Cosmo e Cosentino Advogados
+    url: https://www.cosmocosentino.com
+    summary: |
+      Atuação consultiva e contenciosa em Direito do Trabalho, Direito Sindical e Terceiro Setor (OAB/PE 22.955).
