@@ -1,8 +1,7 @@
 # Linguagens do sítio
+# Site monolíngue (pt-BR). A versão em inglês foi desativada até haver
+# conteúdo traduzido; para reativar, restaurar o bloco `en` abaixo e
+# popular content/en.
 pt:
   locale: pt-BR
   label: "Português"
-en:
-  locale: en-us
-  label: "English"
-  contentDir: content/en
