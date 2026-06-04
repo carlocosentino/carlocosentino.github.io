@@ -21,8 +21,9 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: "Professor Adjunto · Faculdade de Direito do Recife · UFPE"
     # Site meta description for search engines and social sharing
-    description: "The highly-customizable Hugo Academic theme powered by HugoBlox
-      Kit. Easily create your personal academic website."
+    description: "Hub científico de Carlo Cosentino — Professor Adjunto de Direito
+      do Trabalho na Faculdade de Direito do Recife (UFPE). Publicações, linhas de
+      pesquisa e produção acadêmica sobre trabalho, tecnologia e teoria social crítica."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "" # Twitter/X handle for Twitter Cards (without @)
@@ -91,7 +92,7 @@ hugoblox:
     search: true
     theme_toggle: true
     theme_picker: true
-    language_switcher: true
+    language_switcher: false # site monolíngue (pt-BR)
     # Call-to-action button
     cta:
       enable: false
@@ -105,7 +106,7 @@ hugoblox:
   footer:
     # Footer style variant
     style: minimal # minimal | columns | centered
-    language_switcher: true
+    language_switcher: false # site monolíngue (pt-BR)
     # Custom footer text (HTML supported)
     text: ""
 
