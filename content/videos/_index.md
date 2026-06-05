@@ -8,9 +8,9 @@ sections:
     content:
       title: 'Vídeos'
       text: |-
-        Aulas, palestras, entrevistas e participações em vídeo sobre Direito do Trabalho, tecnologia e relações de trabalho na era digital.
+        Aulas, palestras, entrevistas e participações em vídeo sobre Direito do Trabalho, tecnologia e relações de trabalho na era digital, reunidas no canal do YouTube.
 
-        Os vídeos serão reunidos aqui progressivamente. Para sugestões, escreva para [contato@carlocosentino.com.br](mailto:contato@carlocosentino.com.br).
+        <p><a class="more-link" href="https://www.youtube.com/channel/UCAFgy5Xv0HOnfrDhJpTyQmQ" target="_blank" rel="noopener">Ver o canal no YouTube →</a></p>
     design:
       columns: '1'
 ---
