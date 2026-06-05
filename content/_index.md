@@ -50,6 +50,8 @@ sections:
     id: papers
     content:
       title: Publicações
+      sort_by: Weight
+      order: desc
       filters:
         folders:
           - publication

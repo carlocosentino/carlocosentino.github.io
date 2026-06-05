@@ -3,6 +3,7 @@ title: "Direito do Trabalho, Tecnologias da Informação e da Comunicação: imp
 authors:
   - "me"
 date: "2018-01-01"
+weight: 1
 publication_types: ["book"]
 publication:
   publisher: "Belo Horizonte: RTM"
