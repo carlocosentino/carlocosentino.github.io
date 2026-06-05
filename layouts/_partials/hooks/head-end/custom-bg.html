@@ -11,9 +11,9 @@
   [class*="aspect-["][class*="bg-gradient-to-br"][class*="from-zinc"]:not(:has(img)){display:none !important}
   /* Exceção: quando há capa/imagem real (ex.: capa do livro) — exibe a MESMA capa
      da página da publicação: thumbnail limpo e centralizado, sem caixa larga */
-  [class*="aspect-["][class*="from-zinc"]:has(img){display:flex !important;align-items:center;justify-content:center;aspect-ratio:auto !important;height:auto !important;min-height:0 !important;padding:.5rem 0 !important;background:transparent !important}
-  [class*="aspect-["][class*="from-zinc"]:has(img) a{width:auto !important;height:auto !important;display:inline-block !important}
-  [class*="aspect-["][class*="from-zinc"]:has(img) img{position:static !important;object-fit:contain !important;width:auto !important;height:auto !important;max-width:170px !important;max-height:245px !important}
+  [class*="aspect-["][class*="from-zinc"]:has(img){display:block !important;aspect-ratio:auto !important;height:230px !important;min-height:0 !important;padding:0 !important;background:transparent !important}
+  [class*="aspect-["][class*="from-zinc"]:has(img) a{display:block !important;width:100% !important;height:100% !important}
+  [class*="aspect-["][class*="from-zinc"]:has(img) img{position:static !important;width:100% !important;height:100% !important;object-fit:contain !important}
   /* Mesma capa, mesmo tamanho, na página da publicação */
   .featured-image-wrapper{max-width:170px !important;max-height:245px !important}
   /* Coautoria: mesmo destaque para todos os autores (remove o mini-avatar exclusivo do titular) */
