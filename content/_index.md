@@ -11,6 +11,7 @@ sections:
         <style>
         .hero{position:relative;left:50%;transform:translateX(-50%);width:min(1140px,92vw);display:grid;grid-template-columns:minmax(330px,470px) minmax(0,1fr);gap:2.5rem;align-items:center;min-height:78vh}
         .hero__photo{position:relative;display:flex;align-items:center;justify-content:center}
+        .hero__photo picture{display:contents}
         .hero__photo img{width:100%;max-height:86vh;object-fit:contain;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent 100%);mask-image:linear-gradient(to bottom,#000 85%,transparent 100%)}
         .hero__info{color:#e8e8ea;position:relative;z-index:2}
         .hero__kicker{letter-spacing:.2em;font-size:.72rem;text-transform:uppercase;color:#8aa0b4;font-weight:600}
@@ -25,7 +26,7 @@ sections:
         @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;gap:1rem;padding-top:.5rem}.hero__photo{max-width:400px;margin:0 auto;background:none}.hero__photo img{height:auto;max-height:68vh;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}.hero__name{font-size:clamp(2rem,8vw,2.6rem)}.hero__bio{margin:0 auto;font-size:1rem}.hero__social{justify-content:center}}
         </style>
         <div class="hero">
-          <div class="hero__photo"><img src="/img/carlo-cutout.webp" alt="Carlo Cosentino"></div>
+          <div class="hero__photo"><picture><source srcset="/img/carlo-cutout.webp" type="image/webp"><img src="/img/carlo-cutout.png" alt="Carlo Cosentino"></picture></div>
           <div class="hero__info">
             <div class="hero__kicker">Hub científico</div>
             <h1 class="hero__name">Carlo Cosentino</h1>
