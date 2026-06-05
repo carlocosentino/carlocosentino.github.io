@@ -30,7 +30,7 @@ sections:
           <div class="hero__info">
             <h1 class="hero__name">Carlo Cosentino</h1>
             <div class="hero__role">Professor Adjunto · Faculdade de Direito do Recife · UFPE</div>
-            <p class="hero__bio">Doutor em Direito pela UFPE. Pesquisa os impactos das tecnologias da informação e da comunicação nas relações de trabalho — da plataformização ao neotaylorismo digital, em diálogo com a teoria social crítica.</p>
+            <p class="hero__bio">Carlo Cosentino é advogado, sócio do escritório Cosmo e Cosentino Advogados, e Professor Adjunto da Faculdade de Direito do Recife – UFPE. Doutor e Mestre em Direito pela UFPE, investiga as relações entre o trabalho e a tecnologia – em especial as da informação e comunicação –, em diálogo com a teoria social crítica.</p>
             <a class="hero__btn" href="/perfil/">Saiba mais →</a>
             <div class="hero__social">
               <a href="mailto:contato@carlocosentino.com.br">Contato</a>
