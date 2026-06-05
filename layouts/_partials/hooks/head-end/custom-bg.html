@@ -8,4 +8,12 @@
   }
   /* Cards como retângulos limpos, sem miniatura/degradê (todas as seções) */
   [class*="aspect-["][class*="bg-gradient-to-br"][class*="from-zinc"]{display:none !important}
+  /* Cards: só o texto, com o mínimo de fundo (sem borda/sombra) */
+  [class*="bg-zinc-900/90"],[class*="bg-zinc-800/90"]{
+    background: rgba(255,255,255,.025) !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+  }
+  [class*="bg-gray-900/50"],[class*="bg-gray-50"]{ background: transparent !important; }
+  [class*="border-gray-800"],[class*="border-gray-200"]{ border-color: rgba(255,255,255,.06) !important; }
 </style>
