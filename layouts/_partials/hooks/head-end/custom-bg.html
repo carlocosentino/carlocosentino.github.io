@@ -10,6 +10,9 @@
   [class*="aspect-["][class*="bg-gradient-to-br"][class*="from-zinc"]{display:none !important}
   /* Coautoria: mesmo destaque para todos os autores (remove o mini-avatar da assinatura) */
   .inline-flex.items-center.text-current img.rounded-full{display:none !important}
+  /* Remove o card de autor (foto + minicurrículo) no rodapé de publicações/posts:
+     evita repetição e dá o mesmo destaque a todos os coautores */
+  .flex.pt-12.pb-4{display:none !important}
   /* Links "Ver mais / Ver todas" */
   .more-row{text-align:center;margin-top:.4rem}
   .more-link{display:inline-block;color:#9db4cc;font-weight:600;text-decoration:none;font-size:.95rem;transition:color .2s}
