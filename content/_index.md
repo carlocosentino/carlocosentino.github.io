@@ -49,7 +49,7 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Publicações em destaque
+      title: Publicações
       filters:
         folders:
           - publication
@@ -57,28 +57,35 @@ sections:
     design:
       view: article-grid
       columns: 2
-  - block: collection
-    id: news
+  - block: markdown
     content:
-      title: Notícias
-      count: 5
-      filters:
-        folders:
-          - post
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-      offset: 0
-      order: desc
+      text: |
+        <p class="more-row"><a class="more-link" href="/publication/">Ver todas as publicações →</a></p>
     design:
-      view: card
+      columns: '1'
+  - block: markdown
+    content:
+      title: 'Podcast'
+      text: |-
+        Conversas sobre Direito do Trabalho, sindicalismo e os desafios do trabalho na era digital.
+
+        <a class="more-link" href="/podcast/">Ver mais →</a>
+    design:
+      columns: '1'
+  - block: markdown
+    content:
+      title: 'Vídeos'
+      text: |-
+        Aulas, palestras e entrevistas no canal do YouTube.
+
+        <a class="more-link" href="/videos/">Ver mais →</a>
+    design:
+      columns: '1'
   - block: markdown
     content:
       title: 'Advocacia'
       text: |-
-        Além da atuação acadêmica, Carlo Cosentino é advogado (OAB/PE 22.955) e sócio do escritório **Cosmo e Cosentino Advogados**, com atuação consultiva e contenciosa em Direito do Trabalho, Direito Sindical e Terceiro Setor.
-
-        [Conheça o escritório →](https://www.cosmocosentino.com)
+        **[Cosmo e Cosentino Advogados](https://www.cosmocosentino.com)** — atuação consultiva e contenciosa em Direito do Trabalho, Direito Sindical e Terceiro Setor.
     design:
       columns: '1'
 ---
