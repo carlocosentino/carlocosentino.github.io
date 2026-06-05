@@ -12,4 +12,7 @@ publication:
   pages: "101--116"
 abstract: ""
 featured: false
+links:
+  - name: Texto do artigo
+    url: artigo.pdf
 ---
