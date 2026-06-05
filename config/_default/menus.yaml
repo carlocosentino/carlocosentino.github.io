@@ -3,21 +3,24 @@ main:
   - name: Início
     url: /
     weight: 10
+  - name: Perfil
+    url: /perfil/
+    weight: 20
   - name: Publicações
     url: /publication/
-    weight: 20
+    weight: 30
   - name: Notícias
     url: /post/
-    weight: 30
+    weight: 40
   - name: Vídeos
     url: /videos/
-    weight: 40
+    weight: 50
   - name: Podcast
     url: /podcast/
-    weight: 50
-  - name: Materiais Didáticos
-    url: /materiais/
     weight: 60
+  - name: Material didático
+    url: /materiais/
+    weight: 70
   - name: Projetos de Pesquisa
     url: /projects/
-    weight: 70
+    weight: 80

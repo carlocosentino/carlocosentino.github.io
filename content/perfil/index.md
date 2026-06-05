@@ -1,5 +1,5 @@
 ---
-title: 'Sobre'
+title: 'Perfil'
 date: 2026-06-04
 type: landing
 

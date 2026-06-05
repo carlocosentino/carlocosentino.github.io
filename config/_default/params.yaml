@@ -39,9 +39,9 @@ hugoblox:
     pack: "default"
     # Optional: Override theme pack colors
     colors:
-      primary: "" # Tailwind palette name or hex (e.g., "indigo" or "#6366f1")
+      primary: "#9db4cc" # azul-acinzentado do herói (acentos, links, botões)
       secondary: ""
-      neutral: "" # Affects gray utilities (text-gray-*, bg-gray-*)
+      neutral: "slate" # cinzas com tom azulado, casando com o topo
     # Optional: Mode-specific color overrides
     colors_light: {}
     colors_dark: {}

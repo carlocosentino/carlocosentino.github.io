@@ -1,12 +1,12 @@
 ---
-title: 'Materiais Didáticos'
+title: 'Material didático'
 date: 2026-06-04
 type: landing
 
 sections:
   - block: markdown
     content:
-      title: 'Materiais Didáticos'
+      title: 'Material didático'
       text: |-
         Espaço dedicado a materiais de apoio ao ensino e à pesquisa — planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho e Direito Sindical.
 

@@ -9,7 +9,7 @@ sections:
     content:
       text: |
         <style>
-        .hero{position:relative;left:50%;transform:translateX(-50%);width:min(1140px,92vw);display:grid;grid-template-columns:minmax(330px,470px) minmax(0,1fr);gap:2.5rem;align-items:center;min-height:78vh}
+        .hero{position:relative;left:50%;transform:translateX(-50%);width:min(1140px,92vw);display:grid;grid-template-columns:minmax(330px,470px) minmax(0,1fr);gap:2.5rem;align-items:center;min-height:64vh;margin-top:-1.5rem}
         .hero__photo{position:relative;display:flex;align-items:center;justify-content:center}
         .hero__photo picture{display:contents}
         .hero__photo img{width:100%;max-height:86vh;object-fit:contain;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent 100%);mask-image:linear-gradient(to bottom,#000 85%,transparent 100%)}
@@ -31,7 +31,7 @@ sections:
             <h1 class="hero__name">Carlo Cosentino</h1>
             <div class="hero__role">Professor Adjunto · Faculdade de Direito do Recife · UFPE</div>
             <p class="hero__bio">Doutor em Direito pela UFPE. Pesquisa os impactos das tecnologias da informação e da comunicação nas relações de trabalho — da plataformização ao neotaylorismo digital, em diálogo com a teoria social crítica.</p>
-            <a class="hero__btn" href="/sobre/">Saiba mais →</a>
+            <a class="hero__btn" href="/perfil/">Saiba mais →</a>
             <div class="hero__social">
               <a href="mailto:contato@carlocosentino.com.br">Contato</a>
               <a href="https://orcid.org/0000-0002-7661-4688" target="_blank" rel="noopener">ORCID</a>
@@ -44,6 +44,8 @@ sections:
         </div>
     design:
       columns: '1'
+      spacing:
+        padding: ['0', '0', '0', '0']
   - block: collection
     id: papers
     content:
