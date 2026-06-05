@@ -15,5 +15,5 @@ abstract: |-
 featured: true
 links:
   - name: Texto do artigo
-    url: artigo.docx
+    url: artigo.pdf
 ---
