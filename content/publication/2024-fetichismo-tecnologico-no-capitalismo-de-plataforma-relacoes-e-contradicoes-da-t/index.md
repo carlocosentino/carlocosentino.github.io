@@ -4,6 +4,7 @@ authors:
   - "me"
   - "Fydel Marcus Rolim Mota"
 date: "2024-01-01"
+weight: 8
 publication_types: ["article-journal"]
 publication:
   name: "Eptic On-Line (UFS)"

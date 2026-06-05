@@ -50,6 +50,7 @@ sections:
     id: papers
     content:
       title: Publicações
+      count: 10
       sort_by: Weight
       order: desc
       filters:

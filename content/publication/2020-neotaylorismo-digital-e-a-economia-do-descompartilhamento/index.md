@@ -3,6 +3,7 @@ title: "Neotaylorismo digital e a economia do (des)compartilhamento"
 authors:
   - "me"
 date: "2020-01-01"
+weight: 2
 publication_types: ["chapter"]
 publication:
   name: "Futuro do Trabalho: efeitos da revolução digital na sociedade"

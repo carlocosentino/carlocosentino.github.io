@@ -3,6 +3,7 @@ title: "A ação Coletiva no século XXI. O Trabalho Autônomo e o Cibertariado"
 authors:
   - "me"
 date: "2024-01-01"
+weight: 7
 publication_types: ["chapter"]
 publication:
   name: "O Direito do Trabalho Frente aos Desafios da Reestruturação Tecnológica e Produtiva"

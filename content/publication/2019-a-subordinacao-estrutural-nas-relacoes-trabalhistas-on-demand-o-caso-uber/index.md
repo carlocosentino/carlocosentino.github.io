@@ -4,6 +4,7 @@ authors:
   - "me"
   - "Cristiane Pereira de Souza"
 date: "2019-01-01"
+weight: 1
 publication_types: ["article-journal"]
 publication:
   name: "Revista Pense (Faculdades Integradas Barros Melo)"
