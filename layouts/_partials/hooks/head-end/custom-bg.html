@@ -8,9 +8,10 @@
   }
   /* Cards como retângulos limpos, sem miniatura/degradê (todas as seções) */
   [class*="aspect-["][class*="bg-gradient-to-br"][class*="from-zinc"]{display:none !important}
-  /* Exceção: quando há capa/imagem real (ex.: capa do livro), exibir inteira e sem distorção */
-  [class*="aspect-["][class*="from-zinc"]:has(img){display:block !important;background:#0c0d0f !important}
-  [class*="aspect-["][class*="from-zinc"]:has(img) img{object-fit:contain !important}
+  /* Exceção: quando há capa/imagem real (ex.: capa do livro), dar destaque —
+     enquadra na proporção real da capa (retrato), grande e inteira, sem distorção */
+  [class*="aspect-["][class*="from-zinc"]:has(img){display:block !important;aspect-ratio:347/500 !important;background:#0c0d0f !important}
+  [class*="aspect-["][class*="from-zinc"]:has(img) img{object-fit:cover !important}
   /* Coautoria: mesmo destaque para todos os autores (remove o mini-avatar exclusivo do titular) */
   .inline-flex.items-center.text-current img.rounded-full{display:none !important}
   img[alt="avatar"]{display:none !important}
