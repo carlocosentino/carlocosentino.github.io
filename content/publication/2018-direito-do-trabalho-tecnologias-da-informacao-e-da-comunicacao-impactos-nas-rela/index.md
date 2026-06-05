@@ -8,6 +8,9 @@ publication:
   publisher: "Belo Horizonte: RTM"
 abstract: ""
 featured: true
+links:
+  - name: Comprar na Amazon
+    url: "https://www.amazon.com.br/dp/B07TXRXB3T"
 hugoblox:
   ids:
     isbn: "9788594710604"

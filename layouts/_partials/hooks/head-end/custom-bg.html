@@ -14,6 +14,25 @@
   .more-row{text-align:center;margin-top:.4rem}
   .more-link{display:inline-block;color:#9db4cc;font-weight:600;text-decoration:none;font-size:.95rem;transition:color .2s}
   .more-link:hover{color:#e8e8ea}
+</style>
+<script>
+  // Liga o nome do coautor Fydel Marcus Rolim Mota ao seu Instagram
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('div, span').forEach(function (el) {
+      if (el.children.length === 0 && el.textContent.trim() === 'Fydel Marcus Rolim Mota') {
+        var a = document.createElement('a');
+        a.href = 'https://www.instagram.com/prof.fydelmota/';
+        a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = el.textContent;
+        a.className = 'hover:underline';
+        a.style.color = 'inherit';
+        el.textContent = '';
+        el.appendChild(a);
+      }
+    });
+  });
+</script>
+<style>
   /* Cards: só o texto, com o mínimo de fundo (sem borda/sombra) */
   [class*="bg-zinc-900/90"],[class*="bg-zinc-800/90"]{
     background: rgba(255,255,255,.025) !important;
