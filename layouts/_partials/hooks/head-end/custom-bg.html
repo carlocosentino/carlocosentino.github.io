@@ -8,8 +8,10 @@
   }
   /* Cards como retângulos limpos, sem miniatura/degradê (todas as seções) */
   [class*="aspect-["][class*="bg-gradient-to-br"][class*="from-zinc"]{display:none !important}
-  /* Coautoria: mesmo destaque para todos os autores (remove o mini-avatar da assinatura) */
+  /* Coautoria: mesmo destaque para todos os autores (remove o mini-avatar exclusivo do titular) */
   .inline-flex.items-center.text-current img.rounded-full{display:none !important}
+  img[alt="avatar"]{display:none !important}
+  .relative.h-6.w-6.flex-shrink-0{display:none !important}
   /* Remove o card de autor (foto + minicurrículo) no rodapé de publicações/posts:
      evita repetição e dá o mesmo destaque a todos os coautores */
   .flex.pt-12.pb-4{display:none !important}
