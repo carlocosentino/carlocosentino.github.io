@@ -9,20 +9,20 @@ sections:
     content:
       text: |
         <style>
-        .hero{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:1.25rem;align-items:center;max-width:1080px;margin:0 auto;min-height:70vh}
-        .hero__photo{position:relative;display:flex;justify-content:center}
-        .hero__photo img{width:100%;max-height:78vh;object-fit:contain;display:block;-webkit-mask-image:radial-gradient(125% 110% at 52% 45%,#000 55%,transparent 100%);mask-image:radial-gradient(125% 110% at 52% 45%,#000 55%,transparent 100%)}
+        .hero{position:relative;left:50%;transform:translateX(-50%);width:min(1140px,92vw);display:grid;grid-template-columns:minmax(330px,470px) minmax(0,1fr);gap:2.5rem;align-items:center;min-height:78vh}
+        .hero__photo{position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#070707 0%,#080808 20%,#0c0d0e 42%,#121315 64%,#18191b 100%)}
+        .hero__photo img{width:100%;max-height:84vh;object-fit:contain;display:block;-webkit-mask-image:radial-gradient(120% 110% at 50% 45%,#000 58%,transparent 100%);mask-image:radial-gradient(120% 110% at 50% 45%,#000 58%,transparent 100%)}
         .hero__info{color:#e8e8ea}
         .hero__kicker{letter-spacing:.2em;font-size:.72rem;text-transform:uppercase;color:#8aa0b4;font-weight:600}
-        .hero__name{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:700;line-height:1.05;margin:.2rem 0 .35rem;letter-spacing:-.01em}
-        .hero__role{font-size:.95rem;color:#aebccb;font-weight:600;margin-bottom:.9rem}
-        .hero__bio{font-size:.98rem;line-height:1.6;color:#c9ced6;max-width:42ch}
-        .hero__btn{display:inline-block;margin-top:1.1rem;padding:.6rem 1.2rem;border:1px solid #2c3340;border-radius:10px;color:#e8e8ea;text-decoration:none;font-weight:600;font-size:.92rem;transition:background .2s}
+        .hero__name{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;line-height:1.05;margin:.2rem 0 .35rem;letter-spacing:-.01em}
+        .hero__role{font-size:.92rem;color:#aebccb;font-weight:600;margin-bottom:.85rem}
+        .hero__bio{font-size:.95rem;line-height:1.6;color:#c9ced6;max-width:42ch}
+        .hero__btn{display:inline-block;margin-top:1.1rem;padding:.58rem 1.15rem;border:1px solid #2c3340;border-radius:10px;color:#e8e8ea;text-decoration:none;font-weight:600;font-size:.9rem;transition:background .2s}
         .hero__btn:hover{background:#161a22}
         .hero__social{display:flex;gap:1rem;margin-top:1.2rem;flex-wrap:wrap}
-        .hero__social a{color:#8aa0b4;text-decoration:none;font-size:.86rem;font-weight:500}
+        .hero__social a{color:#8aa0b4;text-decoration:none;font-size:.84rem;font-weight:500}
         .hero__social a:hover{color:#e8e8ea}
-        @media(max-width:820px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;gap:1rem;padding-top:.5rem}.hero__photo{max-width:360px;margin:0 auto}.hero__photo img{max-height:none;-webkit-mask-image:radial-gradient(135% 118% at 50% 42%,#000 60%,transparent 100%);mask-image:radial-gradient(135% 118% at 50% 42%,#000 60%,transparent 100%)}.hero__name{font-size:clamp(2rem,8vw,2.6rem)}.hero__bio{margin:0 auto;font-size:1rem}.hero__social{justify-content:center}}
+        @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;gap:1rem;padding-top:.5rem}.hero__photo{max-width:400px;margin:0 auto;background:none}.hero__photo img{height:auto;max-height:64vh;-webkit-mask-image:radial-gradient(135% 118% at 50% 42%,#000 60%,transparent 100%);mask-image:radial-gradient(135% 118% at 50% 42%,#000 60%,transparent 100%)}.hero__name{font-size:clamp(2rem,8vw,2.6rem)}.hero__bio{margin:0 auto;font-size:1rem}.hero__social{justify-content:center}}
         </style>
         <div class="hero">
           <div class="hero__photo"><img src="/img/carlo-portrait.jpg" alt="Carlo Cosentino"></div>
