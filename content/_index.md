@@ -26,9 +26,8 @@ sections:
         @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;gap:1rem;padding-top:.5rem}.hero__photo{max-width:400px;margin:0 auto;background:none}.hero__photo img{height:auto;max-height:68vh;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}.hero__name{font-size:clamp(2rem,8vw,2.6rem)}.hero__bio{margin:0 auto;font-size:1rem}.hero__social{justify-content:center}}
         </style>
         <div class="hero">
-          <div class="hero__photo"><picture><source srcset="/img/carlo-cutout.webp" type="image/webp"><img src="/img/carlo-cutout.png" alt="Carlo Cosentino"></picture></div>
+          <div class="hero__photo"><img src="/img/carlo-cutout.png" alt="Carlo Cosentino"></div>
           <div class="hero__info">
-            <div class="hero__kicker">Hub científico</div>
             <h1 class="hero__name">Carlo Cosentino</h1>
             <div class="hero__role">Professor Adjunto · Faculdade de Direito do Recife · UFPE</div>
             <p class="hero__bio">Doutor em Direito pela UFPE. Pesquisa os impactos das tecnologias da informação e da comunicação nas relações de trabalho — da plataformização ao neotaylorismo digital, em diálogo com a teoria social crítica.</p>
