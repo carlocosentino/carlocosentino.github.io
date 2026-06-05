@@ -7,7 +7,8 @@ weight: 1
 publication_types: ["book"]
 publication:
   publisher: "Belo Horizonte: RTM"
-abstract: ""
+abstract: |-
+  Resultado da pesquisa doutoral do autor, a obra investiga os impactos das tecnologias da informação e da comunicação sobre o Direito do Trabalho, em suas dimensões individual, sindical e internacional. À luz da Revolução Informacional e do conceito de trabalho imaterial em Jean Lojkine, examina a crise do sindicalismo contemporâneo e a necessária restauração dos movimentos contra-hegemônicos em escala supranacional — o "movimento dos movimentos" —, propondo, ao final, uma reconfiguração teórico-dogmática do pressuposto da autonomia no Direito do Trabalho.
 featured: true
 links:
   - name: Comprar na Amazon
