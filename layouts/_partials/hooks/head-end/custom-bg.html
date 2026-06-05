@@ -40,6 +40,11 @@
         el.appendChild(a);
       }
     });
+    // Abre os anexos (PDF/links "Texto do artigo/capítulo") em nova aba
+    document.querySelectorAll('a.hb-attachment-link, a[href$=".pdf"], a[href$=".docx"]').forEach(function (a) {
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
   });
 </script>
 <style>
