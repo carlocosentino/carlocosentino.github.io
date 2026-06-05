@@ -62,7 +62,8 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   typography:
     # Theme pack: name from data/fonts/
-    pack: "academic"
+    # "system" usa a fonte do sistema → San Francisco (Apple) em Mac/iOS.
+    pack: "system"
 
   # ────────────────────────────────────────────────────────────────────────────
   # LAYOUT
