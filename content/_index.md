@@ -10,8 +10,8 @@ sections:
       text: |
         <style>
         .hero{position:relative;left:50%;transform:translateX(-50%);width:min(1140px,92vw);display:grid;grid-template-columns:minmax(330px,470px) minmax(0,1fr);gap:2.5rem;align-items:center;min-height:78vh}
-        .hero__photo{position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#070707 0%,#080808 20%,#0c0d0e 42%,#121315 64%,#18191b 100%)}
-        .hero__photo img{width:100%;max-height:84vh;object-fit:contain;display:block;-webkit-mask-image:radial-gradient(120% 110% at 50% 45%,#000 58%,transparent 100%);mask-image:radial-gradient(120% 110% at 50% 45%,#000 58%,transparent 100%)}
+        .hero__photo{position:relative;display:flex;align-items:center;justify-content:center}
+        .hero__photo img{width:100%;max-height:84vh;object-fit:contain;display:block;-webkit-mask-image:radial-gradient(130% 118% at 50% 46%,#000 46%,rgba(0,0,0,.5) 72%,transparent 97%);mask-image:radial-gradient(130% 118% at 50% 46%,#000 46%,rgba(0,0,0,.5) 72%,transparent 97%)}
         .hero__info{color:#e8e8ea}
         .hero__kicker{letter-spacing:.2em;font-size:.72rem;text-transform:uppercase;color:#8aa0b4;font-weight:600}
         .hero__name{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;line-height:1.05;margin:.2rem 0 .35rem;letter-spacing:-.01em}
