@@ -11,8 +11,11 @@ abstract: ""
 featured: true
 links:
   - name: Comprar na Amazon
-    url: "https://www.amazon.com.br/dp/B07TXRXB3T"
+    url: "https://www.amazon.com.br/dp/B07TXRXB3T?tag=cosentino0b-20"
 hugoblox:
   ids:
     isbn: "9788594710604"
 ---
+
+<p style="font-size:.8rem;color:#8aa0b4;margin-top:1rem">Como Associado da Amazon, Carlo Cosentino recebe por compras qualificadas.</p>
+
