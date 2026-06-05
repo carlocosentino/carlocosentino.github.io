@@ -11,9 +11,9 @@ sections:
         <style>
         .hero{position:relative;left:50%;transform:translateX(-50%);width:min(1140px,92vw);display:grid;grid-template-columns:minmax(330px,470px) minmax(0,1fr);gap:2.5rem;align-items:center;min-height:78vh}
         .hero__photo{position:relative;display:flex;align-items:center;justify-content:center}
-        .hero__photo::before{content:"";position:absolute;inset:-6% -16%;z-index:0;background:url(/img/carlo-portrait.jpg) no-repeat center/cover;filter:blur(46px) saturate(.9);-webkit-mask-image:radial-gradient(70% 78% at 50% 46%,#000 30%,transparent 100%);mask-image:radial-gradient(70% 78% at 50% 46%,#000 30%,transparent 100%)}
+        .hero__photo::before{content:"";position:absolute;inset:-8% -2% -8% -18%;z-index:0;background:url(/img/carlo-portrait.jpg) no-repeat center/cover;filter:blur(46px) saturate(.9);-webkit-mask-image:radial-gradient(68% 80% at 46% 46%,#000 28%,transparent 100%);mask-image:radial-gradient(68% 80% at 46% 46%,#000 28%,transparent 100%)}
         .hero__photo img{position:relative;z-index:1;width:100%;max-height:84vh;object-fit:contain;display:block;-webkit-mask-image:radial-gradient(128% 118% at 50% 46%,#000 58%,rgba(0,0,0,.55) 80%,transparent 99%);mask-image:radial-gradient(128% 118% at 50% 46%,#000 58%,rgba(0,0,0,.55) 80%,transparent 99%)}
-        .hero__info{color:#e8e8ea}
+        .hero__info{color:#e8e8ea;position:relative;z-index:2}
         .hero__kicker{letter-spacing:.2em;font-size:.72rem;text-transform:uppercase;color:#8aa0b4;font-weight:600}
         .hero__name{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;line-height:1.05;margin:.2rem 0 .35rem;letter-spacing:-.01em}
         .hero__role{font-size:.92rem;color:#aebccb;font-weight:600;margin-bottom:.85rem}
