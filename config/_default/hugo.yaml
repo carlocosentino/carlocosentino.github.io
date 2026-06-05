@@ -57,6 +57,9 @@ taxonomies:
   publication_type: publication_types
 markup:
   _merge: deep
+  goldmark:
+    renderer:
+      unsafe: true # permite HTML embutido no conteúdo (herói personalizado)
   highlight:
     lineNos: false
 security:

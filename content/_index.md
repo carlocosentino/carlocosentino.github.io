@@ -5,19 +5,46 @@ date: 2026-05-25
 type: landing
 
 sections:
-  - block: resume-biography
+  - block: markdown
     content:
-      username: me
-      button:
-        text: Saiba mais
-        url: /sobre/
+      text: |
+        <style>
+        .hero{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:1.5rem;align-items:center;max-width:1120px;margin:0 auto;min-height:72vh}
+        .hero__photo{position:relative}
+        .hero__photo img{width:100%;height:auto;display:block;-webkit-mask-image:linear-gradient(to right,#000 56%,transparent 100%);mask-image:linear-gradient(to right,#000 56%,transparent 100%)}
+        .hero__photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:32%;background:linear-gradient(to bottom,transparent,#0a0a0b);pointer-events:none}
+        .hero__info{color:#e8e8ea}
+        .hero__kicker{letter-spacing:.2em;font-size:.78rem;text-transform:uppercase;color:#8aa0b4;font-weight:600}
+        .hero__name{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:700;line-height:1.04;margin:.25rem 0 .4rem}
+        .hero__role{font-size:1.05rem;color:#aebccb;font-weight:600;margin-bottom:1.1rem}
+        .hero__bio{font-size:1.08rem;line-height:1.7;color:#c9ced6;max-width:40ch}
+        .hero__btn{display:inline-block;margin-top:1.3rem;padding:.7rem 1.35rem;border:1px solid #2c3340;border-radius:10px;color:#e8e8ea;text-decoration:none;font-weight:600;transition:background .2s}
+        .hero__btn:hover{background:#161a22}
+        .hero__social{display:flex;gap:1.1rem;margin-top:1.4rem;flex-wrap:wrap}
+        .hero__social a{color:#8aa0b4;text-decoration:none;font-size:.92rem;font-weight:500}
+        .hero__social a:hover{color:#e8e8ea}
+        @media(max-width:820px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;gap:.5rem}.hero__photo{max-width:300px;margin:0 auto}.hero__photo img{-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}.hero__photo::after{display:none}.hero__bio{margin:0 auto}.hero__social{justify-content:center}}
+        </style>
+        <div class="hero">
+          <div class="hero__photo"><img src="/img/carlo-portrait.jpg" alt="Carlo Cosentino"></div>
+          <div class="hero__info">
+            <div class="hero__kicker">Hub científico</div>
+            <h1 class="hero__name">Carlo Cosentino</h1>
+            <div class="hero__role">Professor Adjunto · Faculdade de Direito do Recife · UFPE</div>
+            <p class="hero__bio">Doutor em Direito pela UFPE. Pesquisa os impactos das tecnologias da informação e da comunicação nas relações de trabalho — da plataformização ao neotaylorismo digital, em diálogo com a teoria social crítica.</p>
+            <a class="hero__btn" href="/sobre/">Saiba mais →</a>
+            <div class="hero__social">
+              <a href="mailto:contato@carlocosentino.com.br">Contato</a>
+              <a href="https://orcid.org/0000-0002-7661-4688" target="_blank" rel="noopener">ORCID</a>
+              <a href="https://scholar.google.com/citations?user=8O4wNSUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+              <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Lattes</a>
+              <a href="https://ufpe.academia.edu/CarloCosentino" target="_blank" rel="noopener">Academia.edu</a>
+              <a href="https://www.researchgate.net/profile/Carlo-Cosentino-3" target="_blank" rel="noopener">ResearchGate</a>
+            </div>
+          </div>
+        </div>
     design:
-      background:
-        gradient_mesh:
-          enable: true
-      avatar:
-        size: xl
-        shape: rounded
+      columns: '1'
   - block: collection
     id: papers
     content:
@@ -33,8 +60,6 @@ sections:
     id: news
     content:
       title: Notícias
-      subtitle: ''
-      text: ''
       count: 5
       filters:
         folders:
@@ -46,8 +71,6 @@ sections:
       order: desc
     design:
       view: card
-      spacing:
-        padding: [0, 0, 0, 0]
   - block: markdown
     content:
       title: 'Advocacia'
