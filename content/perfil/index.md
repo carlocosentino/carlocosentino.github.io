@@ -8,6 +8,7 @@ sections:
     content:
       text: |-
         <style>
+        .perfil-title{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,92vw);text-align:center;font-size:clamp(1.9rem,3.6vw,2.5rem);font-weight:700;letter-spacing:-.015em;color:#f3f4f6;margin:0 0 2.4rem}
         .perfil{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,92vw);display:grid;grid-template-columns:480px minmax(0,1fr);gap:3rem;align-items:start;padding-top:1rem}
         .perfil__aside{position:sticky;top:6rem}
         .perfil__foto{width:100%;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent 100%);mask-image:linear-gradient(to bottom,#000 85%,transparent 100%)}
@@ -20,8 +21,15 @@ sections:
         .perfil__texto p{text-align:justify;text-justify:inter-word;hyphens:auto;line-height:1.85;font-size:1.02rem;margin:0 0 1.15rem}
         .perfil__texto a{color:#9db4cc;text-decoration:none;border-bottom:1px solid rgba(157,180,204,.35)}
         .perfil__texto a:hover{color:#e8e8ea}
-        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:240px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}}
+        .perfil-cols{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,92vw);display:grid;grid-template-columns:1fr 1fr;gap:3.2rem;margin-top:3.2rem;padding-top:2.4rem;border-top:1px solid rgba(255,255,255,.09)}
+        .perfil-col h2{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#9db4cc;font-weight:700;margin:0 0 1.3rem;padding-bottom:.6rem;border-bottom:1px solid rgba(157,180,204,.22)}
+        .perfil-col ul{list-style:none;margin:0;padding:0}
+        .perfil-col li{margin:0 0 1.15rem;color:#cdd2da;line-height:1.5;font-size:.98rem}
+        .perfil-col li strong{color:#f3f4f6;font-weight:600}
+        .perfil-col li .meta{display:block;font-size:.82rem;color:#8a93a0;margin-top:.18rem}
+        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:240px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
         </style>
+        <h1 class="perfil-title">Perfil</h1>
         <div class="perfil">
           <div class="perfil__aside">
             <img class="perfil__foto" src="/img/carlo-perfil-cutout-v4.png" alt="Carlo Cosentino">
@@ -39,6 +47,27 @@ sections:
             <p>É professor permanente do Programa de Pós-Graduação em Direito do Centro de Ciências Jurídicas da UFPE. Coordena o Grupo de Pesquisa Direito do Trabalho e Teoria Social Crítica (PPGD/UFPE), o projeto de pesquisa Impactos da Revolução Informacional e do Desenvolvimento Tecnológico no Direito do Trabalho e o projeto de extensão Caminhos do Trabalho. Em perspectiva interdisciplinar, suas linhas de pesquisa centrais investigam as relações entre o trabalho e a tecnologia – em especial as da informação e comunicação –, organizadas em torno dos seguintes eixos: o futuro do trabalho; os atravessamentos de gênero e raça; sindicalismo e novos movimentos sociais; mercado de trabalho, economia e regulação; morte lenta e adoecimento; e financeirização e colonialismo de dados.</p>
             <p>Integra a Academia Pernambucana de Direito do Trabalho (APDT), o Instituto Ítalo-Brasileiro de Direito do Trabalho (IIBDT) e a Rede Nacional de Pesquisas e Estudos em Direito do Trabalho e da Seguridade Social (RENAPEDTS). Atua como Membro Consultor da Comissão Nacional de Direitos Sociais da Ordem dos Advogados do Brasil. Preside, ademais, o Sindicato dos Professores das Instituições de Ensino Superior Privadas do Recife e Região Metropolitana (SINPROES-PE).</p>
             <p>Inscrito na OAB/PE sob o número 22.955, exerce a advocacia há mais de vinte anos. A atuação consultiva e contenciosa concentra-se no Direito do Trabalho – em suas dimensões individual e coletiva – e no Direito Sindical, estendendo-se à assessoria jurídica a organizações do Terceiro Setor – associações, fundações e organizações não governamentais –, com atenção às particularidades de seu regime jurídico próprio. A trajetória profissional desenvolve-se em permanente diálogo com a produção acadêmica.</p>
+          </div>
+        </div>
+        <div class="perfil-cols">
+          <div class="perfil-col">
+            <h2>Formação Acadêmica</h2>
+            <ul>
+              <li><strong>Doutorado em Direito</strong> (2017) — Universidade Federal de Pernambuco<span class="meta">Orientador: Everaldo Gaspar Lopes de Andrade</span></li>
+              <li><strong>Mestrado em Direito</strong> (2011) — Universidade Federal de Pernambuco<span class="meta">Orientador: Everaldo Gaspar Lopes de Andrade</span></li>
+              <li><strong>Graduação em Direito</strong> (2004) — Sociedade Pernambucana de Cultura e Ensino</li>
+            </ul>
+          </div>
+          <div class="perfil-col">
+            <h2>Atuação Profissional</h2>
+            <ul>
+              <li><strong>Professor Adjunto</strong> — Faculdade de Direito do Recife (UFPE)</li>
+              <li><strong>Professor permanente</strong> — Programa de Pós-Graduação em Direito (PPGD/UFPE)</li>
+              <li><strong>Advogado e sócio</strong> — Cosmo e Cosentino Advogados (OAB/PE 22.955)</li>
+              <li><strong>Presidente</strong> — Sindicato dos Professores das Instituições de Ensino Superior Privadas do Recife e Região Metropolitana (SINPROES-PE)</li>
+              <li><strong>Membro Consultor</strong> — Comissão Nacional de Direitos Sociais (OAB)</li>
+              <li><strong>Coordenador</strong> — Grupo de Pesquisa Direito do Trabalho e Teoria Social Crítica (PPGD/UFPE)</li>
+            </ul>
           </div>
         </div>
     design:
