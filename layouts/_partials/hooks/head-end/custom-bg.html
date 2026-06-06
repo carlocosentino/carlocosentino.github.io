@@ -48,6 +48,16 @@
       a.target = '_blank';
       a.rel = 'noopener';
     });
+    // O Hugo gera uma miniatura 16/9 RECORTADA da capa para os cards; troca pela
+    // imagem original (featured.jpg) para mostrar a capa inteira, sem corte.
+    document.querySelectorAll('img[srcset*="featured_hu"]').forEach(function (img) {
+      var m = (img.getAttribute('srcset') || '').match(/(\S+\/)featured_hu_[^,\s]+/);
+      if (m) {
+        img.removeAttribute('srcset');
+        img.removeAttribute('sizes');
+        img.src = m[1] + 'featured.jpg';
+      }
+    });
   });
 </script>
 <style>
