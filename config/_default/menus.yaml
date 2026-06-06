@@ -21,6 +21,6 @@ main:
   - name: Material didático
     url: /materiais/
     weight: 70
-  - name: Projetos de Pesquisa
+  - name: Grupo de Pesquisa
     url: /projects/
     weight: 80
