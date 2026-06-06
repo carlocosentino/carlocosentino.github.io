@@ -24,7 +24,7 @@ sections:
         </style>
         <div class="perfil">
           <div class="perfil__aside">
-            <img class="perfil__foto" src="/img/carlo-perfil-cutout.png" alt="Carlo Cosentino">
+            <img class="perfil__foto" src="/img/carlo-perfil-cutout-v2.png" alt="Carlo Cosentino">
             <div class="perfil__nome">Carlo Cosentino</div>
             <div class="perfil__cargo">Professor Adjunto · Faculdade de Direito do Recife · UFPE<br>Advogado · OAB/PE 22.955</div>
             <div class="perfil__links">
