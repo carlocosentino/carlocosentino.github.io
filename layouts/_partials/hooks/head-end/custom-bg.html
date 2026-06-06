@@ -69,4 +69,12 @@
   }
   [class*="bg-gray-900/50"],[class*="bg-gray-50"]{ background: transparent !important; }
   [class*="border-gray-800"],[class*="border-gray-200"]{ border-color: rgba(255,255,255,.06) !important; }
+  /* Resumo COMPLETO nos cards de publicação (home e página /publication/),
+     sem o corte de 3 linhas — não afeta Notícias/posts */
+  [role="article"]:has(a[href*="/publication/"]) p[class*="line-clamp"]{
+    -webkit-line-clamp: unset !important;
+    line-clamp: unset !important;
+    display: block !important;
+    overflow: visible !important;
+  }
 </style>
