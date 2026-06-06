@@ -62,11 +62,26 @@ sections:
             <h2>Atuação Profissional</h2>
             <ul>
               <li><strong>Professor Adjunto</strong> — Faculdade de Direito do Recife (UFPE)</li>
+              <li><strong>Coordenador da área de Direito do Trabalho</strong> — Centro de Ciências Jurídicas / Faculdade de Direito do Recife (CCJ/FDR · UFPE)</li>
               <li><strong>Professor permanente</strong> — Programa de Pós-Graduação em Direito (PPGD/UFPE)</li>
+              <li><strong>Coordenador</strong> — Grupo de Pesquisa Direito do Trabalho e Teoria Social Crítica (PPGD/UFPE)</li>
               <li><strong>Advogado e sócio</strong> — Cosmo e Cosentino Advogados (OAB/PE 22.955)</li>
               <li><strong>Presidente</strong> — Sindicato dos Professores das Instituições de Ensino Superior Privadas do Recife e Região Metropolitana (SINPROES-PE)</li>
+            </ul>
+          </div>
+          <div class="perfil-col">
+            <h2>Atuação Institucional</h2>
+            <ul>
+              <li><strong>Academia Pernambucana de Direito do Trabalho</strong> (APDT)</li>
+              <li><strong>Instituto Ítalo-Brasileiro de Direito do Trabalho</strong> (IIBDT)</li>
+              <li><strong>Rede Nacional de Pesquisas e Estudos em Direito do Trabalho e da Seguridade Social</strong> (RENAPEDTS)</li>
               <li><strong>Membro Consultor</strong> — Comissão Nacional de Direitos Sociais (OAB)</li>
-              <li><strong>Coordenador</strong> — Grupo de Pesquisa Direito do Trabalho e Teoria Social Crítica (PPGD/UFPE)</li>
+            </ul>
+          </div>
+          <div class="perfil-col">
+            <h2>Honrarias</h2>
+            <ul>
+              <li><strong>Láurea de Agradecimento</strong> — Conselho Federal da Ordem dos Advogados do Brasil (OAB Nacional)<span class="meta">Comissão Nacional de Direitos Sociais · gestão 2022–2024</span></li>
             </ul>
           </div>
         </div>
