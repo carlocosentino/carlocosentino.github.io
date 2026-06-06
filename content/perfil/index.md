@@ -10,7 +10,7 @@ sections:
         <style>
         .perfil{position:relative;left:50%;transform:translateX(-50%);width:min(1140px,92vw);display:grid;grid-template-columns:400px minmax(0,1fr);gap:3rem;align-items:start;padding-top:1rem}
         .perfil__aside{position:sticky;top:6rem}
-        .perfil__foto{width:100%;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}
+        .perfil__foto{width:100%;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 58%,transparent 92%);mask-image:linear-gradient(to bottom,#000 58%,transparent 92%)}
         .perfil__nome{font-size:1.5rem;font-weight:700;letter-spacing:-.01em;color:#f3f4f6;margin:1.15rem 0 .3rem;line-height:1.15}
         .perfil__cargo{font-size:.86rem;color:#9db4cc;font-weight:600;line-height:1.5}
         .perfil__links{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1rem}
