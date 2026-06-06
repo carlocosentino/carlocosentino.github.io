@@ -16,11 +16,11 @@ sections:
         .perfil__links{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1rem}
         .perfil__links a{color:#8aa0b4;text-decoration:none;font-size:.8rem;font-weight:500}
         .perfil__links a:hover{color:#e8e8ea}
-        .perfil__texto{color:#cdd2da}
+        .perfil__texto{color:#cdd2da;padding-top:2cm}
         .perfil__texto p{text-align:justify;text-justify:inter-word;hyphens:auto;line-height:1.85;font-size:1.02rem;margin:0 0 1.15rem}
         .perfil__texto a{color:#9db4cc;text-decoration:none;border-bottom:1px solid rgba(157,180,204,.35)}
         .perfil__texto a:hover{color:#e8e8ea}
-        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:240px;margin:0 auto}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}}
+        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:240px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}}
         </style>
         <div class="perfil">
           <div class="perfil__aside">
