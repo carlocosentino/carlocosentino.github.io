@@ -27,6 +27,14 @@ sections:
         .perfil-col li{margin:0 0 1.15rem;color:#cdd2da;line-height:1.5;font-size:.98rem}
         .perfil-col li strong{color:#f3f4f6;font-weight:600}
         .perfil-col li .meta{display:block;font-size:.82rem;color:#8a93a0;margin-top:.18rem}
+        .perfil-section{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,92vw);margin-top:3.2rem;padding-top:2.4rem;border-top:1px solid rgba(255,255,255,.09)}
+        .perfil-section h2{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#9db4cc;font-weight:700;margin:0 0 1.1rem}
+        .perfil-section p{color:#cdd2da;line-height:1.75;font-size:1rem;max-width:74ch;margin:0 0 .9rem}
+        .perfil-section p strong{color:#f3f4f6;font-weight:600}
+        .perfil-section a{color:#9db4cc;text-decoration:none;border-bottom:1px solid rgba(157,180,204,.35)}
+        .perfil-section a:hover{color:#e8e8ea}
+        .perfil-section .links{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:.6rem}
+        .perfil-section .links a{border-bottom:none;font-weight:600;font-size:.9rem}
         @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:240px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
         </style>
         <h1 class="perfil-title">Perfil</h1>
@@ -84,6 +92,20 @@ sections:
               <li><strong>Láurea de Agradecimento</strong> — Conselho Federal da Ordem dos Advogados do Brasil (OAB Nacional)<span class="meta">Comissão Nacional de Direitos Sociais · gestão 2022–2024</span></li>
             </ul>
           </div>
+        </div>
+        <div class="perfil-section">
+          <h2>Grupo de Pesquisa</h2>
+          <p><strong>Direito do Trabalho e Teoria Social Crítica</strong> (PPGD/UFPE) — grupo coordenado por Carlo Cosentino, dedicado às relações entre trabalho, tecnologia e teoria social crítica: do futuro do trabalho e da uberização aos atravessamentos de gênero e raça, ao sindicalismo e aos novos movimentos sociais, à morte lenta e ao adoecimento, e à financeirização e à colonialidade de dados.</p>
+          <div class="links">
+            <a href="https://www.youtube.com/@carlocosentino" target="_blank" rel="noopener">YouTube →</a>
+            <a href="https://scholar.google.com/citations?user=8O4wNSUAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>
+            <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Lattes →</a>
+          </div>
+        </div>
+        <div class="perfil-section">
+          <h2>Contato</h2>
+          <p>E-mail: <a href="mailto:contato@carlocosentino.com.br">contato@carlocosentino.com.br</a><br>E-mail institucional: <a href="mailto:carlo.cosentino@ufpe.br">carlo.cosentino@ufpe.br</a></p>
+          <p>Advocacia: <a href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Cosmo e Cosentino Advogados</a> — Recife/PE</p>
         </div>
     design:
       columns: '1'
