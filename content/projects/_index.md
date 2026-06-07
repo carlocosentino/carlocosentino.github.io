@@ -20,10 +20,15 @@ sections:
         </style>
         <div class="gp">
           <div class="gp__kicker">Grupo de Pesquisa · FDR / UFPE</div>
-          <p class="gp__desc">O Grupo de Pesquisa <strong>Direito do Trabalho e Teoria Social Crítica</strong>, sediado na Faculdade de Direito do Recife (UFPE), reúne pesquisadoras e pesquisadores de Direito, Sociologia, História e Ciência Política em torno da crítica aos fundamentos do Direito do Trabalho diante da crise do pleno emprego e da reconfiguração das relações laborais na era informacional. A partir da teoria do conhecimento jurídico-trabalhista de Everaldo Gaspar Lopes de Andrade, o grupo problematiza o trabalho livre-subordinado como objeto do Direito do Trabalho e investiga, em perspectiva interdisciplinar, o futuro do trabalho e a uberização, o sindicalismo e os novos movimentos sociais, os atravessamentos de gênero e raça, a morte lenta e o adoecimento, e a financeirização e a colonialidade de dados.</p>
+          <p class="gp__desc">O Grupo de Pesquisa <strong>Direito do Trabalho e Teoria Social Crítica</strong>, da Universidade Federal de Pernambuco, tem o objetivo de propagar as ideias desenvolvidas ao longo dos anos na linha de pesquisa iniciada pelo professor Doutor Everaldo Gaspar Lopes de Andrade, trazendo diversos temas de Direito do Trabalho, sob uma luz ou inspiração filosófica, que vão desde o deslocamento do objeto do trabalho contraditoriamente livre/subordinado/assalariado, até as crises do sindicalismo em virtude do desemprego estrutural e da clandestinização da força de trabalho; a globalização, a revolução informacional, os movimentos migratórios e as metamorfoses das relações de trabalho; bem ainda o trabalho no contexto da teoria organizacional crítica, entre diversos outros objetos. Pretende, através de publicações científicas, eventos e demais meios de organização e publicação nas mídias eletrônicas, propagar o pensamento da escola do Recife a todos os espaços físicos e virtuais de resistência.</p>
           <p class="gp__meta"><strong>Coordenação:</strong> Carlo Cosentino e Hugo Cavalcanti Melo Filho<br><strong>Fundamentos teóricos:</strong> Everaldo Gaspar Lopes de Andrade<br><strong>Vínculos:</strong> Linha 2.1 do Programa de Pós-Graduação em Direito (PPGD/UFPE) · Rede Nacional de Pesquisas e Estudos em Direito do Trabalho e da Seguridade Social (RENAPEDTS)</p>
           <div class="gp__links">
-            <a href="https://grupodepesquisadireitodotrabalhoufpe.wordpress.com/" target="_blank" rel="noopener">Site oficial →</a>
+            <a href="https://grupodepesquisadireitodotrabalhoufpe.wordpress.com/" target="_blank" rel="noopener">Site oficial</a>
+            <a href="http://dgp.cnpq.br/dgp/espelhogrupo/42738" target="_blank" rel="noopener">Diretório CNPq</a>
+            <a href="https://www.youtube.com/@gpdireitodotrabalhoeteoria5136" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.instagram.com/dttsc.ufpe/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/gpdireitodotrabalhoeteoriasocialcritica" target="_blank" rel="noopener">Facebook</a>
+            <a href="mailto:direitodotrabalhofdrufpe@gmail.com">E-mail</a>
           </div>
         </div>
     design:
