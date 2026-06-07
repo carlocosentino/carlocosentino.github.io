@@ -10,7 +10,7 @@ publication:
   publisher: "Belo Horizonte: RTM"
   pages: "213--232"
 abstract: |-
-  O capítulo retoma a dicotomia capital × trabalho na sociedade contemporânea para demonstrar que, sob o discurso neoliberal da superação da luta de classes, persistem — e se renovam — as formas de exploração da força de trabalho. Diante da figura do trabalhador convertido em "empreendedor" e da dispersão do antigo operário do chão de fábrica, o texto investiga a perda da consciência de classe e os caminhos para a reorganização da ação coletiva no século XXI, no contexto do trabalho autônomo e do chamado cibertariado. O estudo organiza-se em três partes: o paradigma do trabalho subordinado na sociedade moderna; a ação coletiva na modernidade, sob a égide do trabalho livre e subordinado; e a ação coletiva no século XXI, no contexto do trabalho autônomo e do cibertariado.
+  A luta entre capital e trabalho acabou? Longe disso. O capítulo mostra como, sob o discurso neoliberal do "empreendedor de si", surge o cibertariado — uma nova classe de trabalhadores digitais — e por que a ação coletiva continua indispensável no século XXI.
 featured: true
 links:
   - name: Texto do capítulo

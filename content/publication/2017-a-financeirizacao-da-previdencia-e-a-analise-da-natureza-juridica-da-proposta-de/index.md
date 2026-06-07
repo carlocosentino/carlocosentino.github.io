@@ -9,7 +9,8 @@ publication:
   name: "Interlocuções entre o Direito Previdênciário, o Direito Tributário e a Economia"
   publisher: "Paixão"
   pages: "125--200"
-abstract: ""
+abstract: |-
+  Por trás das propostas de reforma da Previdência está a lógica do mercado financeiro. O artigo revela como essa financeirização molda as mudanças previdenciárias e analisa a sua natureza jurídica, expondo os riscos para a proteção social.
 featured: false
 hugoblox:
   ids:

@@ -8,7 +8,8 @@ publication:
   name: "Il diritto del lavoro nell'era digitale"
   publisher: "Universitas Mercatorum Press"
   pages: "125--139"
-abstract: ""
+abstract: |-
+  Boa parte do trabalho de hoje não produz objetos, mas conhecimento, dados e relações. O texto explora como essa imaterialidade do trabalho redefine os modelos de divisão do labor na economia contemporânea.
 featured: false
 hugoblox:
   ids:

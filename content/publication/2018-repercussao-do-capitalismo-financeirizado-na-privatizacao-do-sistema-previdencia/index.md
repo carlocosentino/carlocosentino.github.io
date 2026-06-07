@@ -9,7 +9,8 @@ publication:
   name: "Seguridade Social e Meio Ambiente do Trabalho: Direitos Humanos nas Relações Sociais"
   publisher: "RTM"
   pages: "400--409"
-abstract: ""
+abstract: |-
+  Analisa como o capitalismo financeirizado impulsiona a privatização da Previdência no Brasil, transferindo riscos para o indivíduo e corroendo a lógica solidária da seguridade social.
 featured: false
 hugoblox:
   ids:

@@ -21,9 +21,9 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: "Professor Adjunto · Faculdade de Direito do Recife · UFPE"
     # Site meta description for search engines and social sharing
-    description: "Hub científico de Carlo Cosentino — Professor Adjunto de Direito
-      do Trabalho na Faculdade de Direito do Recife (UFPE). Publicações, linhas de
-      pesquisa e produção acadêmica sobre trabalho, tecnologia e teoria social crítica."
+    description: "Carlo Cosentino — advogado e Professor Adjunto de Direito do
+      Trabalho na Faculdade de Direito do Recife (UFPE). Publicações, pesquisa e
+      atuação sobre trabalho, tecnologia e os rumos do mundo do trabalho."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "" # Twitter/X handle for Twitter Cards (without @)
@@ -108,31 +108,10 @@ hugoblox:
     # Footer style variant
     style: minimal # minimal | columns | centered
     language_switcher: false # site monolíngue (pt-BR)
-    # Custom footer text (HTML supported) — seção de Contato (padrão Fredie)
+    # Custom footer text (HTML supported) — contato discreto; versão completa em /contato/
     text: |-
-      <div class="site-contato">
-      <div class="site-contato__info">
-      <h2>Contato</h2>
-      <hr class="rule">
-      <div class="firma">Cosmo e Cosentino Advogados</div>
-      <p>Rua Frei Matias Teves, 280 — Sala 305<br>Ilha do Leite (Empresarial Albert Einstein)<br>Recife/PE · CEP 50070-465</p>
-      <p>Telefone: <a href="tel:+558130330089">+55 81 3033-0089</a><br>WhatsApp: <a href="https://wa.me/5581996372619" target="_blank" rel="noopener">+55 81 99637-2619</a></p>
-      <p>E-mail: <a href="mailto:contato@carlocosentino.com.br">contato@carlocosentino.com.br</a></p>
-      <a class="wa" href="https://wa.me/5581996372619" target="_blank" rel="noopener">Falar no WhatsApp</a>
-      </div>
-      <div class="site-contato__form">
-      <form action="mailto:contato@carlocosentino.com.br" method="post" enctype="text/plain">
-      <label for="ct-nome">Seu nome</label>
-      <input id="ct-nome" name="Nome" type="text" required>
-      <label for="ct-email">Seu e-mail</label>
-      <input id="ct-email" name="E-mail" type="email" required>
-      <label for="ct-assunto">Assunto</label>
-      <input id="ct-assunto" name="Assunto" type="text">
-      <label for="ct-msg">Sua mensagem</label>
-      <textarea id="ct-msg" name="Mensagem"></textarea>
-      <button type="submit">ENVIAR</button>
-      </form>
-      </div>
+      <div class="site-contato-mini">
+      <a href="/contato/">Contato</a><span>·</span><a href="mailto:contato@carlocosentino.com.br">contato@carlocosentino.com.br</a><span>·</span><a href="tel:+558130330089">+55 81 3033-0089</a><span>·</span><a href="https://wa.me/5581996372619" target="_blank" rel="noopener">WhatsApp</a>
       </div>
 
   # ────────────────────────────────────────────────────────────────────────────
@@ -141,7 +120,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}. This work is licensed under {license}"
+    notice: ""
     license:
       type: cc # cc | custom
       allow_derivatives: false
@@ -309,7 +288,7 @@ hugoblox:
     # Requires: HugoBlox Premium to support HugoBlox via alternative means
     # Note: Even with Premium, you can keep this false to support open source!
     # Get Premium: https://hugoblox.com/premium
-    hide_attribution: false
+    hide_attribution: true
 
     # Affiliate referral code for rewards program
     # Join affiliate program: https://hugoblox.com/affiliates

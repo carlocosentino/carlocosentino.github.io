@@ -10,7 +10,8 @@ publication:
   name: "Direito e Desmercantilização do Trabalho: Afirmação de um ideal democrático"
   publisher: "RTM"
   pages: "199--209"
-abstract: ""
+abstract: |-
+  Ao encarecer e dificultar o processo trabalhista, a Reforma de 2017 acabou fechando as portas da Justiça para muitos trabalhadores. O artigo discute como a Lei 13.467/2017 se tornou um obstáculo ao acesso à justiça.
 featured: false
 hugoblox:
   ids:

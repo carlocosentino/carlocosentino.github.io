@@ -6,6 +6,7 @@ type: landing
 sections:
   - block: markdown
     content:
+      title: 'Perfil'
       text: |-
         <style>
         .perfil-title{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,92vw);text-align:center;font-size:clamp(1.9rem,3.6vw,2.5rem);font-weight:700;letter-spacing:-.015em;color:#f3f4f6;margin:0 0 2.4rem}
@@ -37,7 +38,6 @@ sections:
         .perfil-section .links a{border-bottom:none;font-weight:600;font-size:.9rem}
         @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:240px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
         </style>
-        <h1 class="perfil-title">Perfil</h1>
         <div class="perfil">
           <div class="perfil__aside">
             <img class="perfil__foto" src="/img/carlo-perfil-cutout-v4.png" alt="Carlo Cosentino">

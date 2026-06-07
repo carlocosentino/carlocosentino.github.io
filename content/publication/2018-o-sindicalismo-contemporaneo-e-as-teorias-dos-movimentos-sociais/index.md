@@ -10,7 +10,8 @@ publication:
   name: "Direito, Sociedade e Meio Ambiente"
   publisher: "FASA"
   pages: "65--81"
-abstract: ""
+abstract: |-
+  Aproxima o sindicalismo das teorias dos movimentos sociais para compreender as novas formas de organização e de luta dos trabalhadores num tempo de crise da representação tradicional.
 featured: false
 hugoblox:
   ids:

@@ -11,7 +11,7 @@ publication:
   volume: "26"
   pages: "82--108"
 abstract: |-
-  O presente artigo investiga o fetichismo tecnológico no capitalismo de plataforma. Inspirado no fetichismo da mercadoria marxiano, argumenta-se que o sistema do capital esconde sob um "véu tecnológico" as relações sociais na tentativa constante de ocultar o trabalho humano como fonte vital e crucial de valorização do capital e de sustentação de toda economia contemporânea, sem o qual desmorona. Conclui afirmando pela necessidade de uma concepção crítica da tecnologia, dos algoritmos e da inteligência artificial, desvelando ideologias e propagandas tecnoliberais como forma de resistência e ampliação da proteção do trabalho humano, principal objeto do Direito do Trabalho.
+  Assim como Marx falou do fetiche da mercadoria, o artigo fala do fetiche da tecnologia: a crença de que algoritmos e IA são neutros e autônomos. O texto revela as contradições dessa ilusão no capitalismo de plataforma e seus efeitos sobre o Direito do Trabalho.
 url_source: "https://periodicos.ufs.br/eptic/article/view/20834"
 featured: true
 ---

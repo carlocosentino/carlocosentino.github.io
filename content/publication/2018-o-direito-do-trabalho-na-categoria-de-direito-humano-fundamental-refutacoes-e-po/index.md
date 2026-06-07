@@ -11,7 +11,8 @@ publication:
   name: "Reformas Institucionais de Austeridade, Democracia e Relações de Trabalho"
   publisher: "LTr"
   pages: "117--129"
-abstract: ""
+abstract: |-
+  O trabalho digno é um direito humano fundamental? O texto enfrenta as principais objeções a essa tese e defende o lugar do Direito do Trabalho entre os direitos fundamentais, indispensável à dignidade da pessoa.
 featured: false
 hugoblox:
   ids:

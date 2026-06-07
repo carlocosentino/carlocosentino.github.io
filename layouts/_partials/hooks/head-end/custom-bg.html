@@ -96,4 +96,11 @@
   .site-contato button{align-self:flex-end;background:#9db4cc;color:#0a0a0b;border:0;border-radius:10px;padding:.62rem 1.7rem;font-weight:700;font-size:.95rem;cursor:pointer;letter-spacing:.06em}
   .site-contato button:hover{background:#b6c7d8}
   @media(max-width:820px){.site-contato{grid-template-columns:1fr;gap:2rem}}
+  /* Remove a linha inferior do rodapé: ícones de licença + "Made with Hugo Blox" + "Construa a sua" */
+  footer .powered-by{display:none !important}
+  /* Contato discreto no rodapé (versão completa fica em /contato/) */
+  .site-contato-mini{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.55rem;font-size:.85rem;color:#8a93a0;padding:.3rem 0}
+  .site-contato-mini a{color:#9db4cc;text-decoration:none}
+  .site-contato-mini a:hover{color:#e8e8ea}
+  .site-contato-mini span{color:#454c57}
 </style>
