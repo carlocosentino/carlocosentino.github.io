@@ -31,6 +31,14 @@
 <script>
   // Liga o nome do coautor Fydel Marcus Rolim Mota ao seu Instagram
   document.addEventListener('DOMContentLoaded', function () {
+    // Confirmação após envio do formulário (redirect ?enviado=1)
+    if (/[?&]enviado=1/.test(location.search)) {
+      var b = document.createElement('div');
+      b.textContent = 'Mensagem enviada com sucesso. Obrigado pelo contato!';
+      b.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1f6f43;color:#fff;padding:.8rem 1.4rem;border-radius:10px;font-weight:600;font-size:.95rem;z-index:9999;box-shadow:0 6px 24px rgba(0,0,0,.4)';
+      document.body.appendChild(b);
+      setTimeout(function(){ b.style.transition='opacity .6s'; b.style.opacity='0'; }, 5000);
+    }
     document.querySelectorAll('div, span').forEach(function (el) {
       if (el.children.length === 0 && el.textContent.trim() === 'Fydel Marcus Rolim Mota') {
         var a = document.createElement('a');
@@ -103,4 +111,24 @@
   .site-contato-mini a{color:#9db4cc;text-decoration:none}
   .site-contato-mini a:hover{color:#e8e8ea}
   .site-contato-mini span{color:#454c57}
+  /* Botão de seção (link para canal/destino externo) */
+  .section-cta{display:inline-flex;align-items:center;gap:.5rem;margin:.2rem 0 .2rem;padding:.6rem 1.2rem;border:1px solid #2c3340;border-radius:10px;color:#e8e8ea;text-decoration:none;font-weight:600;font-size:.92rem;transition:background .2s}
+  .section-cta:hover{background:#161a22}
+  /* Grade de últimos vídeos do YouTube */
+  .yt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.4rem;margin:1.8rem auto 0;max-width:980px}
+  .yt-card{display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:rgba(255,255,255,.03);transition:transform .15s,background .2s}
+  .yt-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.06)}
+  .yt-card__thumb{position:relative;aspect-ratio:16/9;background:#000}
+  .yt-card__thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .yt-card__play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .yt-card__play svg{width:48px;height:48px;color:#fff;opacity:.92;filter:drop-shadow(0 2px 6px rgba(0,0,0,.55))}
+  .yt-card__title{padding:.7rem .8rem .9rem;font-size:.9rem;line-height:1.35;color:#dfe3ea;font-weight:600}
+  /* Ícones de redes sociais (grupo de pesquisa) */
+  .gp__social{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.6rem}
+  .gp__social a{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #2c3340;border-radius:50%;color:#cdd2da;transition:background .2s,color .2s,border-color .2s}
+  .gp__social a:hover{background:#161a22;color:#fff;border-color:#3a4453}
+  .gp__social svg{width:21px;height:21px}
+  /* Formulário isolado (página de contato / fale com o grupo) */
+  .site-contato--solo{grid-template-columns:1fr !important;width:min(560px,92vw);gap:1rem}
+  .site-contato--form-title{text-align:center;font-size:1.05rem;font-weight:700;color:#f3f4f6;margin:2.6rem 0 0}
 </style>

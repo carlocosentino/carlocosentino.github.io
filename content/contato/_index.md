@@ -17,7 +17,12 @@ sections:
         <a class="wa" href="https://wa.me/5581996372619" target="_blank" rel="noopener">Falar no WhatsApp</a>
         </div>
         <div class="site-contato__form">
-        <form action="mailto:contato@carlocosentino.com.br" method="post" enctype="text/plain">
+        <form action="https://formsubmit.co/contato@carlocosentino.com.br" method="POST">
+        <input type="hidden" name="_subject" value="Contato pelo site — carlocosentino.com.br">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.carlocosentino.com.br/contato/?enviado=1">
+        <input type="text" name="_honey" style="display:none">
         <label for="ct-nome">Seu nome</label>
         <input id="ct-nome" name="Nome" type="text" required>
         <label for="ct-email">Seu e-mail</label>
