@@ -141,6 +141,10 @@
   .pod-card__title{font-weight:600;font-size:.92rem;color:#e8eaee;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .pod-card__date{font-size:.78rem;color:#8a93a0;margin-top:.2rem}
   @media(max-width:640px){.pod-grid{grid-template-columns:1fr}}
+  /* Correção mobile: as grades (auto-fill/2 colunas) inflavam o container .prose
+     (centralizado com align-items:center) e vazavam para a direita no celular.
+     width/max-width:100% faz a grade respeitar a largura disponível. */
+  .yt-grid,.pod-grid{width:100%;max-width:100%}
 </style>
 <script>
 (function(){
