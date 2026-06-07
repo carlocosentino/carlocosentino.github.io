@@ -63,7 +63,7 @@ sections:
             <ul>
               <li><strong>Doutorado em Direito</strong> (2017) — Universidade Federal de Pernambuco<span class="meta">Orientador: Everaldo Gaspar Lopes de Andrade</span></li>
               <li><strong>Mestrado em Direito</strong> (2011) — Universidade Federal de Pernambuco<span class="meta">Orientador: Everaldo Gaspar Lopes de Andrade</span></li>
-              <li><strong>Graduação em Direito</strong> (2004) — Sociedade Pernambucana de Cultura e Ensino</li>
+              <li><strong>Graduação em Direito</strong> (2004) — Faculdade de Ciências Humanas de Pernambuco</li>
             </ul>
           </div>
           <div class="perfil-col">
