@@ -196,9 +196,23 @@
     }
     if(out.length)el.innerHTML=out.map(podCard).join('');
   }
+  function pinBook(){
+    if(!/^\/publication\/?$/.test(location.pathname)) return;
+    var slug='/publication/2018-direito-do-trabalho-tecnologias-da-informacao-e-da-comunicacao-impactos-nas-rela/';
+    var a=document.querySelector('a[href*="'+slug+'"]');
+    if(!a) return;
+    var card=a, grid=null;
+    while(card&&card.parentElement){
+      var c=card.parentElement.className||'';
+      if(/grid-cols/.test(c)){grid=card.parentElement;break;}
+      card=card.parentElement;
+    }
+    if(grid&&card&&grid.firstElementChild!==card){grid.insertBefore(card,grid.firstElementChild);}
+  }
   document.addEventListener('DOMContentLoaded',function(){
     document.querySelectorAll('[data-yt-channel]').forEach(renderYT);
     document.querySelectorAll('[data-pod-rss]').forEach(renderPod);
+    pinBook();
   });
 })();
 </script>
