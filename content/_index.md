@@ -24,6 +24,9 @@ sections:
         .hero__social a{color:#8aa0b4;text-decoration:none;font-size:.84rem;font-weight:500}
         .hero__social a:hover{color:#e8e8ea}
         @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;min-height:auto;gap:1rem;padding-top:.5rem}.hero__photo{max-width:400px;margin:0 auto;background:none}.hero__photo img{height:auto;max-height:68vh;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}.hero__name{font-size:clamp(2rem,8vw,2.6rem)}.hero__bio{margin:0 auto;font-size:1rem}.hero__social{justify-content:center}}
+        /* Home: espaçamento mais compacto entre as seções e entre título e conteúdo */
+        .page-body section.hbb-section+section.hbb-section{padding-top:2.3rem!important;padding-bottom:2.3rem!important}
+        .page-body section.hbb-section .flex.flex-col.gap-3{gap:.3rem!important}
         </style>
         <div class="hero">
           <div class="hero__photo"><img src="/img/carlo-cutout.png" alt="Carlo Cosentino"></div>
@@ -64,6 +67,24 @@ sections:
     content:
       text: |
         <p class="more-row"><a class="more-link" href="/publication/">Ver todas as publicações →</a></p>
+    design:
+      columns: '1'
+  - block: markdown
+    content:
+      title: 'Material didático'
+      text: |-
+        Planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho e Direito Sindical.
+
+        <p class="more-row"><a class="more-link" href="/materiais/">Ver o material didático →</a></p>
+    design:
+      columns: '1'
+  - block: markdown
+    content:
+      title: 'Grupo de Pesquisa'
+      text: |-
+        **Direito do Trabalho e Teoria Social Crítica** (FDR/UFPE) — pesquisa interdisciplinar sobre trabalho, tecnologia e teoria social crítica, na tradição da Escola do Recife.
+
+        <p class="more-row"><a class="more-link" href="/projects/">Conhecer o grupo de pesquisa →</a></p>
     design:
       columns: '1'
   - block: markdown
