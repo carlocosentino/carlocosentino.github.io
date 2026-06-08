@@ -9,8 +9,10 @@ sections:
       title: 'Publicações'
       text: |-
         <style>
-        .page-body section.hbb-section{padding-top:1rem!important;padding-bottom:1rem!important}
-        .page-body section.hbb-section .flex.flex-col.gap-3{gap:.3rem!important}
+        .page-body section.hbb-section{padding-top:1rem!important;padding-bottom:.3rem!important}
+        .page-body section.hbb-section+section.hbb-section{padding-top:.3rem!important}
+        .page-body section.hbb-section .flex.flex-col.gap-3{gap:.15rem!important}
+        .page-body section.hbb-section p{margin-top:0!important;margin-bottom:.2rem!important}
         </style>
         Livros, capítulos e artigos sobre Direito do Trabalho, sindicalismo e as transformações do trabalho na era digital.
     design:
