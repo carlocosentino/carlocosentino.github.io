@@ -15,8 +15,8 @@ sections:
         [class*="text-3xl"][class*="font-bold"]{margin-bottom:.3rem!important}
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.2rem!important}
         .perfil__foto{margin-top:0!important}
-        /* Reduz 40% o espaço acima do título (96px -> 3.6rem) */
-        .page-body section.hbb-section{padding-top:3.6rem!important}
+        /* Espaço acima do título igual ao espaço título->foto (~8px) */
+        .page-body section.hbb-section{padding-top:.5rem!important}
         .perfil__aside{position:sticky;top:6rem}
         .perfil__foto{width:100%;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent 100%);mask-image:linear-gradient(to bottom,#000 85%,transparent 100%)}
         .perfil__nome{font-size:1.5rem;font-weight:700;letter-spacing:-.01em;color:#f3f4f6;margin:1.15rem 0 .3rem;line-height:1.15}
