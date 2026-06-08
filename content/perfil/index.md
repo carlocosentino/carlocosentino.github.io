@@ -36,7 +36,7 @@ sections:
         .perfil-section a:hover{color:#e8e8ea}
         .perfil-section .links{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:.6rem}
         .perfil-section .links a{border-bottom:none;font-weight:600;font-size:.9rem}
-        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:240px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
+        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:400px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
         </style>
         <div class="perfil">
           <div class="perfil__aside">
