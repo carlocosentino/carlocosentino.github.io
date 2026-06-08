@@ -27,6 +27,9 @@
   .more-row{text-align:center;margin-top:.4rem}
   .more-link{display:inline-block;color:#9db4cc;font-weight:600;text-decoration:none;font-size:.95rem;transition:color .2s}
   .more-link:hover{color:#e8e8ea}
+  /* Títulos de seção clicáveis (home) */
+  [class*="text-3xl"][class*="font-bold"] a{color:inherit;text-decoration:none}
+  [class*="text-3xl"][class*="font-bold"] a:hover{color:#9db4cc;text-decoration:underline}
 </style>
 <script>
   // Liga o nome do coautor Fydel Marcus Rolim Mota ao seu Instagram
@@ -242,4 +245,25 @@
     pinBook();
   });
 })();
+</script>
+<script>
+  // Títulos das seções da home viram links para as páginas correspondentes
+  (function(){
+    if(location.pathname!=='/'&&location.pathname!==''&&location.pathname!=='/index.html') return;
+    var map={'Publicações':'/publication/','Material didático':'/materiais/','Grupo de Pesquisa':'/projects/','Podcast':'/podcast/','Vídeos':'/videos/','Advocacia':'https://www.cosmocosentino.com'};
+    document.addEventListener('DOMContentLoaded',function(){
+      document.querySelectorAll('.page-body [class*="text-3xl"][class*="font-bold"]').forEach(function(d){
+        var t=d.textContent.trim();
+        if(map[t]&&!d.querySelector('a')){
+          var ext=/^https?:/.test(map[t]);
+          var a=document.createElement('a');
+          a.href=map[t];
+          if(ext){a.target='_blank';a.rel='noopener';}
+          a.textContent=t;
+          d.textContent='';
+          d.appendChild(a);
+        }
+      });
+    });
+  })();
 </script>
