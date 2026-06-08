@@ -8,6 +8,10 @@ sections:
     content:
       title: 'Notícias'
       text: |-
+        <style>
+        .page-body section.hbb-section{padding-top:1rem!important;padding-bottom:1rem!important}
+        .page-body section.hbb-section .flex.flex-col.gap-3{gap:.3rem!important}
+        </style>
         Novidades, lançamentos e registros da produção acadêmica e da atuação de Carlo Cosentino.
     design:
       columns: '1'
