@@ -71,24 +71,6 @@ sections:
       columns: '1'
   - block: markdown
     content:
-      title: 'Material didático'
-      text: |-
-        Planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho e Direito Sindical.
-
-        <p class="more-row"><a class="more-link" href="/materiais/">Ver o material didático →</a></p>
-    design:
-      columns: '1'
-  - block: markdown
-    content:
-      title: 'Grupo de Pesquisa'
-      text: |-
-        **Direito do Trabalho e Teoria Social Crítica** (FDR/UFPE) — pesquisa interdisciplinar sobre trabalho, tecnologia e teoria social crítica, na tradição da Escola do Recife.
-
-        <p class="more-row"><a class="more-link" href="/projects/">Conhecer o grupo de pesquisa →</a></p>
-    design:
-      columns: '1'
-  - block: markdown
-    content:
       title: 'Podcast'
       text: |-
         Conversas sobre Direito do Trabalho, sindicalismo e os desafios do trabalho na era digital.
@@ -116,6 +98,24 @@ sections:
         <p style="text-align:center;margin-top:1.2rem"><a class="section-cta" href="https://www.youtube.com/@carlocosentino" target="_blank" rel="noopener">▶ Ir para o canal no YouTube</a></p>
 
         <p class="more-row"><a class="more-link" href="/videos/">Ver todos os vídeos →</a></p>
+    design:
+      columns: '1'
+  - block: markdown
+    content:
+      title: 'Material didático'
+      text: |-
+        Planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho e Direito Sindical.
+
+        <p class="more-row"><a class="more-link" href="/materiais/">Ver o material didático →</a></p>
+    design:
+      columns: '1'
+  - block: markdown
+    content:
+      title: 'Grupo de Pesquisa'
+      text: |-
+        **Direito do Trabalho e Teoria Social Crítica** (FDR/UFPE) — pesquisa interdisciplinar sobre trabalho, tecnologia e teoria social crítica, na tradição da Escola do Recife.
+
+        <p class="more-row"><a class="more-link" href="/projects/">Conhecer o grupo de pesquisa →</a></p>
     design:
       columns: '1'
   - block: markdown
