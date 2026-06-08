@@ -14,7 +14,7 @@ sections:
         /* Aproxima o título "Perfil" da foto */
         [class*="text-3xl"][class*="font-bold"]{margin-bottom:.3rem!important}
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.2rem!important}
-        .perfil__foto{margin-top:0!important}
+        .perfil__foto{margin-top:-2rem!important}
         /* Espaço acima do título (96px reduzido em 40% -> 3.6rem) */
         .page-body section.hbb-section{padding-top:3.6rem!important}
         .perfil__aside{position:sticky;top:6rem}
