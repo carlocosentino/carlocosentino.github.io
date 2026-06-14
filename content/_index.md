@@ -32,7 +32,7 @@ sections:
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.3rem!important}
         </style>
         <div class="hero">
-          <div class="hero__photo"><img src="/img/carlo-home-cutout.webp" alt="Carlo Cosentino"></div>
+          <div class="hero__photo"><img src="/img/carlo-home-front-smile.webp" alt="Carlo Cosentino"></div>
           <div class="hero__info">
             <h1 class="hero__name">Carlo Cosentino</h1>
             <div class="hero__role">Professor Adjunto · Faculdade de Direito do Recife · UFPE</div>
