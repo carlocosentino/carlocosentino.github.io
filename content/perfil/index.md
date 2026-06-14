@@ -14,7 +14,7 @@ sections:
       text: |-
         <style>
         .perfil-title{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,92vw);text-align:center;font-size:clamp(1.9rem,3.6vw,2.5rem);font-weight:700;letter-spacing:-.015em;color:#f3f4f6;margin:0 0 2.4rem}
-        .perfil{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,92vw);display:grid;grid-template-columns:480px minmax(0,1fr);gap:3rem;align-items:start;padding-top:0}
+        .perfil{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,92vw);display:grid;grid-template-columns:560px minmax(0,1fr);gap:3rem;align-items:start;padding-top:0}
         /* Aproxima o título "Perfil" da foto */
         [class*="text-3xl"][class*="font-bold"]{margin-bottom:.3rem!important}
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.2rem!important}
@@ -50,7 +50,7 @@ sections:
         </style>
         <div class="perfil">
           <div class="perfil__aside">
-            <img class="perfil__foto" src="/img/carlo-home-front-smile.webp" alt="Carlo Cosentino">
+            <img class="perfil__foto" src="/img/carlo-perfil-cutout-v4.png" alt="Carlo Cosentino">
             <div class="perfil__nome">Carlo Cosentino</div>
             <div class="perfil__cargo">Advogado · OAB/PE 22.955<br>Professor Adjunto · Faculdade de Direito do Recife · UFPE</div>
             <div class="perfil__links">
