@@ -10,10 +10,6 @@ sections:
       text: |-
         <div class="site-contato site-contato--page">
         <div class="site-contato__info">
-        <div class="firma">Cosmo e Cosentino Advogados</div>
-        <p>Rua Frei Matias Teves, 280 — Sala 305<br>Ilha do Leite (Empresarial Albert Einstein)<br>Recife/PE · CEP 50070-465</p>
-        <p>Telefone: <a href="tel:+558130330089">+55 81 3033-0089</a><br>WhatsApp: <a href="https://wa.me/5581996372619" target="_blank" rel="noopener">+55 81 99637-2619</a></p>
-        <p>E-mail: <a href="mailto:contato@carlocosentino.com.br">contato@carlocosentino.com.br</a></p>
         <a class="wa" href="https://wa.me/5581996372619" target="_blank" rel="noopener">Falar no WhatsApp</a>
         </div>
         <div class="site-contato__form">
