@@ -35,7 +35,6 @@ sections:
           <div class="hero__photo"><img src="/img/carlo-home-front-smile.webp" alt="Carlo Cosentino"></div>
           <div class="hero__info">
             <h1 class="hero__name">Carlo Cosentino</h1>
-            <div class="hero__role">Professor Adjunto · Faculdade de Direito do Recife · UFPE</div>
             <p class="hero__bio">Carlo Cosentino é advogado, sócio do escritório Cosmo e Cosentino Advogados, e Professor Adjunto da Faculdade de Direito do Recife – UFPE. Doutor e Mestre em Direito pela UFPE, investiga as relações entre o trabalho e a tecnologia – em especial as da informação e comunicação –, em diálogo com a teoria social crítica.</p>
             <a class="hero__btn" href="/perfil/">Saiba mais →</a>
             <div class="hero__social">
