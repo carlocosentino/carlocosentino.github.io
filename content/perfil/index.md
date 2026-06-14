@@ -1,6 +1,10 @@
 ---
 title: 'Perfil'
 date: 2026-06-04
+aliases:
+  - /cv/
+  - /author/admin/
+  - /authors/me/
 type: landing
 
 sections:

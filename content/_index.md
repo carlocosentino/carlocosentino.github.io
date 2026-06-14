@@ -2,6 +2,9 @@
 title: ''
 summary: ''
 date: 2026-05-25
+aliases:
+  - /categories/
+  - /feed/
 type: landing
 
 sections:
