@@ -30,7 +30,7 @@ sections:
         <div class="gp">
           <div class="gp__kicker">Grupo de Pesquisa · FDR / UFPE</div>
           <p class="gp__desc">O Grupo de Pesquisa <strong>Direito do Trabalho e Teoria Social Crítica</strong>, da Universidade Federal de Pernambuco, tem o objetivo de propagar as ideias desenvolvidas ao longo dos anos na linha de pesquisa iniciada pelo professor Doutor Everaldo Gaspar Lopes de Andrade, trazendo diversos temas de Direito do Trabalho, sob uma luz ou inspiração filosófica, que vão desde o deslocamento do objeto do trabalho contraditoriamente livre/subordinado/assalariado, até as crises do sindicalismo em virtude do desemprego estrutural e da clandestinização da força de trabalho; a globalização, a revolução informacional, os movimentos migratórios e as metamorfoses das relações de trabalho; bem ainda o trabalho no contexto da teoria organizacional crítica, entre diversos outros objetos. Pretende, através de publicações científicas, eventos e demais meios de organização e publicação nas mídias eletrônicas, propagar o pensamento da escola do Recife a todos os espaços físicos e virtuais de resistência.</p>
-          <p class="gp__meta"><strong>Coordenação:</strong> <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Prof. Carlo Cosentino</a> e <a href="http://lattes.cnpq.br/1618403722316877" target="_blank" rel="noopener">Prof. Hugo Melo</a><br><strong>Vínculos:</strong> <a href="https://www.ufrgs.br/renapedts/" target="_blank" rel="noopener">Rede Nacional de Pesquisas e Estudos em Direito do Trabalho e da Seguridade Social (RENAPEDTS)</a> · <a href="https://www.ufpe.br/ppgd" target="_blank" rel="noopener">Projeto Coletivo de Pesquisa 1.5 — Direito do Trabalho e Teoria Social Crítica (PPGD/UFPE)</a></p>
+          <p class="gp__meta"><strong>Coordenação:</strong> <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Prof. Carlo Cosentino</a> e <a href="http://lattes.cnpq.br/1618403722316877" target="_blank" rel="noopener">Prof. Hugo Melo</a><br><strong>Vínculos:</strong> <a href="https://www.ufrgs.br/renapedts/" target="_blank" rel="noopener">Rede Nacional de Pesquisas e Estudos em Direito do Trabalho e da Seguridade Social (RENAPEDTS)</a> · <a href="https://www.ufpe.br/ppgd" target="_blank" rel="noopener">Projeto Coletivo de Pesquisa 1.5 – Direito do Trabalho e Teoria Social Crítica (PPGD/UFPE)</a></p>
           <div class="gp__social">
             <a href="https://grupodepesquisadireitodotrabalhoufpe.wordpress.com/" target="_blank" rel="noopener" title="Site oficial" aria-label="Site oficial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"/></svg></a>
             <a href="http://dgp.cnpq.br/dgp/espelhogrupo/42738" target="_blank" rel="noopener" title="Diretório de Grupos de Pesquisa do CNPq" aria-label="Diretório CNPq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></a>
@@ -44,12 +44,12 @@ sections:
           <h2>Projetos de Pesquisa em andamento</h2>
           <div class="gp__proj">
             <h3>Impactos da Revolução Informacional e do Desenvolvimento Tecnológico no Direito do Trabalho</h3>
-            <p>Investiga como a inteligência artificial, os algoritmos, a automação e as plataformas digitais estão remodelando o mundo do trabalho — da uberização e da vigilância tecnológica à precarização das relações laborais. A pesquisa discute os desafios que o capitalismo de plataforma impõe à autonomia do Direito do Trabalho e acompanha debates legislativos como o PLP 12/2024, a partir de uma abordagem interdisciplinar ancorada na tradição crítica da Escola do Recife.</p>
+            <p>Investiga como a inteligência artificial, os algoritmos, a automação e as plataformas digitais estão remodelando o mundo do trabalho – da uberização e da vigilância tecnológica à precarização das relações laborais. A pesquisa discute os desafios que o capitalismo de plataforma impõe à autonomia do Direito do Trabalho e acompanha debates legislativos como o PLP 12/2024, a partir de uma abordagem interdisciplinar ancorada na tradição crítica da Escola do Recife.</p>
             <span class="coord">Coordenação: Prof. Carlo Cosentino</span>
           </div>
           <div class="gp__proj">
             <h3>No Rastro da História do Direito Brasileiro do Trabalho: resgate e contemporaneidade dos pensamentos de Tobias Barreto de Menezes, Joaquim Pimenta e Luiz Pinto Ferreira</h3>
-            <p>Resgata as contribuições de três juristas pernambucanos ligados à Faculdade de Direito do Recife e à Escola do Recife — Tobias Barreto, Joaquim Pimenta e Luiz Pinto Ferreira — para compreender as raízes históricas do Direito do Trabalho brasileiro e sua atualidade. Por meio de seminários e da elaboração de uma obra coletiva, o projeto articula história do direito, pensamento social e trabalho numa perspectiva interdisciplinar.</p>
+            <p>Resgata as contribuições de três juristas pernambucanos ligados à Faculdade de Direito do Recife e à Escola do Recife – Tobias Barreto, Joaquim Pimenta e Luiz Pinto Ferreira – para compreender as raízes históricas do Direito do Trabalho brasileiro e sua atualidade. Por meio de seminários e da elaboração de uma obra coletiva, o projeto articula história do direito, pensamento social e trabalho numa perspectiva interdisciplinar.</p>
             <span class="coord">Coordenação: Prof. Hugo Melo</span>
           </div>
         </div>
@@ -57,7 +57,7 @@ sections:
         <div class="site-contato site-contato--solo">
         <div class="site-contato__form">
         <form action="https://formsubmit.co/direitodotrabalhofdrufpe@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Contato pelo site — Grupo de Pesquisa DTTSC">
+        <input type="hidden" name="_subject" value="Contato pelo site – Grupo de Pesquisa DTTSC">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://www.carlocosentino.com.br/projects/?enviado=1">

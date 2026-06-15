@@ -10,7 +10,7 @@ publication:
   publisher: "Belo Horizonte: RTM"
   pages: "213--232"
 abstract: |-
-  A luta entre capital e trabalho acabou? Longe disso. O capítulo mostra como, sob o discurso neoliberal do "empreendedor de si", surge o cibertariado — uma nova classe de trabalhadores digitais — e por que a ação coletiva continua indispensável no século XXI.
+  A luta entre capital e trabalho acabou? Longe disso. O capítulo mostra como, sob o discurso neoliberal do "empreendedor de si", surge o cibertariado – uma nova classe de trabalhadores digitais – e por que a ação coletiva continua indispensável no século XXI.
 featured: true
 links:
   - name: Texto do capítulo

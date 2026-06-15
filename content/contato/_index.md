@@ -18,7 +18,7 @@ sections:
         <div class="site-contato site-contato--page">
         <div class="site-contato__form">
         <form action="https://formsubmit.co/contato@carlocosentino.com.br" method="POST">
-        <input type="hidden" name="_subject" value="Contato pelo site — carlocosentino.com.br">
+        <input type="hidden" name="_subject" value="Contato pelo site – carlocosentino.com.br">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://www.carlocosentino.com.br/contato/?enviado=1">

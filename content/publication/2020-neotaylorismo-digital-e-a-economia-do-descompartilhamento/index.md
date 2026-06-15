@@ -10,7 +10,7 @@ publication:
   publisher: "Brasília: ESMPU"
   pages: "417--430"
 abstract: |-
-  A "economia do compartilhamento" é mesmo colaborativa? O artigo desmonta esse discurso e mostra como os aplicativos reeditam, em versão digital, o velho taylorismo — um neotaylorismo que cronometra e controla o trabalho pela tela do celular.
+  A "economia do compartilhamento" é mesmo colaborativa? O artigo desmonta esse discurso e mostra como os aplicativos reeditam, em versão digital, o velho taylorismo – um neotaylorismo que cronometra e controla o trabalho pela tela do celular.
 featured: true
 links:
   - name: Ler no livro (ESMPU, p. 417)
