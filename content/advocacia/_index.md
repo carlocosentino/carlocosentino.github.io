@@ -34,7 +34,7 @@ sections:
         .adv-contato__h{text-align:center;color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 2.1rem;padding-bottom:.75rem;position:relative}
         .adv-contato__h::after{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:96px;height:1px;background:#d0835d}
         .adv-contato__grid{display:grid;grid-template-columns:1fr 1fr;gap:2.8rem;align-items:start}
-        .adv-contato__info{color:#cdd2da;line-height:1.8}
+        .adv-contato__info{color:#cdd2da;line-height:1.8;text-align:left}
         .adv-contato__info strong{display:block;font-size:1.05rem;margin:0 0 .55rem;color:#f3f4f6;font-weight:600}
         .adv-contato__info address{font-style:normal;font-size:.99rem;margin:0 0 1.1rem}
         .adv-contato__info a{color:#9db4cc;text-decoration:none;font-weight:500}
@@ -43,7 +43,7 @@ sections:
         .adv-contato__info a.adv-wa{display:inline-flex;align-items:center;gap:.5rem;margin:1.1rem 0 0;background:transparent;color:#cdd2da;font-weight:500;font-size:.86rem;letter-spacing:.01em;padding:.5rem 1.05rem;border:1px solid rgba(157,180,204,.3);border-radius:6px;text-decoration:none;transition:border-color .18s ease,color .18s ease,background .18s ease}
         .adv-contato__info a.adv-wa:hover{border-color:#25d366;color:#fff;background:rgba(37,211,102,.08)}
         .adv-contato__info a.adv-wa svg{flex:0 0 auto;color:#25d366}
-        .adv-form{display:flex;flex-direction:column;gap:.25rem}
+        .adv-form{display:flex;flex-direction:column;gap:.25rem;text-align:left}
         .adv-form label{color:#9db4cc;font-size:.74rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin:.55rem 0 .25rem}
         .adv-form input,.adv-form textarea{font-family:'Montserrat',sans-serif;background:rgba(157,180,204,.06);border:1px solid rgba(157,180,204,.28);border-radius:4px;color:#eef1f5;font-size:.98rem;padding:.62rem .8rem;transition:border-color .18s ease,background .18s ease}
         .adv-form input:focus,.adv-form textarea:focus{outline:none;border-color:#d0835d;background:rgba(208,131,93,.07)}
