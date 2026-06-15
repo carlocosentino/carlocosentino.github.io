@@ -24,7 +24,7 @@ main:
   - name: Grupo de Pesquisa
     url: /projects/
     weight: 80
-  - name: Advocacia
+  - name: Consultoria Jurídica
     url: /advocacia/
     weight: 85
   - name: Contato

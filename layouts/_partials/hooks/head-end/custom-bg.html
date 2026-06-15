@@ -34,6 +34,9 @@
   .prose p{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
   /* Justifica também o conteúdo estruturado das publicações (Resumo etc.) */
   .max-w-prose.grid > div{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
+  /* Justifica título e resumo dos cards de publicação (home e /publication/) */
+  [role="article"]:has(a[href*="/publication/"]) h3,
+  [role="article"]:has(a[href*="/publication/"]) p{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
 </style>
 <script>
   // Liga o nome do coautor Fydel Marcus Rolim Mota ao seu Instagram
