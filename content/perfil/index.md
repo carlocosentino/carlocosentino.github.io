@@ -25,9 +25,11 @@ sections:
         .perfil__foto{width:100%;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent 100%);mask-image:linear-gradient(to bottom,#000 85%,transparent 100%)}
         .perfil__nome{font-size:1.5rem;font-weight:700;letter-spacing:-.01em;color:#f3f4f6;margin:1.15rem 0 .3rem;line-height:1.15}
         .perfil__cargo{font-size:.86rem;color:#9db4cc;font-weight:600;line-height:1.5}
-        .perfil__links{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1rem}
-        .perfil__links a{color:#8aa0b4;text-decoration:none;font-size:.8rem;font-weight:500}
-        .perfil__links a:hover{color:#e8e8ea}
+        .perfil__nav{margin-top:1.15rem;display:flex;flex-direction:column;gap:1rem}
+        .perfil__navgroup h3{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#9db4cc;font-weight:700;margin:0 0 .5rem;padding-bottom:.4rem;border-bottom:1px solid rgba(157,180,204,.18)}
+        .perfil__navgroup .links{display:flex;flex-wrap:wrap;gap:.45rem .9rem}
+        .perfil__navgroup .links a{color:#8aa0b4;text-decoration:none;font-size:.82rem;font-weight:500}
+        .perfil__navgroup .links a:hover{color:#e8e8ea}
         .perfil__texto{color:#cdd2da;padding-top:2cm}
         .perfil__texto p{text-align:justify;text-justify:inter-word;hyphens:auto;line-height:1.85;font-size:1.02rem;margin:0 0 1.15rem}
         .perfil__texto a{color:#9db4cc;text-decoration:none;border-bottom:1px solid rgba(157,180,204,.35)}
@@ -46,17 +48,48 @@ sections:
         .perfil-section a:hover{color:#e8e8ea}
         .perfil-section .links{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:.6rem}
         .perfil-section .links a{border-bottom:none;font-weight:600;font-size:.9rem}
-        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:400px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__links{justify-content:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
+        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:400px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__navgroup .links{justify-content:center}.perfil__navgroup h3{border-bottom:none}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
         </style>
         <div class="perfil">
           <div class="perfil__aside">
             <img class="perfil__foto" src="/img/carlo-perfil-cutout-v4.png" alt="Carlo Cosentino">
             <div class="perfil__nome">Carlo Cosentino</div>
-            <div class="perfil__links">
-              <a href="mailto:contato@carlocosentino.com.br">Contato</a>
-              <a href="https://orcid.org/0000-0002-7661-4688" target="_blank" rel="noopener">ORCID</a>
-              <a href="https://scholar.google.com/citations?user=8O4wNSUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-              <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Lattes</a>
+            <div class="perfil__nav">
+              <div class="perfil__navgroup">
+                <h3>Publicações</h3>
+                <div class="links">
+                  <a href="/podcast/">Podcast</a>
+                  <a href="https://www.youtube.com/@carlocosentino" target="_blank" rel="noopener">Canal do YouTube</a>
+                  <a href="/materiais/">Material Didático</a>
+                  <a href="/publication/">Artigos</a>
+                </div>
+              </div>
+              <div class="perfil__navgroup">
+                <h3>Redes sociais</h3>
+                <div class="links">
+                  <a href="https://www.instagram.com/carlocosentino/" target="_blank" rel="noopener">Instagram</a>
+                  <a href="https://www.facebook.com/carlo.cosentino.filho" target="_blank" rel="noopener">Facebook</a>
+                  <a href="https://www.linkedin.com/in/carlocosentino/" target="_blank" rel="noopener">LinkedIn</a>
+                  <a href="https://wa.me/5581996372619" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+              <div class="perfil__navgroup">
+                <h3>Contato Profissional</h3>
+                <div class="links">
+                  <a href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Cosmo e Cosentino Advogados</a>
+                  <a href="https://www.ufpe.br/ccj" target="_blank" rel="noopener">Centro de Ciências Jurídicas – UFPE</a>
+                </div>
+              </div>
+              <div class="perfil__navgroup">
+                <h3>Acadêmico</h3>
+                <div class="links">
+                  <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Currículo Lattes</a>
+                  <a href="https://orcid.org/0000-0002-7661-4688" target="_blank" rel="noopener">ORCID</a>
+                  <a href="https://scholar.google.com/citations?user=8O4wNSUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                  <a href="https://ufpe.academia.edu/CarloCosentino" target="_blank" rel="noopener">Academia.Edu</a>
+                  <a href="https://www.researchgate.net/profile/Carlo-Cosentino-3" target="_blank" rel="noopener">ResearchGate</a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="perfil__texto">

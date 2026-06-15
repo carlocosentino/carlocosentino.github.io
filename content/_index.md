@@ -39,18 +39,6 @@ sections:
             <h1 class="hero__name">Carlo Cosentino</h1>
             <p class="hero__bio">Carlo Cosentino é advogado, sócio do escritório Cosmo e Cosentino Advogados, e Professor Adjunto da Faculdade de Direito do Recife – UFPE. Doutor e Mestre em Direito pela UFPE, investiga as relações entre o trabalho e a tecnologia – em especial as da informação e comunicação –, em diálogo com a teoria social crítica.</p>
             <a class="hero__btn" href="/perfil/">Saiba mais →</a>
-            <div class="hero__social">
-              <a href="https://open.spotify.com/show/2nWAQids7nHXD2OcM0hAdb" target="_blank" rel="noopener">Podcast</a>
-              <a href="https://www.youtube.com/@carlocosentino" target="_blank" rel="noopener">Canal do YouTube</a>
-              <a href="https://www.instagram.com/carlocosentino/" target="_blank" rel="noopener">Instagram</a>
-              <a href="https://wa.me/5581996372619" target="_blank" rel="noopener">WhatsApp</a>
-              <a href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Cosmo e Cosentino Advogados</a>
-              <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Currículo Lattes</a>
-              <a href="https://orcid.org/0000-0002-7661-4688" target="_blank" rel="noopener">ORCID</a>
-              <a href="https://scholar.google.com/citations?user=8O4wNSUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-              <a href="https://ufpe.academia.edu/CarloCosentino" target="_blank" rel="noopener">Academia.Edu</a>
-              <a href="https://www.researchgate.net/profile/Carlo-Cosentino-3" target="_blank" rel="noopener">ResearchGate</a>
-            </div>
           </div>
         </div>
     design:
