@@ -33,6 +33,13 @@ sections:
         .adv-banner__desc{display:block;max-width:48ch;margin:0 auto 2rem;color:#495057;font-size:1rem;line-height:1.7}
         .adv-banner__cta{display:inline-block;font-weight:700;font-size:.84rem;letter-spacing:.09em;text-transform:uppercase;color:#d0835d;border:2px solid #d0835d;border-radius:0;padding:.72rem 1.9rem;transition:background .2s ease,color .2s ease}
         .adv-banner:hover .adv-banner__cta{background:#d0835d;color:#fff}
+        /* Bloco de contato do escritório */
+        .adv-contato{margin:3.4rem auto 0;max-width:640px;text-align:center}
+        .adv-contato__h{color:#f3f4f6;font-weight:600;font-size:1.15rem;letter-spacing:.005em;margin:0 0 .9rem}
+        .adv-contato__addr{color:#cdd2da;line-height:1.75;font-size:1rem;font-style:normal;margin:0 0 1.4rem}
+        .adv-contato__links{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem 1rem;margin:0;padding:0}
+        .adv-contato__links a{display:inline-flex;align-items:center;color:#9db4cc;text-decoration:none;font-size:.95rem;border:1px solid rgba(157,180,204,.3);border-radius:999px;padding:.5rem 1.15rem;transition:background .18s ease,color .18s ease,border-color .18s ease}
+        .adv-contato__links a:hover{background:rgba(157,180,204,.1);color:#fff;border-color:rgba(157,180,204,.55)}
         </style>
         <div class="adv-wrap">
           <p class="adv-lead">Rigor acadêmico e prática profissional<br><span>a serviço do mundo do trabalho.</span></p>
@@ -55,6 +62,16 @@ sections:
             <span class="adv-banner__desc">Atuação consultiva e contenciosa em Direito do Trabalho, Direito Sindical e Terceiro Setor. Conheça o escritório no site institucional.</span>
             <span class="adv-banner__cta">Acessar o site do escritório</span>
           </a>
+
+          <div class="adv-contato">
+            <p class="adv-contato__h">Cosmo &amp; Cosentino Advogados</p>
+            <address class="adv-contato__addr">Rua Frei Matias Teves, 280 — 305<br>Ilha do Leite, Recife / PE</address>
+            <ul class="adv-contato__links">
+              <li><a href="https://wa.me/5581996372619" target="_blank" rel="noopener">WhatsApp (81) 99637-2619</a></li>
+              <li><a href="tel:+558130330089">Fone (81) 3033-0089</a></li>
+              <li><a href="mailto:contato@cosmocosentino.com">contato@cosmocosentino.com</a></li>
+            </ul>
+          </div>
         </div>
     design:
       columns: '1'
