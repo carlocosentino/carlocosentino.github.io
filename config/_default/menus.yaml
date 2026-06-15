@@ -24,6 +24,9 @@ main:
   - name: Grupo de Pesquisa
     url: /projects/
     weight: 80
+  - name: Advocacia
+    url: /advocacia/
+    weight: 85
   - name: Contato
     url: /contato/
     weight: 90
