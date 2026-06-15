@@ -9,7 +9,7 @@ sections:
       title: 'Publicações'
       text: |-
         <style>
-        .page-body section.hbb-section{padding-top:1rem!important;padding-bottom:.3rem!important}
+        .page-body section.hbb-section{padding-top:3.6rem!important;padding-bottom:.3rem!important}
         .page-body section.hbb-section+section.hbb-section{padding-top:.3rem!important}
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.15rem!important}
         .page-body section.hbb-section p{margin-top:0!important;margin-bottom:.2rem!important}
