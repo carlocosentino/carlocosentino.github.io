@@ -29,12 +29,6 @@ sections:
         .adv-about__link{display:inline-block;margin:2rem 0 0;font-weight:500;font-size:.95rem;letter-spacing:.02em;color:#fff;text-decoration:none;border-bottom:1px solid #d0835d;padding-bottom:.22rem;transition:border-color .2s ease}
         .adv-about__link:hover{border-color:#fff}
         @media(max-width:680px){.adv-about__cols{column-count:1}}
-        /* Subtítulos de seção (cobre delicado) */
-        .adv-sub{color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 1.2rem;position:relative;padding-bottom:.75rem}
-        .adv-sub::after{content:'';position:absolute;left:0;bottom:0;width:96px;height:1px;background:#d0835d}
-        /* ÁREA DE ATUAÇÃO — alinhado à esquerda */
-        .adv-atuacao{text-align:left;padding:3.4rem 0;border-bottom:1px solid rgba(157,180,204,.1)}
-        .adv-atuacao p{color:#cdd2da;line-height:1.95;font-size:1.06rem;max-width:80ch;margin:1.3rem 0 0;text-align:left}
         /* CONTATO — padrão escuro, alinhado à esquerda, duas colunas */
         .adv-contato{padding:3.4rem 0 1rem}
         .adv-contato__h{text-align:left;color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 1.8rem;padding-bottom:.75rem;position:relative}
@@ -74,11 +68,6 @@ sections:
                 <a class="adv-about__link" href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Visite o site</a>
               </div>
             </div>
-          </section>
-
-          <section class="adv-atuacao">
-            <h2 class="adv-sub">Área de atuação</h2>
-            <p>Histórico de atuação na defesa dos interesses de pessoas físicas, empresas, organizações não governamentais e entidades de classe. Intensa experiência em demandas relacionadas ao terceiro setor e às relações individuais e coletivas de trabalho.</p>
           </section>
 
           <section class="adv-contato">
