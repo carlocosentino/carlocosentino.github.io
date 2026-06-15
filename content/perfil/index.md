@@ -26,7 +26,7 @@ sections:
         .perfil__nome{font-size:1.5rem;font-weight:700;letter-spacing:-.01em;color:#f3f4f6;margin:1.15rem 0 .3rem;line-height:1.15}
         .perfil__cargo{font-size:.86rem;color:#9db4cc;font-weight:600;line-height:1.5}
         .perfil__nav{margin-top:1.15rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem .8rem;align-items:start}
-        .perfil__navgroup h3{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#9db4cc;font-weight:700;margin:0 0 .6rem;padding-bottom:.4rem;border-bottom:1px solid rgba(157,180,204,.18)}
+        .perfil__navgroup h3{display:flex;align-items:flex-end;min-height:2.6em;line-height:1.2;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#9db4cc;font-weight:700;margin:0 0 .6rem;padding-bottom:.4rem;border-bottom:1px solid rgba(157,180,204,.18)}
         .perfil__navgroup .links{display:flex;flex-direction:column;gap:.45rem}
         .perfil__navgroup .links a{color:#8aa0b4;text-decoration:none;font-size:.8rem;font-weight:500;line-height:1.25}
         .perfil__navgroup .links a:hover{color:#e8e8ea}
@@ -48,7 +48,7 @@ sections:
         .perfil-section a:hover{color:#e8e8ea}
         .perfil-section .links{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:.6rem}
         .perfil-section .links a{border-bottom:none;font-weight:600;font-size:.9rem}
-        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:400px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__nav{grid-template-columns:1fr 1fr}.perfil__navgroup .links{align-items:center}.perfil__navgroup h3{border-bottom:none;text-align:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
+        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:400px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__nav{grid-template-columns:1fr 1fr}.perfil__navgroup .links{align-items:center}.perfil__navgroup h3{border-bottom:none;justify-content:center;min-height:0}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
         </style>
         <div class="perfil">
           <div class="perfil__aside">
@@ -143,11 +143,6 @@ sections:
             <a href="https://scholar.google.com/citations?user=8O4wNSUAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>
             <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Lattes →</a>
           </div>
-        </div>
-        <div class="perfil-section">
-          <h2>Contato</h2>
-          <p>E-mail: <a href="mailto:contato@carlocosentino.com.br">contato@carlocosentino.com.br</a><br>E-mail institucional: <a href="mailto:carlo.cosentino@ufpe.br">carlo.cosentino@ufpe.br</a></p>
-          <p>Advocacia: <a href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Cosmo e Cosentino Advogados</a> — Recife/PE</p>
         </div>
     design:
       columns: '1'
