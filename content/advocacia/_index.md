@@ -12,23 +12,23 @@ sections:
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
         .adv{font-family:'Montserrat',system-ui,sans-serif;position:relative;left:50%;transform:translateX(-50%);width:min(1040px,92vw)}
         /* SEÇÃO "CONHEÇA O ESCRITÓRIO" com as fotos (rotativas) ao fundo */
-        .adv-esc{position:relative;border-radius:12px;overflow:hidden;padding:3.2rem 2.6rem;border:1px solid rgba(157,180,204,.18);box-shadow:0 30px 70px -34px rgba(0,0,0,.95)}
+        .adv-esc{position:relative;width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;padding:3.8rem 0}
         .adv-esc__slide{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;animation:advfade 18s infinite}
         .adv-esc__slide:nth-child(1){animation-delay:0s}
         .adv-esc__slide:nth-child(2){animation-delay:6s}
         .adv-esc__slide:nth-child(3){animation-delay:12s}
         @keyframes advfade{0%{opacity:0}2%{opacity:1}30%{opacity:1}34%{opacity:0}100%{opacity:0}}
         .adv-esc__ov{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,11,.82),rgba(10,10,11,.88))}
-        .adv-esc__in{position:relative;z-index:2}
-        .adv-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:2.8rem;align-items:center}
+        .adv-esc__in{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.6rem)}
+        .adv-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.8rem;align-items:start}
         /* "Conheça o Escritório" — fonte menor que o título da página */
         .adv-sub{color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 1.2rem;position:relative;padding-bottom:.75rem}
         .adv-sub::after{content:'';position:absolute;left:0;bottom:0;width:96px;height:1px;background:#d0835d}
-        .adv-cols__text p{color:#e3e7ec;line-height:1.9;font-size:1.02rem;text-align:left;margin:0 0 1.05rem;text-shadow:0 1px 10px rgba(0,0,0,.45)}
-        .adv-cols__text p:last-child{margin-bottom:0}
-        .adv-officecard{text-align:center}
-        .adv-officecard__logo{width:min(290px,84%);height:auto;display:block;margin:0 auto 1.6rem}
-        .adv-officecard__btn{display:inline-block;font-weight:500;font-size:.95rem;letter-spacing:.02em;color:#fff;text-decoration:none;border-bottom:1px solid #d0835d;padding-bottom:.22rem;transition:border-color .2s ease}
+        .adv-cols p{color:#e3e7ec;line-height:1.9;font-size:1.02rem;text-align:left;margin:0 0 1.05rem;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+        .adv-cols p:last-child{margin-bottom:0}
+        .adv-officecard{text-align:left}
+        .adv-officecard__logo{width:min(270px,82%);height:auto;display:block;margin:0 0 1.4rem}
+        .adv-officecard__btn{display:inline-block;margin-top:1.3rem;font-weight:500;font-size:.95rem;letter-spacing:.02em;color:#fff;text-decoration:none;border-bottom:1px solid #d0835d;padding-bottom:.22rem;transition:border-color .2s ease}
         .adv-officecard__btn:hover{border-color:#fff}
         /* ÁREA DE ATUAÇÃO — alinhado à esquerda */
         .adv-atuacao{text-align:left;padding:3.4rem 0;border-bottom:1px solid rgba(157,180,204,.1)}
@@ -64,13 +64,12 @@ sections:
             <div class="adv-esc__in">
               <div class="adv-cols">
                 <div class="adv-cols__text">
-                  <h2 class="adv-sub">Conheça o Escritório</h2>
-                  <p>Cosmo e Cosentino Advogados foi fundado em 2007, a partir da união de Sergio Cosmo e Carlo Cosentino – advogados desde 2000 e 2005, respectivamente. A sociedade nasceu de um propósito compartilhado: exercer uma advocacia de excelência, que dedique às pessoas físicas a mesma atenção e o mesmo rigor profissional tradicionalmente reservados à clientela empresarial.</p>
                   <p>A atuação voltada às pessoas jurídicas – empresas, entidades de classe e sindicatos, além de organizações não governamentais e demais instituições do terceiro setor – desenvolve-se no contencioso judicial, na consultoria jurídica e na negociação coletiva trabalhista.</p>
                   <p>Compõe ainda o portfólio do escritório um serviço de cálculos judiciais, sobretudo trabalhistas, apoiado em sistema próprio de elaboração e auditoria, que confere precisão e previsibilidade à gestão do passivo.</p>
                 </div>
                 <div class="adv-officecard">
                   <img class="adv-officecard__logo" src="/img/cosmo-brand-emblem-copper.png" alt="Cosmo & Cosentino Advogados">
+                  <p>Cosmo e Cosentino Advogados foi fundado em 2007, a partir da união de Sergio Cosmo e Carlo Cosentino – advogados desde 2000 e 2005, respectivamente. A sociedade nasceu de um propósito compartilhado: exercer uma advocacia de excelência, que dedique às pessoas físicas a mesma atenção e o mesmo rigor profissional tradicionalmente reservados à clientela empresarial.</p>
                   <a class="adv-officecard__btn" href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Visite o site</a>
                 </div>
               </div>
