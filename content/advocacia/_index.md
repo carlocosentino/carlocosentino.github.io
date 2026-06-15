@@ -40,9 +40,9 @@ sections:
         .adv-contato__info a{color:#9db4cc;text-decoration:none;font-weight:500}
         .adv-contato__info a:hover{color:#fff}
         .adv-contato__info .line{display:block;margin:.25rem 0}
-        .adv-contato__info a.adv-wa{display:inline-flex;align-items:center;gap:.5rem;margin:.3rem 0 .9rem;background:#25d366;color:#0a0a0b;font-weight:600;font-size:.9rem;letter-spacing:.01em;padding:.6rem 1.15rem;border-radius:6px;text-decoration:none;transition:background .18s ease}
-        .adv-contato__info a.adv-wa:hover{background:#1ebe5b;color:#0a0a0b}
-        .adv-contato__info a.adv-wa svg{flex:0 0 auto}
+        .adv-contato__info a.adv-wa{display:inline-flex;align-items:center;gap:.5rem;margin:1.1rem 0 0;background:transparent;color:#cdd2da;font-weight:500;font-size:.86rem;letter-spacing:.01em;padding:.5rem 1.05rem;border:1px solid rgba(157,180,204,.3);border-radius:6px;text-decoration:none;transition:border-color .18s ease,color .18s ease,background .18s ease}
+        .adv-contato__info a.adv-wa:hover{border-color:#25d366;color:#fff;background:rgba(37,211,102,.08)}
+        .adv-contato__info a.adv-wa svg{flex:0 0 auto;color:#25d366}
         .adv-form{display:flex;flex-direction:column;gap:.25rem}
         .adv-form label{color:#9db4cc;font-size:.74rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin:.55rem 0 .25rem}
         .adv-form input,.adv-form textarea{font-family:'Montserrat',sans-serif;background:rgba(157,180,204,.06);border:1px solid rgba(157,180,204,.28);border-radius:4px;color:#eef1f5;font-size:.98rem;padding:.62rem .8rem;transition:border-color .18s ease,background .18s ease}
@@ -87,9 +87,9 @@ sections:
                   Rua Frei Matias Teves, 280 — 305<br>
                   Ilha do Leite, Recife / PE
                 </address>
-                <a class="adv-wa" href="https://wa.me/5581996372619" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.05 1.6 5.78L2 22l4.42-1.16a9.9 9.9 0 0 0 5.62 1.73h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-2.62.69.7-2.56-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.06-8.32 8.06zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>WhatsApp: (81) 99637-2619</a>
                 <a class="line" href="tel:+558130330089">Telefone: (81) 3033-0089</a>
                 <a class="line" href="mailto:contato@cosmocosentino.com">contato@cosmocosentino.com</a>
+                <a class="adv-wa" href="https://wa.me/5581996372619" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.05 1.6 5.78L2 22l4.42-1.16a9.9 9.9 0 0 0 5.62 1.73h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-2.62.69.7-2.56-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.06-8.32 8.06zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.25 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>WhatsApp: (81) 99637-2619</a>
               </div>
               <form class="adv-form" action="https://formsubmit.co/contato@cosmocosentino.com" method="POST">
                 <input type="hidden" name="_subject" value="Contato pelo site — Advocacia (carlocosentino.com.br)">
