@@ -33,7 +33,7 @@ sections:
             <li>Contencioso trabalhista</li>
           </ul>
           <a class="adv-banner" href="https://www.cosmocosentino.com" target="_blank" rel="noopener">
-            <img class="adv-banner__logo" src="/img/cosmo-consentino-brand.png" alt="Cosmo & Cosentino Advogados Associados">
+            <img class="adv-banner__logo" src="/img/cosmo-consentino-brand.png" alt="Cosmo & Cosentino Advogados">
             <span class="adv-banner__desc">Atuação consultiva e contenciosa em Direito do Trabalho, Direito Sindical e Terceiro Setor. Conheça o escritório no site institucional.</span>
             <span class="adv-banner__cta">Acessar o site do escritório</span>
           </a>
