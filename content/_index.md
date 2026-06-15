@@ -109,7 +109,7 @@ sections:
     content:
       title: 'Grupo de Pesquisa'
       text: |-
-        **Direito do Trabalho e Teoria Social Crítica** (FDR/UFPE) — pesquisa interdisciplinar sobre trabalho, tecnologia e teoria social crítica, na tradição da Escola do Recife.
+        **Direito do Trabalho e Teoria Social Crítica** (FDR/UFPE) – pesquisa interdisciplinar sobre trabalho, tecnologia e teoria social crítica, na tradição da Escola do Recife.
 
         <p class="more-row"><a class="more-link" href="/projects/">Conhecer o grupo de pesquisa →</a></p>
     design:
@@ -118,7 +118,7 @@ sections:
     content:
       title: 'Advocacia'
       text: |-
-        **[Cosmo e Cosentino Advogados](https://www.cosmocosentino.com)** — atuação consultiva e contenciosa em Direito do Trabalho, Direito Sindical e Terceiro Setor.
+        **[Cosmo e Cosentino Advogados](https://www.cosmocosentino.com)** – atuação consultiva e contenciosa em Direito do Trabalho, Direito Sindical e Terceiro Setor.
     design:
       columns: '1'
 ---

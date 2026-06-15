@@ -9,6 +9,6 @@ tags:
 date: 2012-01-01
 ---
 
-Linha de pesquisa de caráter transversal, voltada à fundamentação teórica das demais investigações do grupo. Examina a reconfiguração dos pressupostos dogmáticos do Direito do Trabalho — subordinação, autonomia, categoria profissional — à luz das transformações produtivas e tecnológicas contemporâneas, na esteira da versão analítica desenvolvida por Everaldo Gaspar Lopes de Andrade.
+Linha de pesquisa de caráter transversal, voltada à fundamentação teórica das demais investigações do grupo. Examina a reconfiguração dos pressupostos dogmáticos do Direito do Trabalho – subordinação, autonomia, categoria profissional – à luz das transformações produtivas e tecnológicas contemporâneas, na esteira da versão analítica desenvolvida por Everaldo Gaspar Lopes de Andrade.
 
 Abrange também a análise da financeirização do fundo público e seus reflexos na previdência social, a colonialidade de gênero e raça como estruturantes do trabalho subalterno, e o fetichismo tecnológico como ideologia do capitalismo de plataforma.

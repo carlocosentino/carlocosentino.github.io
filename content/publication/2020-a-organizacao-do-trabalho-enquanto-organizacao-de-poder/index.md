@@ -1,5 +1,5 @@
 ---
-title: "A Organização do Trabalho enquanto Organização de Poder: explicações científicas extraídas da sociedade de controle — respostas e proposições das teorias organizacional e jurídica críticas"
+title: "A Organização do Trabalho enquanto Organização de Poder: explicações científicas extraídas da sociedade de controle – respostas e proposições das teorias organizacional e jurídica críticas"
 authors:
   - "me"
   - "Everaldo Gaspar Lopes de Andrade"

@@ -103,20 +103,20 @@ sections:
           <div class="perfil-col">
             <h2>Formação Acadêmica</h2>
             <ul>
-              <li><strong>Doutorado em Direito</strong> (2017) — Universidade Federal de Pernambuco<span class="meta">Orientador: Everaldo Gaspar Lopes de Andrade</span></li>
-              <li><strong>Mestrado em Direito</strong> (2011) — Universidade Federal de Pernambuco<span class="meta">Orientador: Everaldo Gaspar Lopes de Andrade</span></li>
-              <li><strong>Graduação em Direito</strong> (2004) — Faculdade de Ciências Humanas de Pernambuco</li>
+              <li><strong>Doutorado em Direito</strong> (2017) – Universidade Federal de Pernambuco<span class="meta">Orientador: Everaldo Gaspar Lopes de Andrade</span></li>
+              <li><strong>Mestrado em Direito</strong> (2011) – Universidade Federal de Pernambuco<span class="meta">Orientador: Everaldo Gaspar Lopes de Andrade</span></li>
+              <li><strong>Graduação em Direito</strong> (2004) – Faculdade de Ciências Humanas de Pernambuco</li>
             </ul>
           </div>
           <div class="perfil-col">
             <h2>Atuação Profissional</h2>
             <ul>
-              <li><strong>Professor Adjunto</strong> — Faculdade de Direito do Recife (UFPE)</li>
-              <li><strong>Coordenador da área de Direito do Trabalho</strong> — Centro de Ciências Jurídicas / Faculdade de Direito do Recife (CCJ/FDR · UFPE)</li>
-              <li><strong>Professor permanente</strong> — Programa de Pós-Graduação em Direito (PPGD/UFPE)</li>
-              <li><strong>Coordenador</strong> — Grupo de Pesquisa Direito do Trabalho e Teoria Social Crítica (PPGD/UFPE)</li>
-              <li><strong>Advogado e sócio</strong> — Cosmo e Cosentino Advogados (OAB/PE 22.955)</li>
-              <li><strong>Presidente</strong> — Sindicato dos Professores das Instituições de Ensino Superior Privadas do Recife e Região Metropolitana (SINPROES-PE)</li>
+              <li><strong>Professor Adjunto</strong> – Faculdade de Direito do Recife (UFPE)</li>
+              <li><strong>Coordenador da área de Direito do Trabalho</strong> – Centro de Ciências Jurídicas / Faculdade de Direito do Recife (CCJ/FDR · UFPE)</li>
+              <li><strong>Professor permanente</strong> – Programa de Pós-Graduação em Direito (PPGD/UFPE)</li>
+              <li><strong>Coordenador</strong> – Grupo de Pesquisa Direito do Trabalho e Teoria Social Crítica (PPGD/UFPE)</li>
+              <li><strong>Advogado e sócio</strong> – Cosmo e Cosentino Advogados (OAB/PE 22.955)</li>
+              <li><strong>Presidente</strong> – Sindicato dos Professores das Instituições de Ensino Superior Privadas do Recife e Região Metropolitana (SINPROES-PE)</li>
             </ul>
           </div>
           <div class="perfil-col">
@@ -125,19 +125,19 @@ sections:
               <li><strong>Academia Pernambucana de Direito do Trabalho</strong> (APDT)</li>
               <li><strong>Instituto Ítalo-Brasileiro de Direito do Trabalho</strong> (IIBDT)</li>
               <li><strong>Rede Nacional de Pesquisas e Estudos em Direito do Trabalho e da Seguridade Social</strong> (RENAPEDTS)</li>
-              <li><strong>Membro Consultor</strong> — Comissão Nacional de Direitos Sociais (OAB)</li>
+              <li><strong>Membro Consultor</strong> – Comissão Nacional de Direitos Sociais (OAB)</li>
             </ul>
           </div>
           <div class="perfil-col">
             <h2>Honrarias</h2>
             <ul>
-              <li><strong>Láurea de Agradecimento</strong> — Conselho Federal da Ordem dos Advogados do Brasil (OAB Nacional)<span class="meta">Comissão Nacional de Direitos Sociais · gestão 2022–2024</span></li>
+              <li><strong>Láurea de Agradecimento</strong> – Conselho Federal da Ordem dos Advogados do Brasil (OAB Nacional)<span class="meta">Comissão Nacional de Direitos Sociais · gestão 2022–2024</span></li>
             </ul>
           </div>
         </div>
         <div class="perfil-section">
           <h2>Grupo de Pesquisa</h2>
-          <p><strong>Direito do Trabalho e Teoria Social Crítica</strong> (PPGD/UFPE) — grupo coordenado por Carlo Cosentino, dedicado às relações entre trabalho, tecnologia e teoria social crítica: do futuro do trabalho e da uberização aos atravessamentos de gênero e raça, ao sindicalismo e aos novos movimentos sociais, à morte lenta e ao adoecimento, e à financeirização e à colonialidade de dados.</p>
+          <p><strong>Direito do Trabalho e Teoria Social Crítica</strong> (PPGD/UFPE) – grupo coordenado por Carlo Cosentino, dedicado às relações entre trabalho, tecnologia e teoria social crítica: do futuro do trabalho e da uberização aos atravessamentos de gênero e raça, ao sindicalismo e aos novos movimentos sociais, à morte lenta e ao adoecimento, e à financeirização e à colonialidade de dados.</p>
           <div class="links">
             <a href="https://www.youtube.com/@carlocosentino" target="_blank" rel="noopener">YouTube →</a>
             <a href="https://scholar.google.com/citations?user=8O4wNSUAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>

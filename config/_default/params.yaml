@@ -21,7 +21,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: "Professor Adjunto · Faculdade de Direito do Recife · UFPE"
     # Site meta description for search engines and social sharing
-    description: "Carlo Cosentino — advogado e Professor Adjunto de Direito do
+    description: "Carlo Cosentino – advogado e Professor Adjunto de Direito do
       Trabalho na Faculdade de Direito do Recife (UFPE). Publicações, pesquisa e
       atuação sobre trabalho, tecnologia e os rumos do mundo do trabalho."
     # Social accounts (used for meta tags like Twitter Cards)
@@ -45,7 +45,7 @@ hugoblox:
     # Optional: Mode-specific color overrides
     colors_light: {}
     colors_dark: {}
-    # Semantic surface overrides — fundo escuro casando com o fundo da foto
+    # Semantic surface overrides – fundo escuro casando com o fundo da foto
     surfaces:
       background: "#0a0a0b"
       foreground: "#e8e8ea"
@@ -108,7 +108,7 @@ hugoblox:
     # Footer style variant
     style: minimal # minimal | columns | centered
     language_switcher: false # site monolíngue (pt-BR)
-    # Custom footer text (HTML supported) — contato discreto; versão completa em /contato/
+    # Custom footer text (HTML supported) – contato discreto; versão completa em /contato/
     text: |-
       <div class="site-contato-mini">
       <a href="/contato/">Contato</a><span>·</span><a href="mailto:contato@carlocosentino.com.br">contato@carlocosentino.com.br</a><span>·</span><a href="tel:+558130330089">+55 81 3033-0089</a><span>·</span><a href="https://wa.me/5581996372619" target="_blank" rel="noopener">WhatsApp</a>

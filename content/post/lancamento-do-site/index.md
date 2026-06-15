@@ -1,6 +1,6 @@
 ---
 title: "Novo site no ar"
-summary: "Lançamento da página que reúne a produção científica e a atuação acadêmica de Carlo Cosentino — publicações, projetos de pesquisa e remissões aos demais canais científicos."
+summary: "Lançamento da página que reúne a produção científica e a atuação acadêmica de Carlo Cosentino – publicações, projetos de pesquisa e remissões aos demais canais científicos."
 date: 2026-06-04
 authors:
   - me
@@ -13,9 +13,9 @@ featured: true
 
 O sítio reúne, em um único endereço:
 
-- as **publicações** — artigos, capítulos e livros dedicados ao Direito do Trabalho na era digital;
+- as **publicações** – artigos, capítulos e livros dedicados ao Direito do Trabalho na era digital;
 - os **projetos de pesquisa** que organizam essa produção, da plataformização do trabalho ao neotaylorismo digital;
-- as **remissões** aos demais canais científicos — ORCID, Google Scholar, Currículo Lattes, Academia.edu e ResearchGate.
+- as **remissões** aos demais canais científicos – ORCID, Google Scholar, Currículo Lattes, Academia.edu e ResearchGate.
 
 A proposta é oferecer um ponto de acesso estável e curado à pesquisa que desenvolvo, em diálogo com a teoria social crítica e com os desafios contemporâneos da proteção social diante das transformações tecnológicas do trabalho.
 

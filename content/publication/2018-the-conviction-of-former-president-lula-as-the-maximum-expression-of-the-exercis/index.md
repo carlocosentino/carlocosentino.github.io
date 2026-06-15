@@ -10,7 +10,7 @@ publication:
   publisher: "CLACSO"
   pages: "117--121"
 abstract: |-
-  Artigo em inglês que analisa a condenação do ex-presidente Lula como expressão máxima do lawfare — o uso do Direito e do processo como armas de perseguição política. Uma leitura crítica sobre os limites entre Justiça e poder no Brasil recente.
+  Artigo em inglês que analisa a condenação do ex-presidente Lula como expressão máxima do lawfare – o uso do Direito e do processo como armas de perseguição política. Uma leitura crítica sobre os limites entre Justiça e poder no Brasil recente.
 featured: false
 hugoblox:
   ids:
