@@ -27,7 +27,7 @@ sections:
         .perfil__cargo{font-size:.86rem;color:#9db4cc;font-weight:600;line-height:1.5}
         .perfil__nav{margin-top:1.15rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem .8rem;align-items:start}
         .perfil__navgroup h3{display:flex;align-items:flex-end;min-height:3.2em;line-height:1.2;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#9db4cc;font-weight:700;margin:0 0 .6rem;padding-bottom:.4rem;border-bottom:1px solid rgba(157,180,204,.18)}
-        .perfil__navgroup .links{display:flex;flex-direction:column;gap:.2rem}
+        .perfil__navgroup .links{display:flex;flex-direction:column;gap:.3rem}
         .perfil__navgroup .links a{display:flex;align-items:center;min-height:2.6em;color:#8aa0b4;text-decoration:none;font-size:.8rem;font-weight:500;line-height:1.25}
         .perfil__navgroup .links a:hover{color:#e8e8ea}
         .perfil__texto{color:#cdd2da;padding-top:2cm}
