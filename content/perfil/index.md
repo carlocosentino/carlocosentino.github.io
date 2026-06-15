@@ -25,10 +25,10 @@ sections:
         .perfil__foto{width:100%;display:block;-webkit-mask-image:linear-gradient(to bottom,#000 85%,transparent 100%);mask-image:linear-gradient(to bottom,#000 85%,transparent 100%)}
         .perfil__nome{font-size:1.5rem;font-weight:700;letter-spacing:-.01em;color:#f3f4f6;margin:1.15rem 0 .3rem;line-height:1.15}
         .perfil__cargo{font-size:.86rem;color:#9db4cc;font-weight:600;line-height:1.5}
-        .perfil__nav{margin-top:1.15rem;display:flex;flex-direction:column;gap:1rem}
-        .perfil__navgroup h3{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#9db4cc;font-weight:700;margin:0 0 .5rem;padding-bottom:.4rem;border-bottom:1px solid rgba(157,180,204,.18)}
-        .perfil__navgroup .links{display:flex;flex-wrap:wrap;gap:.45rem .9rem}
-        .perfil__navgroup .links a{color:#8aa0b4;text-decoration:none;font-size:.82rem;font-weight:500}
+        .perfil__nav{margin-top:1.15rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem .8rem;align-items:start}
+        .perfil__navgroup h3{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#9db4cc;font-weight:700;margin:0 0 .6rem;padding-bottom:.4rem;border-bottom:1px solid rgba(157,180,204,.18)}
+        .perfil__navgroup .links{display:flex;flex-direction:column;gap:.45rem}
+        .perfil__navgroup .links a{color:#8aa0b4;text-decoration:none;font-size:.8rem;font-weight:500;line-height:1.25}
         .perfil__navgroup .links a:hover{color:#e8e8ea}
         .perfil__texto{color:#cdd2da;padding-top:2cm}
         .perfil__texto p{text-align:justify;text-justify:inter-word;hyphens:auto;line-height:1.85;font-size:1.02rem;margin:0 0 1.15rem}
@@ -48,7 +48,7 @@ sections:
         .perfil-section a:hover{color:#e8e8ea}
         .perfil-section .links{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:.6rem}
         .perfil-section .links a{border-bottom:none;font-weight:600;font-size:.9rem}
-        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:400px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__navgroup .links{justify-content:center}.perfil__navgroup h3{border-bottom:none}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
+        @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:400px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__nav{grid-template-columns:1fr 1fr}.perfil__navgroup .links{align-items:center}.perfil__navgroup h3{border-bottom:none;text-align:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
         </style>
         <div class="perfil">
           <div class="perfil__aside">
