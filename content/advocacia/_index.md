@@ -21,14 +21,14 @@ sections:
         .adv-esc__ov{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,11,.82),rgba(10,10,11,.88))}
         .adv-esc__in{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.6rem)}
         /* Bloco "sobre" — logo centralizada + texto em duas colunas equilibradas */
-        .adv-about{max-width:920px;margin:0 auto;text-align:center}
-        .adv-about__logo{width:min(250px,72%);height:auto;display:inline-block;margin:0 0 2rem}
-        .adv-about__cols{column-count:2;column-gap:3rem;text-align:left;margin:0}
-        .adv-about__cols p{color:#e6eaef;line-height:1.85;font-size:1rem;margin:0 0 1.05rem;break-inside:avoid;text-shadow:0 1px 10px rgba(0,0,0,.45)}
-        .adv-about__cols p:last-child{margin-bottom:0}
-        .adv-about__link{display:inline-block;margin:2rem 0 0;font-weight:500;font-size:.95rem;letter-spacing:.02em;color:#fff;text-decoration:none;border-bottom:1px solid #d0835d;padding-bottom:.22rem;transition:border-color .2s ease}
+        .adv-about{max-width:980px;margin:0 auto}
+        .adv-about__logo{width:min(250px,72%);height:auto;display:block;margin:0 auto 2.2rem}
+        .adv-about__grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;text-align:left}
+        .adv-about__grid p{color:#e6eaef;line-height:1.85;font-size:1rem;margin:0 0 1.05rem;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+        .adv-about__grid p:last-child{margin-bottom:0}
+        .adv-about__link{display:inline-block;margin-top:1.6rem;font-weight:500;font-size:.95rem;letter-spacing:.02em;color:#fff;text-decoration:none;border-bottom:1px solid #d0835d;padding-bottom:.22rem;transition:border-color .2s ease}
         .adv-about__link:hover{border-color:#fff}
-        @media(max-width:680px){.adv-about__cols{column-count:1}}
+        @media(max-width:680px){.adv-about__grid{grid-template-columns:1fr;gap:1.5rem}}
         /* CONTATO — padrão escuro, alinhado à esquerda, duas colunas */
         .adv-contato{padding:3.4rem 0 1rem}
         .adv-contato__h{text-align:left;color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 1.8rem;padding-bottom:.75rem;position:relative}
@@ -60,12 +60,17 @@ sections:
             <div class="adv-esc__in">
               <div class="adv-about">
                 <img class="adv-about__logo" src="/img/cosmo-brand-emblem-copper.png" alt="Cosmo & Cosentino Advogados">
-                <div class="adv-about__cols">
-                  <p>Cosmo e Cosentino Advogados foi fundado em 2007, a partir da união de Sergio Cosmo e Carlo Cosentino – advogados desde 2000 e 2005, respectivamente. A sociedade nasceu de um propósito compartilhado: exercer uma advocacia de excelência, que dedique às pessoas físicas a mesma atenção e o mesmo rigor profissional tradicionalmente reservados à clientela empresarial.</p>
-                  <p>A atuação voltada às pessoas jurídicas – empresas, entidades de classe e sindicatos, além de organizações não governamentais e demais instituições do terceiro setor – desenvolve-se no contencioso judicial, na consultoria jurídica e na negociação coletiva trabalhista.</p>
-                  <p>Compõe ainda o portfólio do escritório um serviço de cálculos judiciais, sobretudo trabalhistas, apoiado em sistema próprio de elaboração e auditoria, que confere precisão e previsibilidade à gestão do passivo.</p>
+                <div class="adv-about__grid">
+                  <div class="adv-about__col">
+                    <p>Cosmo e Cosentino Advogados foi fundado em 2007, a partir da união de Sergio Cosmo e Carlo Cosentino – advogados desde 2000 e 2005, respectivamente.</p>
+                    <p>A sociedade nasceu de um propósito compartilhado: exercer uma advocacia de excelência, que dedique às pessoas físicas a mesma atenção e o mesmo rigor profissional tradicionalmente reservados à clientela empresarial.</p>
+                    <a class="adv-about__link" href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Visite o site</a>
+                  </div>
+                  <div class="adv-about__col">
+                    <p>A atuação voltada às pessoas jurídicas – empresas, entidades de classe e sindicatos, além de organizações não governamentais e demais instituições do terceiro setor – desenvolve-se no contencioso judicial, na consultoria jurídica e na negociação coletiva trabalhista.</p>
+                    <p>Compõe ainda o portfólio do escritório um serviço de cálculos judiciais, sobretudo trabalhistas, apoiado em sistema próprio de elaboração e auditoria, que confere precisão e previsibilidade à gestão do passivo.</p>
+                  </div>
                 </div>
-                <a class="adv-about__link" href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Visite o site</a>
               </div>
             </div>
           </section>
