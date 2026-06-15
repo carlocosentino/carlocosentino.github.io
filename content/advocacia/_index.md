@@ -11,8 +11,8 @@ sections:
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
         .adv{font-family:'Montserrat',system-ui,sans-serif;position:relative;left:50%;transform:translateX(-50%);width:min(1040px,92vw)}
-        /* SEÇÃO "CONHEÇA O ESCRITÓRIO" com as fotos (rotativas) ao fundo */
-        .adv-esc{position:relative;width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;padding:3.8rem 0}
+        /* SEÇÃO do escritório — fotos (rotativas) full-bleed ao fundo */
+        .adv-esc{position:relative;width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;padding:4rem 0}
         .adv-esc__slide{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;animation:advfade 18s infinite}
         .adv-esc__slide:nth-child(1){animation-delay:0s}
         .adv-esc__slide:nth-child(2){animation-delay:6s}
@@ -20,20 +20,22 @@ sections:
         @keyframes advfade{0%{opacity:0}2%{opacity:1}30%{opacity:1}34%{opacity:0}100%{opacity:0}}
         .adv-esc__ov{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,11,.82),rgba(10,10,11,.88))}
         .adv-esc__in{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.6rem)}
-        .adv-cols{display:grid;grid-template-columns:1fr 1fr;gap:2.8rem;align-items:start}
-        /* "Conheça o Escritório" — fonte menor que o título da página */
+        /* Bloco "sobre" — logo centralizada + texto em duas colunas equilibradas */
+        .adv-about{max-width:920px;margin:0 auto;text-align:center}
+        .adv-about__logo{width:min(250px,72%);height:auto;display:inline-block;margin:0 0 2rem}
+        .adv-about__cols{column-count:2;column-gap:3rem;text-align:left;margin:0}
+        .adv-about__cols p{color:#e6eaef;line-height:1.85;font-size:1rem;margin:0 0 1.05rem;break-inside:avoid;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+        .adv-about__cols p:last-child{margin-bottom:0}
+        .adv-about__link{display:inline-block;margin:2rem 0 0;font-weight:500;font-size:.95rem;letter-spacing:.02em;color:#fff;text-decoration:none;border-bottom:1px solid #d0835d;padding-bottom:.22rem;transition:border-color .2s ease}
+        .adv-about__link:hover{border-color:#fff}
+        @media(max-width:680px){.adv-about__cols{column-count:1}}
+        /* Subtítulos de seção (cobre delicado) */
         .adv-sub{color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 1.2rem;position:relative;padding-bottom:.75rem}
         .adv-sub::after{content:'';position:absolute;left:0;bottom:0;width:96px;height:1px;background:#d0835d}
-        .adv-cols p{color:#e3e7ec;line-height:1.9;font-size:1.02rem;text-align:left;margin:0 0 1.05rem;text-shadow:0 1px 10px rgba(0,0,0,.45)}
-        .adv-cols p:last-child{margin-bottom:0}
-        .adv-officecard{text-align:left}
-        .adv-officecard__logo{width:min(270px,82%);height:auto;display:block;margin:0 0 1.4rem}
-        .adv-officecard__btn{display:inline-block;margin-top:1.3rem;font-weight:500;font-size:.95rem;letter-spacing:.02em;color:#fff;text-decoration:none;border-bottom:1px solid #d0835d;padding-bottom:.22rem;transition:border-color .2s ease}
-        .adv-officecard__btn:hover{border-color:#fff}
         /* ÁREA DE ATUAÇÃO — alinhado à esquerda */
         .adv-atuacao{text-align:left;padding:3.4rem 0;border-bottom:1px solid rgba(157,180,204,.1)}
         .adv-atuacao p{color:#cdd2da;line-height:1.95;font-size:1.06rem;max-width:80ch;margin:1.3rem 0 0;text-align:left}
-        /* CONTATO — padrão escuro da página, alinhado à esquerda, duas colunas */
+        /* CONTATO — padrão escuro, alinhado à esquerda, duas colunas */
         .adv-contato{padding:3.4rem 0 1rem}
         .adv-contato__h{text-align:left;color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 1.8rem;padding-bottom:.75rem;position:relative}
         .adv-contato__h::after{content:'';position:absolute;left:0;bottom:0;width:96px;height:1px;background:#d0835d}
@@ -52,7 +54,7 @@ sections:
         .adv-form button{align-self:flex-start;margin-top:1.1rem;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#0a0a0b;background:#d0835d;border:2px solid #d0835d;border-radius:0;padding:.72rem 2.1rem;cursor:pointer;transition:background .2s ease,color .2s ease}
         .adv-form button:hover{background:transparent;color:#d0835d}
         .adv-honey{display:none}
-        @media(max-width:760px){.adv-cols{grid-template-columns:1fr;gap:2rem}.adv-contato__grid{grid-template-columns:1fr;gap:1.8rem}}
+        @media(max-width:760px){.adv-contato__grid{grid-template-columns:1fr;gap:1.8rem}}
         </style>
         <div class="adv">
 
@@ -62,16 +64,14 @@ sections:
             <div class="adv-esc__slide" style="background-image:url('/img/adv-slide-3.jpg')"></div>
             <div class="adv-esc__ov"></div>
             <div class="adv-esc__in">
-              <div class="adv-cols">
-                <div class="adv-officecard">
-                  <img class="adv-officecard__logo" src="/img/cosmo-brand-emblem-copper.png" alt="Cosmo & Cosentino Advogados">
+              <div class="adv-about">
+                <img class="adv-about__logo" src="/img/cosmo-brand-emblem-copper.png" alt="Cosmo & Cosentino Advogados">
+                <div class="adv-about__cols">
                   <p>Cosmo e Cosentino Advogados foi fundado em 2007, a partir da união de Sergio Cosmo e Carlo Cosentino – advogados desde 2000 e 2005, respectivamente. A sociedade nasceu de um propósito compartilhado: exercer uma advocacia de excelência, que dedique às pessoas físicas a mesma atenção e o mesmo rigor profissional tradicionalmente reservados à clientela empresarial.</p>
-                  <a class="adv-officecard__btn" href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Visite o site</a>
-                </div>
-                <div class="adv-cols__text">
                   <p>A atuação voltada às pessoas jurídicas – empresas, entidades de classe e sindicatos, além de organizações não governamentais e demais instituições do terceiro setor – desenvolve-se no contencioso judicial, na consultoria jurídica e na negociação coletiva trabalhista.</p>
                   <p>Compõe ainda o portfólio do escritório um serviço de cálculos judiciais, sobretudo trabalhistas, apoiado em sistema próprio de elaboração e auditoria, que confere precisão e previsibilidade à gestão do passivo.</p>
                 </div>
+                <a class="adv-about__link" href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Visite o site</a>
               </div>
             </div>
           </section>
