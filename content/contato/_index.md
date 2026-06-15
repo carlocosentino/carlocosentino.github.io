@@ -9,16 +9,13 @@ sections:
       title: 'Contato'
       text: |-
         <style>
-        .site-contato--page{grid-template-columns:1fr!important;width:min(560px,92vw)!important;gap:1.3rem!important;padding-top:0}
-        .site-contato--page .site-contato__info{text-align:center}
-        .site-contato--page .wa{margin-bottom:.2rem}
-        .site-contato--page form{align-items:center}
+        .site-contato--page{grid-template-columns:1fr!important;width:min(560px,92vw)!important;gap:1.6rem!important;padding-top:0}
+        .site-contato--page form{align-items:stretch}
+        .site-contato--page label{text-align:left}
         .site-contato--page button{align-self:center}
+        .site-contato--page .site-contato__info{text-align:center}
         </style>
         <div class="site-contato site-contato--page">
-        <div class="site-contato__info">
-        <a class="wa" href="https://wa.me/5581996372619" target="_blank" rel="noopener">Falar no WhatsApp</a>
-        </div>
         <div class="site-contato__form">
         <form action="https://formsubmit.co/contato@carlocosentino.com.br" method="POST">
         <input type="hidden" name="_subject" value="Contato pelo site — carlocosentino.com.br">
@@ -36,6 +33,9 @@ sections:
         <textarea id="ct-msg" name="Mensagem"></textarea>
         <button type="submit">ENVIAR</button>
         </form>
+        </div>
+        <div class="site-contato__info">
+        <a class="wa" href="https://wa.me/5581996372619" target="_blank" rel="noopener">Falar no WhatsApp</a>
         </div>
         </div>
     design:
