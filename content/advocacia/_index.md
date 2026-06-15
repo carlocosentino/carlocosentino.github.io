@@ -63,14 +63,14 @@ sections:
             <div class="adv-esc__ov"></div>
             <div class="adv-esc__in">
               <div class="adv-cols">
-                <div class="adv-cols__text">
-                  <p>A atuação voltada às pessoas jurídicas – empresas, entidades de classe e sindicatos, além de organizações não governamentais e demais instituições do terceiro setor – desenvolve-se no contencioso judicial, na consultoria jurídica e na negociação coletiva trabalhista.</p>
-                  <p>Compõe ainda o portfólio do escritório um serviço de cálculos judiciais, sobretudo trabalhistas, apoiado em sistema próprio de elaboração e auditoria, que confere precisão e previsibilidade à gestão do passivo.</p>
-                </div>
                 <div class="adv-officecard">
                   <img class="adv-officecard__logo" src="/img/cosmo-brand-emblem-copper.png" alt="Cosmo & Cosentino Advogados">
                   <p>Cosmo e Cosentino Advogados foi fundado em 2007, a partir da união de Sergio Cosmo e Carlo Cosentino – advogados desde 2000 e 2005, respectivamente. A sociedade nasceu de um propósito compartilhado: exercer uma advocacia de excelência, que dedique às pessoas físicas a mesma atenção e o mesmo rigor profissional tradicionalmente reservados à clientela empresarial.</p>
                   <a class="adv-officecard__btn" href="https://www.cosmocosentino.com" target="_blank" rel="noopener">Visite o site</a>
+                </div>
+                <div class="adv-cols__text">
+                  <p>A atuação voltada às pessoas jurídicas – empresas, entidades de classe e sindicatos, além de organizações não governamentais e demais instituições do terceiro setor – desenvolve-se no contencioso judicial, na consultoria jurídica e na negociação coletiva trabalhista.</p>
+                  <p>Compõe ainda o portfólio do escritório um serviço de cálculos judiciais, sobretudo trabalhistas, apoiado em sistema próprio de elaboração e auditoria, que confere precisão e previsibilidade à gestão do passivo.</p>
                 </div>
               </div>
             </div>
