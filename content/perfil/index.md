@@ -52,7 +52,6 @@ sections:
           <div class="perfil__aside">
             <img class="perfil__foto" src="/img/carlo-perfil-cutout-v4.png" alt="Carlo Cosentino">
             <div class="perfil__nome">Carlo Cosentino</div>
-            <div class="perfil__cargo">Advogado · OAB/PE 22.955<br>Professor Adjunto · Faculdade de Direito do Recife · UFPE</div>
             <div class="perfil__links">
               <a href="mailto:contato@carlocosentino.com.br">Contato</a>
               <a href="https://orcid.org/0000-0002-7661-4688" target="_blank" rel="noopener">ORCID</a>
