@@ -22,7 +22,7 @@ sections:
         .adv-esc__in{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.6rem)}
         /* Bloco "sobre" — logo centralizada + texto em duas colunas equilibradas */
         .adv-about{max-width:980px;margin:0 auto}
-        .adv-about__logo{width:min(250px,72%);height:auto;display:block;margin:0 auto 2.2rem}
+        .adv-about__logo{width:min(325px,90%);height:auto;display:block;margin:0 auto 2.2rem}
         .adv-about__grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;text-align:left}
         .adv-about__grid p{color:#e6eaef;line-height:1.85;font-size:1rem;margin:0 0 1.05rem;text-shadow:0 1px 10px rgba(0,0,0,.45)}
         .adv-about__grid p:last-child{margin-bottom:0}
@@ -31,15 +31,16 @@ sections:
         @media(max-width:680px){.adv-about__grid{grid-template-columns:1fr;gap:1.5rem}}
         /* CONTATO — padrão escuro, alinhado à esquerda, duas colunas */
         .adv-contato{padding:3.4rem 0 1rem}
-        .adv-contato__h{text-align:center;color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 2.1rem;padding-bottom:.75rem;position:relative}
-        .adv-contato__h::after{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:96px;height:1px;background:#d0835d}
+        .adv-contato__h{text-align:left;color:#f3f4f6;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(1rem,1.9vw,1.15rem);margin:0 0 2.1rem;padding-bottom:.75rem;position:relative}
+        .adv-contato__h::after{content:'';position:absolute;left:0;bottom:0;width:96px;height:1px;background:#d0835d}
         .adv-contato__grid{display:grid;grid-template-columns:1fr 1fr;gap:2.8rem;align-items:start}
         .adv-contato__info{color:#cdd2da;line-height:1.8}
         .adv-contato__info strong{display:block;font-size:1.05rem;margin:0 0 .55rem;color:#f3f4f6;font-weight:600}
         .adv-contato__info address{font-style:normal;font-size:.99rem;margin:0 0 1.1rem}
         .adv-contato__info a{color:#9db4cc;text-decoration:none;font-weight:500}
         .adv-contato__info a:hover{color:#fff}
-        .adv-contato__info .line{display:block;margin:.25rem 0}
+        .adv-contato__info .line{display:block;margin:.25rem 0;font-size:.99rem;font-weight:400;color:#cdd2da}
+        .adv-contato__info .line:hover{color:#fff}
         .adv-contato__info a.adv-wa{display:inline-flex;align-items:center;gap:.5rem;margin:1.1rem 0 0;background:transparent;color:#cdd2da;font-weight:500;font-size:.86rem;letter-spacing:.01em;padding:.5rem 1.05rem;border:1px solid rgba(157,180,204,.3);border-radius:6px;text-decoration:none;transition:border-color .18s ease,color .18s ease,background .18s ease}
         .adv-contato__info a.adv-wa:hover{border-color:#25d366;color:#fff;background:rgba(37,211,102,.08)}
         .adv-contato__info a.adv-wa svg{flex:0 0 auto;color:#25d366}
