@@ -30,6 +30,8 @@ sections:
         /* Home: espaçamento mais compacto entre as seções e entre título e conteúdo */
         .page-body section.hbb-section+section.hbb-section{padding-top:2.3rem!important;padding-bottom:2.3rem!important}
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.3rem!important}
+        /* Mantém o hero colado no topo (a regra global de título não se aplica aqui) */
+        #section-markdown{padding-top:0!important}
         </style>
         <div class="hero">
           <div class="hero__photo"><img src="/img/carlo-home-front-smile.webp" alt="Carlo Cosentino"></div>
