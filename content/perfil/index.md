@@ -46,6 +46,8 @@ sections:
         .perfil-section p strong{color:#f3f4f6;font-weight:600}
         .perfil-section a{color:#9db4cc;text-decoration:none;border-bottom:1px solid rgba(157,180,204,.35)}
         .perfil-section a:hover{color:#e8e8ea}
+        .perfil-section h2 a{color:inherit;text-decoration:none;border-bottom:none}
+        .perfil-section h2 a:hover{color:#e8e8ea}
         .perfil-section .links{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:.6rem}
         .perfil-section .links a{border-bottom:none;font-weight:600;font-size:.9rem}
         @media(max-width:820px){.perfil{grid-template-columns:1fr;gap:1.6rem;text-align:center}.perfil__aside{position:static;max-width:400px;margin:0 auto}.perfil__texto{padding-top:0}.perfil__texto p{text-align:left}.perfil__nav{grid-template-columns:1fr 1fr}.perfil__navgroup .links{align-items:center}.perfil__navgroup h3{border-bottom:none;justify-content:center}.perfil-cols{grid-template-columns:1fr;gap:2rem;text-align:left}}
@@ -136,13 +138,8 @@ sections:
           </div>
         </div>
         <div class="perfil-section">
-          <h2>Grupo de Pesquisa</h2>
+          <h2><a href="/projects/">Grupo de Pesquisa</a></h2>
           <p><strong>Direito do Trabalho e Teoria Social Crítica</strong> (PPGD/UFPE) – grupo coordenado por Carlo Cosentino, dedicado às relações entre trabalho, tecnologia e teoria social crítica: do futuro do trabalho e da uberização aos atravessamentos de gênero e raça, ao sindicalismo e aos novos movimentos sociais, à morte lenta e ao adoecimento, e à financeirização e à colonialidade de dados.</p>
-          <div class="links">
-            <a href="https://www.youtube.com/@carlocosentino" target="_blank" rel="noopener">YouTube →</a>
-            <a href="https://scholar.google.com/citations?user=8O4wNSUAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>
-            <a href="http://lattes.cnpq.br/9403069473693221" target="_blank" rel="noopener">Lattes →</a>
-          </div>
         </div>
     design:
       columns: '1'

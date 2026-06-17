@@ -18,7 +18,7 @@ main:
   - name: Podcast
     url: /podcast/
     weight: 60
-  - name: Material didático
+  - name: Material Didático
     url: /materiais/
     weight: 70
   - name: Grupo de Pesquisa
