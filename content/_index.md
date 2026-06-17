@@ -31,7 +31,8 @@ sections:
         .page-body section.hbb-section+section.hbb-section{padding-top:2.3rem!important;padding-bottom:2.3rem!important}
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.3rem!important}
         /* Texto das seções justificado (exceto os links "ver mais") */
-        .page-body section.hbb-section p:not(.more-row){text-align:justify}
+        .page-body section.hbb-section .prose{text-align:justify}
+        .page-body section.hbb-section .prose .more-row{text-align:left}
         /* Mantém o hero colado no topo (a regra global de título não se aplica aqui) */
         #section-markdown{padding-top:0!important}
         </style>
