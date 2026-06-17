@@ -8,7 +8,7 @@ sections:
     content:
       title: 'Material Didático'
       text: |-
-        Espaço dedicado a materiais de apoio ao ensino e à pesquisa – planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho e Direito Sindical.
+        Espaço dedicado ao compartilhamento de materiais de apoio ao ensino e à pesquisa – planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho.
 
         Os materiais serão disponibilizados progressivamente. Para solicitações específicas, escreva para [contato@carlocosentino.com.br](mailto:contato@carlocosentino.com.br).
     design:
