@@ -98,7 +98,7 @@ sections:
       columns: '1'
   - block: markdown
     content:
-      title: 'Material didático'
+      title: 'Material Didático'
       text: |-
         Planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho e Direito Sindical.
 
@@ -109,16 +109,18 @@ sections:
     content:
       title: 'Grupo de Pesquisa'
       text: |-
-        **Direito do Trabalho e Teoria Social Crítica** (FDR/UFPE) – pesquisa interdisciplinar sobre trabalho, tecnologia e teoria social crítica, na tradição da Escola do Recife.
+        **Direito do Trabalho e Teoria Social Crítica** (UFPE) – grupo coordenado por Carlo Cosentino que dá continuidade à linha do Prof. Everaldo Gaspar Lopes de Andrade, examinando o Direito do Trabalho sob inspiração filosófica e da teoria social crítica – do trabalho subordinado às crises do sindicalismo, da revolução informacional às metamorfoses do trabalho – e difundindo o pensamento da Escola do Recife.
 
         <p class="more-row"><a class="more-link" href="/projects/">Conhecer o grupo de pesquisa →</a></p>
     design:
       columns: '1'
   - block: markdown
     content:
-      title: 'Advocacia'
+      title: 'Consultoria Jurídica'
       text: |-
-        **[Cosmo e Cosentino Advogados](https://www.cosmocosentino.com)** – atuação consultiva e contenciosa em Direito do Trabalho, Direito Sindical e Terceiro Setor.
+        Atuação advocatícia de Carlo Cosentino como sócio do **Cosmo e Cosentino Advogados** (Recife, desde 2007): consultoria e contencioso em Direito do Trabalho e Direito Sindical, para pessoas físicas, empresas, sindicatos e entidades do terceiro setor – incluindo negociação coletiva e cálculos judiciais trabalhistas.
+
+        <p class="more-row"><a class="more-link" href="/advocacia/">Conhecer a atuação →</a></p>
     design:
       columns: '1'
 ---

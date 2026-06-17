@@ -260,7 +260,7 @@
   // Títulos das seções da home viram links para as páginas correspondentes
   (function(){
     if(location.pathname!=='/'&&location.pathname!==''&&location.pathname!=='/index.html') return;
-    var map={'Publicações':'/publication/','Material didático':'/materiais/','Grupo de Pesquisa':'/projects/','Podcast':'/podcast/','Vídeos':'/videos/','Advocacia':'https://www.cosmocosentino.com'};
+    var map={'Publicações':'/publication/','Material Didático':'/materiais/','Grupo de Pesquisa':'/projects/','Podcast':'/podcast/','Vídeos':'/videos/','Consultoria Jurídica':'/advocacia/'};
     document.addEventListener('DOMContentLoaded',function(){
       document.querySelectorAll('.page-body [class*="text-3xl"][class*="font-bold"]').forEach(function(d){
         var t=d.textContent.trim();
