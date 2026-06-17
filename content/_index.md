@@ -30,6 +30,8 @@ sections:
         /* Home: espaçamento mais compacto entre as seções e entre título e conteúdo */
         .page-body section.hbb-section+section.hbb-section{padding-top:2.3rem!important;padding-bottom:2.3rem!important}
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.3rem!important}
+        /* Texto das seções justificado (exceto os links "ver mais") */
+        .page-body section.hbb-section p:not(.more-row){text-align:justify}
         /* Mantém o hero colado no topo (a regra global de título não se aplica aqui) */
         #section-markdown{padding-top:0!important}
         </style>
@@ -109,7 +111,7 @@ sections:
     content:
       title: 'Grupo de Pesquisa'
       text: |-
-        **Direito do Trabalho e Teoria Social Crítica** (UFPE) – grupo coordenado por Carlo Cosentino que dá continuidade à linha do Prof. Everaldo Gaspar Lopes de Andrade, examinando o Direito do Trabalho sob inspiração filosófica e da teoria social crítica – do trabalho subordinado às crises do sindicalismo, da revolução informacional às metamorfoses do trabalho – e difundindo o pensamento da Escola do Recife.
+        **Direito do Trabalho e Teoria Social Crítica** (UFPE) – grupo coordenado por Carlo Cosentino e pelo professor Hugo Melo, que dá continuidade à linha de pesquisa do professor Everaldo Gaspar Lopes de Andrade, examinando o Direito do Trabalho sob inspiração filosófica e da teoria social crítica – do trabalho subordinado às crises do sindicalismo, da revolução informacional às metamorfoses do trabalho, das ofensivas neoliberais às garantias do não retrocesso social – e difundindo o pensamento da Escola do Recife.
 
         <p class="more-row"><a class="more-link" href="/projects/">Conhecer o grupo de pesquisa →</a></p>
     design:
@@ -118,7 +120,7 @@ sections:
     content:
       title: 'Consultoria Jurídica'
       text: |-
-        Atuação advocatícia de Carlo Cosentino como sócio do **Cosmo e Cosentino Advogados** (Recife, desde 2007): consultoria e contencioso em Direito do Trabalho e Direito Sindical, para pessoas físicas, empresas, sindicatos e entidades do terceiro setor – incluindo negociação coletiva e cálculos judiciais trabalhistas.
+        Carlo Cosentino exerce a advocacia desde 2005 e integra o **Cosmo e Cosentino Advogados**, fundado em 2007. O escritório atende pessoas físicas, empresas, entidades de classe, sindicatos e instituições do terceiro setor, na consultoria jurídica e no contencioso judicial, em vários ramos do direito.
 
         <p class="more-row"><a class="more-link" href="/advocacia/">Conhecer a atuação →</a></p>
     design:
