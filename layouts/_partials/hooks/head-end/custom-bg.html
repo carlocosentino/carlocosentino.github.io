@@ -125,6 +125,12 @@
   .site-contato-mini a{color:#9db4cc;text-decoration:none}
   .site-contato-mini a:hover{color:#e8e8ea}
   .site-contato-mini span{color:#454c57}
+  /* Compartilhamento no rodapé do site (todas as páginas) */
+  .site-share{display:flex;flex-direction:column;align-items:center;gap:.1rem;padding:.2rem 0 .4rem}
+  .site-share__label{font-size:.78rem;color:#8a93a0}
+  .site-share section{padding-top:.45rem !important}
+  .site-share a{background:transparent !important;color:#9db4cc !important;border:1px solid #2c3340;width:2rem;height:2rem;display:inline-flex;align-items:center;justify-content:center}
+  .site-share a:hover{background:#1b2029 !important;color:#e8e8ea !important;border-color:#9db4cc}
   /* Botão de seção (link para canal/destino externo) */
   .section-cta{display:inline-flex;align-items:center;gap:.5rem;margin:.2rem 0 .2rem;padding:.6rem 1.2rem;border:1px solid #2c3340;border-radius:10px;color:#e8e8ea;text-decoration:none;font-weight:600;font-size:.92rem;transition:background .2s}
   .section-cta:hover{background:#161a22}
@@ -281,3 +287,12 @@
     });
   })();
 </script>
+
+{{/* Notícias (post single): a imagem destacada deve ter o tamanho de um card
+     (não a regra de capa de livro de 170px que vale para publicações). */}}
+{{ if eq .Section "post" }}
+<style>
+  .featured-image-wrapper{max-width:440px !important;max-height:none !important;margin:1.5rem auto 2rem !important}
+  .featured-image-wrapper img{width:100% !important;height:auto !important;border-radius:12px}
+</style>
+{{ end }}
