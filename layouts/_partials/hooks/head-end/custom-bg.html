@@ -16,6 +16,10 @@
   [class*="aspect-["][class*="from-zinc"]:has(img) img{position:static !important;width:100% !important;height:100% !important;object-fit:contain !important}
   /* Mesma capa, mesmo tamanho, na página da publicação */
   .featured-image-wrapper{max-width:170px !important;max-height:245px !important;margin-top:8rem !important;margin-bottom:1.6rem !important}
+  /* Notícias (/post/): a imagem do post NÃO é capa de livro — deve ocupar a largura
+     inteira do card e aparecer sem corte. Sobrepõe a altura fixa de 265px das capas. */
+  #noticias [class*="aspect-["][class*="from-zinc"]:has(img){height:auto !important;aspect-ratio:auto !important;padding:0 !important}
+  #noticias [class*="aspect-["][class*="from-zinc"]:has(img) img{position:static !important;width:100% !important;height:auto !important;object-fit:contain !important}
   /* Coautoria: mesmo destaque para todos os autores (remove o mini-avatar exclusivo do titular) */
   .inline-flex.items-center.text-current img.rounded-full{display:none !important}
   img[alt="avatar"]{display:none !important}
