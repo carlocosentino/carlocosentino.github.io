@@ -18,10 +18,11 @@ sections:
         .mat-item{display:flex;gap:1rem;align-items:flex-start;background:#111419;border:1px solid #1e232c;border-radius:12px;padding:1rem 1.1rem;transition:border-color .2s,background .2s}
         .mat-item:hover{border-color:#2c3340;background:#141821}
         .mat-thumb{flex:0 0 auto;padding:0;margin:0;border:1px solid #2c3340;border-radius:8px;overflow:hidden;background:#fff;cursor:pointer;line-height:0;transition:border-color .2s,transform .15s}
-        .mat-thumb--slide{width:150px}
-        .mat-thumb--text{width:96px}
         .mat-thumb:hover{border-color:#9db4cc;transform:translateY(-1px)}
         .mat-thumb img{display:block;width:100%;height:auto}
+        .mat-thumb--slide{width:176px;aspect-ratio:16/9}
+        .mat-thumb--slide img{height:100%;object-fit:cover;object-position:center}
+        .mat-thumb--text{width:112px}
         .mat-body{flex:1 1 auto;min-width:0}
         .mat-title{font-size:.98rem;font-weight:600;color:#e8e8ea;margin:0 0 .25rem}
         .mat-desc{font-size:.86rem;line-height:1.5;color:#9aa3b0;margin:0;text-align:justify}
