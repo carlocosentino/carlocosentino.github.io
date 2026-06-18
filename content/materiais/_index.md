@@ -20,6 +20,8 @@ sections:
         .mat-thumb{flex:0 0 150px;width:150px;padding:0;margin:0;border:1px solid #2c3340;border-radius:8px;overflow:hidden;background:#fff;cursor:pointer;line-height:0;transition:border-color .2s,transform .15s}
         .mat-thumb:hover{border-color:#9db4cc;transform:translateY(-1px)}
         .mat-thumb img{display:block;width:100%;height:auto}
+        .mat-thumb--text{aspect-ratio:1 / 1.414}
+        .mat-thumb--text img{height:100%;object-fit:cover;object-position:top}
         .mat-body{flex:1 1 auto;min-width:0}
         .mat-title{font-size:.98rem;font-weight:600;color:#e8e8ea;margin:0 0 .25rem}
         .mat-desc{font-size:.86rem;line-height:1.5;color:#9aa3b0;margin:0;text-align:justify}
