@@ -12,6 +12,8 @@ publication:
   pages: "82--108"
 abstract: |-
   Assim como Marx falou do fetiche da mercadoria, o artigo fala do fetiche da tecnologia: a crença de que algoritmos e IA são neutros e autônomos. O texto revela as contradições dessa ilusão no capitalismo de plataforma e seus efeitos sobre o Direito do Trabalho.
-url_source: "https://periodicos.ufs.br/eptic/article/view/20834"
+links:
+  - type: source
+    url: "https://periodicos.ufs.br/eptic/article/view/20834"
 featured: true
 ---
