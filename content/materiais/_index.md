@@ -37,6 +37,15 @@ sections:
         <p class="mat-intro">Os materiais são disponibilizados progressivamente. Para solicitações específicas, escreva para <a href="mailto:contato@carlocosentino.com.br">contato@carlocosentino.com.br</a>.</p>
 
         <div class="mat-disc">
+          <div class="mat-disc__title">Materiais interativos</div>
+          <div class="mat-type">Mapas e panoramas do Direito do Trabalho (TGDT · DIT)</div>
+          <div class="mat-list">
+            <div class="mat-item"><button class="mat-thumb mat-thumb--slide mat-view" data-src="/uploads/materiais/interativos/tres-categorias-terceirizacao-pejotizacao-plataformizacao.html" aria-label="Visualizar prévia"><img src="/uploads/materiais/interativos/tres-categorias-terceirizacao-pejotizacao-plataformizacao.thumb.png" loading="lazy" alt=""></button><div class="mat-body"><p class="mat-title">Terceirização, pejotização e plataformização</p><p class="mat-desc">Material interativo de aula: chave de identificação das três formas de retirar trabalho do contrato de emprego, quadro sinótico comparativo, pontes normativas e crítica — com dados do Falcão e do DataJud (ago/2026).</p></div><div class="mat-actions"><button class="mat-btn mat-view mat-view-label" data-src="/uploads/materiais/interativos/tres-categorias-terceirizacao-pejotizacao-plataformizacao.html">Visualizar</button><a class="mat-btn" href="/uploads/materiais/interativos/tres-categorias-terceirizacao-pejotizacao-plataformizacao.html" target="_blank" rel="noopener">Abrir ↗</a></div></div><div class="mat-viewer"></div>
+            <div class="mat-item"><button class="mat-thumb mat-thumb--slide mat-view" data-src="/uploads/materiais/interativos/direito-do-trabalho-2o-semestre-2026.html" aria-label="Visualizar prévia"><img src="/uploads/materiais/interativos/direito-do-trabalho-2o-semestre-2026.thumb.png" loading="lazy" alt=""></button><div class="mat-body"><p class="mat-title">Para onde estamos indo — Direito do Trabalho no 2º semestre de 2026</p><p class="mat-desc">Linha do tempo interativa das frentes abertas no STF, TST, Congresso e OIT (uberização, pejotização, escala 6x1, Convenção 193), com as grandes questões do semestre e o panorama de agosto a dezembro de 2026.</p></div><div class="mat-actions"><button class="mat-btn mat-view mat-view-label" data-src="/uploads/materiais/interativos/direito-do-trabalho-2o-semestre-2026.html">Visualizar</button><a class="mat-btn" href="/uploads/materiais/interativos/direito-do-trabalho-2o-semestre-2026.html" target="_blank" rel="noopener">Abrir ↗</a></div></div><div class="mat-viewer"></div>
+          </div>
+        </div>
+
+        <div class="mat-disc">
           <div class="mat-disc__title">Direito Individual do Trabalho</div>
           <div class="mat-type">Slides de aula</div>
           <div class="mat-list">

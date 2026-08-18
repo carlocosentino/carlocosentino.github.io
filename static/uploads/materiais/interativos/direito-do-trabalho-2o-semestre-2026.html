@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para onde estamos indo — Direito do Trabalho no segundo semestre de 2026</title>
+<style>
+  :root{
+    --paper:#E9ECF1; --card:#F7F9FC; --ink:#14203A; --soft:#46536E; --faint:#6E7A91;
+    --rule:#BFC8D7; --julgado:#1C5B45; --pendente:#7C5A0B; --suspenso:#4F5B72;
+    --signal:#A21167;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:"Avenir Next","Avenir","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"Menlo","SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.5}
+  .wrap{max-width:1640px;margin:0 auto;padding:44px 40px 90px}
+
+  header{border-bottom:3px solid var(--ink);padding-bottom:28px;margin-bottom:36px}
+  .eyebrow{font-family:var(--mono);font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,5.4vw,70px);line-height:1.04;
+    margin:16px 0 14px;letter-spacing:-.018em}
+  h1 em{font-style:italic;color:var(--signal)}
+  .dek{font-size:23px;color:var(--soft);max-width:64ch;margin:0}
+  .stamp{display:inline-block;font-family:var(--mono);font-size:15px;border:1px solid var(--rule);
+    background:var(--card);padding:5px 11px;letter-spacing:.06em;color:var(--soft);margin-top:22px}
+
+  /* agenda de abertura */
+  .hero{margin:40px 0 0;border:2px solid var(--signal);background:#fff;padding:34px 32px 26px}
+  .hero h2{font-family:var(--serif);font-weight:400;font-size:36px;margin:0 0 8px}
+  .hero p{margin:0 0 32px;font-size:20px;color:var(--soft);max-width:76ch}
+  .spine{position:relative;padding-top:30px}
+  .spine-rule{position:absolute;left:0;right:0;top:40px;height:2px;background:var(--signal)}
+  .spine-row{display:flex;flex-wrap:wrap;gap:18px 0}
+  .beat{flex:1 1 190px;position:relative;padding:28px 14px 0}
+  .beat:before{content:"";position:absolute;top:4px;left:14px;width:14px;height:14px;border-radius:50%;
+    background:#fff;border:2.5px solid var(--signal)}
+  .beat.now:before{background:var(--signal);width:18px;height:18px;top:2px}
+  .beat .d{font-family:var(--mono);font-size:15px;color:var(--signal);display:block;margin-bottom:5px;font-weight:700}
+  .beat .t{font-size:17.5px;line-height:1.34;display:block;color:var(--ink)}
+  .beat.vago:before{border-style:dashed}
+  .beat.vago .d{color:var(--faint)} .beat.vago .t{color:var(--soft)}
+
+  /* perguntas */
+  .perguntas{margin:64px 0 0;border-top:3px solid var(--ink);padding-top:30px}
+  .perguntas h2{font-family:var(--serif);font-weight:400;font-size:38px;margin:0 0 10px}
+  .perguntas .intro{font-size:19px;color:var(--soft);max-width:78ch;margin:0 0 28px}
+  .qs{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:20px}
+  .q{border-left:5px solid var(--signal);padding:4px 0 4px 20px}
+  .q .num{font-family:var(--mono);font-size:14px;letter-spacing:.16em;color:var(--signal);display:block;margin-bottom:7px}
+  .q p{margin:0;font-family:var(--serif);font-size:24px;line-height:1.28}
+  .q .nota{font-family:var(--sans);font-size:16px;color:var(--soft);margin-top:9px;line-height:1.42;display:block}
+
+  .group{font-family:var(--mono);font-size:16px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--faint);margin:64px 0 0;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+
+  .tema{margin:40px 0 0}
+  .tema-head{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-bottom:10px}
+  .tema-head h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.1vw,42px);
+    margin:0;letter-spacing:-.015em;line-height:1.1}
+  .tema-sub{font-size:19px;color:var(--soft);margin:0 0 22px;max-width:96ch;line-height:1.45}
+
+  .rail{display:flex;flex-wrap:wrap;gap:14px;margin:0}
+
+  /* o que vem: peso maior */
+  .adiante{display:flex;flex-wrap:wrap;gap:16px;margin:0 0 26px}
+  .fut{flex:1 1 380px;max-width:520px;background:#fff;border:1px solid var(--rule);
+    border-left:6px dashed var(--signal);padding:20px 24px 21px;display:flex;flex-direction:column}
+  .fut .d{font-family:var(--mono);font-size:15px;color:var(--signal);font-weight:700;letter-spacing:.05em;
+    display:block;border-bottom:1px solid var(--rule);padding-bottom:8px;margin-bottom:11px;text-transform:uppercase}
+  .fut p{margin:0;font-size:19px;line-height:1.42}
+  .fut .proc{font-family:var(--mono);font-size:14px;color:var(--faint);margin-top:auto;padding-top:12px;
+    line-height:1.4;display:block}
+
+  /* como chegamos: peso menor */
+  .atras-rot{font-family:var(--mono);font-size:14px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--faint);margin:0 0 12px;display:flex;align-items:center;gap:14px}
+  .atras-rot:after{content:"";flex:1;height:1px;background:var(--rule)}
+  .ev{flex:1 1 270px;max-width:340px;background:transparent;border:1px solid var(--rule);
+    border-left:3px solid var(--faint);padding:11px 14px 12px;display:flex;flex-direction:column}
+  .ev .d{font-family:var(--mono);font-size:12.5px;color:var(--faint);letter-spacing:.05em;display:block;
+    padding-bottom:5px;margin-bottom:7px;border-bottom:1px solid var(--rule);text-transform:uppercase}
+  .ev p{margin:0;font-size:15.5px;line-height:1.4;color:var(--soft)}
+  .ev .proc{font-family:var(--mono);font-size:12.5px;color:var(--faint);margin-top:auto;padding-top:8px;
+    line-height:1.35;display:block}
+  .ev.key{border-left-color:var(--ink)}
+  .ev.key p{color:var(--ink)}
+  .ev.key .d{color:var(--soft)}
+
+  .panel{border:2px solid var(--ink);padding:34px 30px;margin:76px 0 0;background:var(--card)}
+  .panel h2{font-family:var(--serif);font-weight:400;font-size:36px;margin:0 0 22px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;background:var(--rule)}
+  .cell{background:var(--card);padding:20px 22px}
+  .cell .n{font-family:var(--serif);font-size:44px;line-height:1.02;display:block;letter-spacing:-.025em}
+  .cell .n small{font-size:24px;color:var(--soft)}
+  .cell .l{font-size:16.5px;color:var(--soft);display:block;margin-top:10px;line-height:1.4}
+
+  .raiz{margin:76px 0 0;border-top:1px solid var(--rule);padding-top:30px}
+  .raiz h2{font-family:var(--serif);font-weight:400;font-size:30px;margin:0 0 8px;color:var(--soft)}
+  .raiz .intro{font-size:17.5px;color:var(--faint);max-width:88ch;margin:0 0 22px}
+
+  .seal{display:inline-flex;align-items:center;font-family:var(--mono);font-size:14px;
+    letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border:1.5px solid currentColor;border-radius:2px}
+  .s-julgado{color:var(--julgado)} .s-pendente{color:var(--pendente)}
+  .s-suspenso{color:var(--suspenso)} .s-pautado{color:var(--signal)}
+
+  footer{margin-top:60px;border-top:1px solid var(--rule);padding-top:22px;font-size:14.5px;
+    color:var(--faint);line-height:1.6}
+  footer b{color:var(--soft);font-weight:600}
+
+  @media print{ body{background:#fff} .tema,.panel,.q{break-inside:avoid} }
+  @media (max-width:760px){ .wrap{padding:26px 18px 60px} body{font-size:17px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">Liga de Direito do Trabalho · Faculdade de Direito do Recife · UFPE · abertura do semestre</span>
+  <h1>Para onde estamos indo<br>no <em>segundo semestre de 2026</em></h1>
+  <p class="dek">Em pouco mais de quatro meses o Supremo decide o que é uma relação de emprego, o Senado decide a jornada e o Congresso fecha para as eleições. Estas são as frentes abertas e as perguntas que elas impõem.</p>
+  <span class="stamp">verificação encerrada em 18 · 08 · 2026</span>
+</header>
+
+<section class="hero">
+  <h2>De hoje a dezembro</h2>
+  <p>Todas as datas abaixo estão à frente. O que não for decidido até o recesso de dezembro atravessa a eleição e cai num Congresso de composição nova.</p>
+  <div class="spine">
+    <div class="spine-rule"></div>
+    <div class="spine-row">
+      <div class="beat now"><span class="d">18 ago · hoje</span><span class="t">Abertura do semestre da Liga</span></div>
+      <div class="beat"><span class="d">27 ago</span><span class="t">STF retoma a uberização, com o voto do relator</span></div>
+      <div class="beat"><span class="d">31 ago – 4 set</span><span class="t">Esforço concentrado. A PEC da 6x1 na CCJ do Senado</span></div>
+      <div class="beat vago"><span class="d">setembro</span><span class="t">TST pode pautar os incidentes 149 e 102</span></div>
+      <div class="beat"><span class="d">4 e 25 out</span><span class="t">Eleições gerais, primeiro e segundo turnos</span></div>
+      <div class="beat vago"><span class="d">novembro</span><span class="t">Conselho de Administração da OIT retoma a Recomendação</span></div>
+      <div class="beat vago"><span class="d">sem data</span><span class="t">Pejotização: devolução da vista de Cármen Lúcia</span></div>
+      <div class="beat vago"><span class="d">dezembro</span><span class="t">Recesso. O que ficar atravessa para 2027</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="perguntas">
+  <h2>As grandes questões do semestre</h2>
+  <p class="intro">Seis perguntas que atravessam todas as frentes. Nenhuma delas tem resposta assentada, e todas podem mudar de estado antes do recesso.</p>
+  <div class="qs">
+    <div class="q"><span class="num">Primeira</span><p>A subordinação algorítmica é uma forma nova de subordinação jurídica, ou é a forma antiga que apenas trocou de suporte técnico?</p><span class="nota">Se for a antiga, o art. 3º da CLT basta. Se for nova, a lei que existe não a alcança, e a pergunta se desloca para o Legislativo.</span></div>
+    <div class="q"><span class="num">Segunda</span><p>Se a forma do contrato pode afastar a proteção, o que resta do princípio da primazia da realidade?</p><span class="nota">É o núcleo do Tema 1.389. A Convenção 193 manda decidir pelos fatos, mas não cria presunção de vínculo. O Supremo terá de escolher qual das duas leituras adota.</span></div>
+    <div class="q"><span class="num">Terceira</span><p>Quem deve julgar a alegação de fraude no contrato civil: a Justiça do Trabalho ou a Justiça Comum?</p><span class="nota">A PGR já se posicionou pela Justiça Comum. A resposta redefine o alcance do art. 114 da Constituição e o destino de vinte e quatro tribunais regionais.</span></div>
+    <div class="q"><span class="num">Quarta</span><p>Depois do Tema 1.046, onde fica a fronteira dos direitos absolutamente indisponíveis?</p><span class="nota">O incidente 149 do TST põe a questão no seu ponto mais duro: norma coletiva pode ampliar a jornada em ambiente insalubre sem licença prévia?</span></div>
+    <div class="q"><span class="num">Quinta</span><p>Reduzir a jornada por emenda constitucional adianta, se a forma de contratação pode ser trocada?</p><span class="nota">A PEC da 6x1 protege quem tem contrato de emprego. Não alcança quem foi contratado como pessoa jurídica ou como autônomo de plataforma.</span></div>
+    <div class="q"><span class="num">Sexta</span><p>Por que o Judiciário brasileiro não tem sequer um código de assunto para trabalho em plataforma?</p><span class="nota">Decide-se em 27 de agosto o regime jurídico de uma categoria que o próprio sistema de informação do Judiciário ainda não sabe nomear.</span></div>
+  </div>
+</section>
+
+<p class="group">No Supremo Tribunal Federal</p>
+
+<section class="tema">
+  <div class="tema-head"><h3>Uberização</h3><span class="seal s-pautado">pautado para 27 de agosto</span></div>
+  <p class="tema-sub">Tema 1.291. A fronteira externa do contrato de trabalho: a subordinação algorítmica preenche o requisito do art. 3º da CLT? Mais de dez mil processos aguardam a tese.</p>
+  <div class="adiante">
+    <div class="fut"><span class="d">27 de agosto de 2026</span><p>Retomada com o voto do relator, em julgamento conjunto do recurso da Uber e da reclamação da Rappi. Risco real de novo adiamento por pedido de vista ou destaque.</p><span class="proc">RE 1.446.336, rel. Fachin · Rcl 64.018, rel. Alexandre de Moraes</span></div>
+    <div class="fut"><span class="d">primeiro cenário</span><p>Vínculo reconhecido. Submissão das plataformas ao regime celetista e internalização da força de trabalho.</p></div>
+    <div class="fut"><span class="d">segundo cenário</span><p>Categoria intermediária, à moda da parassubordinação europeia, com remessa ao Legislativo para o desenho do microssistema.</p></div>
+    <div class="fut"><span class="d">terceiro cenário</span><p>Vínculo afastado. Consagra-se o trabalho autônomo digitalmente mediado, e os processos sobrestados resolvem-se pela aplicação da tese.</p></div>
+  </div>
+  <p class="atras-rot">como chegamos até aqui</p>
+  <div class="rail">
+    <div class="ev"><span class="d">2019</span><p>A Uber interpõe recurso extraordinário contra decisão do TST que reconhecera o vínculo de uma motorista.</p><span class="proc">RE 1.446.336, rel. Edson Fachin</span></div>
+    <div class="ev"><span class="d">2020 em diante</span><p>A Rappi ajuíza reclamação contra decisões da 4ª Turma do TRT3 e da 2ª Turma do TST, invocando cinco precedentes do Supremo.</p><span class="proc">Rcl 64.018 · ADC 48, ADPF 324, RE 958.252 (Tema 725), ADI 5.835 MC, RE 688.223 (Tema 590)</span></div>
+    <div class="ev"><span class="d">admissão</span><p>Repercussão geral reconhecida por unanimidade, em lote de vinte novos temas. Audiência pública concluída, com mais de cinquenta expositores.</p><span class="proc">Tema 1.291 da repercussão geral</span></div>
+    <div class="ev key"><span class="d">1 e 2 de outubro de 2025</span><p>Julgamento aberto na primeira sessão de Fachin como presidente. Leitura dos relatórios e sustentações orais. Nenhum voto proferido.</p></div>
+    <div class="ev key"><span class="d">24 de junho de 2026</span><p>Retirado de pauta por fato superveniente: a adoção da Convenção 193 da OIT. Intimação das partes e dos amici em cinco dias.</p><span class="proc">art. 933 do CPC</span></div>
+    <div class="ev"><span class="d">agosto de 2026</span><p>As manifestações divergem. Plataformas: a Convenção não cria presunção e tem caráter programático. ITF: o algoritmo exerce função de supervisor.</p></div>
+  </div>
+</section>
+
+<section class="tema">
+  <div class="tema-head"><h3>Pejotização</h3><span class="seal s-pendente">pendente, sem data</span></div>
+  <p class="tema-sub">Tema 1.389. A fronteira interna do contrato: competência e ônus da prova na alegação de fraude, e licitude da contratação de pessoa jurídica ou de autônomo. É o tema de maior alcance dos dois.</p>
+  <div class="adiante">
+    <div class="fut"><span class="d">sem data</span><p>A retomada depende da devolução da vista da Ministra Cármen Lúcia. Não consta da pauta divulgada de agosto. Enquanto isso, no TST a suspensão permanece integral.</p><span class="proc">ARE 1.532.603, Tema 1.389, rel. Gilmar Mendes</span></div>
+    <div class="fut"><span class="d">primeiro cenário</span><p>Licitude ampla e competência da Justiça Comum, com ônus da prova ao trabalhador. Efeito equivalente a uma reforma trabalhista por via judicial.</p></div>
+    <div class="fut"><span class="d">segundo cenário</span><p>Licitude condicionada à ausência efetiva de subordinação, preservadas a competência trabalhista e o ônus do tomador.</p></div>
+    <div class="fut"><span class="d">terceiro cenário</span><p>Tese restritiva, com reafirmação da primazia da realidade.</p></div>
+  </div>
+  <p class="atras-rot">como chegamos até aqui</p>
+  <div class="rail">
+    <div class="ev"><span class="d">2021 a 2026</span><p>Centenas de reclamações constitucionais cassam acórdãos de TRTs que reconheciam vínculo. Levantamento privado aponta 408 decisões pela competência da Justiça Comum.</p></div>
+    <div class="ev key"><span class="d">12 e 14 de abril de 2025</span><p>Repercussão geral reconhecida, vencido Fachin. Dois dias depois, suspensão nacional de todos os processos: quase cinquenta mil ações paralisadas.</p><span class="proc">ARE 1.532.603, rel. Gilmar Mendes</span></div>
+    <div class="ev"><span class="d">nov. e dez. de 2025</span><p>Julgamento de mérito iniciado em plenário virtual e suspenso por pedido de vista da Ministra Cármen Lúcia.</p></div>
+    <div class="ev"><span class="d">fevereiro de 2026</span><p>A suspensão não alcança ação de mero reconhecimento de vínculo sem contrato civil escrito. No mesmo mês, parecer da PGR pela licitude e pela competência da Justiça Comum.</p><span class="proc">Rcl 86.571/GO</span></div>
+    <div class="ev key"><span class="d">18 de junho de 2026</span><p>Levantamento parcial. Varas e TRTs voltam a julgar; após o acórdão regional o processo torna a ficar sobrestado.</p></div>
+  </div>
+</section>
+
+<section class="tema">
+  <div class="tema-head"><h3>Execução contra grupo econômico</h3><span class="seal s-julgado">já vinculante</span></div>
+  <p class="tema-sub">Tema 1.232. Único dos três já julgado, e o que muda a prática forense desde já.</p>
+  <div class="adiante">
+    <div class="fut"><span class="d">efeito imediato</span><p>Toda inicial trabalhista passa a exigir o desenho do grupo econômico desde a propositura, com demonstração concreta dos requisitos. A discussão deixa de ser diferível para a execução.</p><span class="proc">RE 1.387.795, Tema 1.232, rel. Dias Toffoli</span></div>
+    <div class="fut"><span class="d">o que sobra de exceção</span><p>Redirecionamento ainda cabe na sucessão empresarial e no abuso da personalidade jurídica, ressalvados coisa julgada, créditos satisfeitos e execuções findas.</p><span class="proc">art. 448-A da CLT · art. 50 do Código Civil</span></div>
+  </div>
+  <p class="atras-rot">como chegamos até aqui</p>
+  <div class="rail">
+    <div class="ev key"><span class="d">outubro de 2025</span><p>Julgado por nove votos a dois, vencidos os Ministros Fachin e Alexandre de Moraes. Fixada tese em três partes.</p><span class="proc">RE 1.387.795, rel. Dias Toffoli</span></div>
+  </div>
+</section>
+
+<p class="group">No Tribunal Superior do Trabalho</p>
+
+<section class="tema">
+  <div class="tema-head"><h3>Os incidentes que podem sair este semestre</h3><span class="seal s-pendente">98 pendentes</span></div>
+  <p class="tema-sub">Em dois anos o Tribunal passou a fixar teses de observância obrigatória em escala industrial. Três incidentes concentram o que interessa ao semestre.</p>
+  <div class="adiante">
+    <div class="fut"><span class="d">IRR 149 · pronto para pauta</span><p>Norma coletiva pode ampliar a jornada em ambiente insalubre sem licença prévia da autoridade competente? Opõe o art. 611-A, XIII, ao art. 60 da CLT, sob o crivo do Tema 1.046. Audiência pública realizada em 12 de março.</p><span class="proc">IRR 100225-49.2020.5.03.0041 · afetado ao Pleno em maio de 2025</span></div>
+    <div class="fut"><span class="d">IRR 29 · sobrestamento nacional</span><p>Cabe distinção à ADPF 324 e aos Temas 725 e 739 para reconhecer vínculo com o tomador em caso de fraude na terceirização? É o ponto de fricção mais agudo com o Supremo.</p><span class="proc">IncJulgRREmbRep 1848300-31.2003.5.09.0011, rel. Alexandre Ramos</span></div>
+    <div class="fut"><span class="d">IRR 102</span><p>Intervalo interjornada dos petroleiros em turnos de oito horas, também sob o Tema 1.046. Pode entrar na pauta do Pleno.</p></div>
+  </div>
+  <p class="atras-rot">como chegamos até aqui</p>
+  <div class="rail">
+    <div class="ev"><span class="d">fim de 2024</span><p>Alterações regimentais criam a reafirmação de jurisprudência, que confere força vinculante ao entendimento já pacificado.</p><span class="proc">art. 896-C da CLT · arts. 976 a 987 do CPC</span></div>
+    <div class="ev key"><span class="d">30 de junho de 2025</span><p>Cancelamento de 36 enunciados, vigente desde 1º de julho. Caem, entre outras, as Súmulas 90, 277, 331 item I, 437, 444 e 449.</p><span class="proc">Resolução TST 225/2025 · DEJT n. 4253</span></div>
+    <div class="ev"><span class="d">balanço de 2025</span><p>Duzentas e dezoito teses vinculantes e 73 incidentes afetados no ano, contra 20 teses em 2024. A tabela ultrapassa 300 teses obrigatórias.</p></div>
+    <div class="ev"><span class="d">primeiro semestre de 2026</span><p>Presidência do Ministro Vieira de Mello Filho, com foco em precedentes. Oito temas pacificados, entre eles um de origem pernambucana.</p><span class="proc">Tema 26, IRR 0000620-78.2021.5.06.0003</span></div>
+  </div>
+</section>
+
+<p class="group">No Congresso Nacional</p>
+
+<section class="tema">
+  <div class="tema-head"><h3>Fim da escala 6x1</h3><span class="seal s-pendente">na CCJ do Senado</span></div>
+  <p class="tema-sub">PEC 221/2019. A maior alteração da jornada desde a Constituição de 1988. Aprovada na Câmara em maio, chegou à comissão há quatro dias.</p>
+  <div class="adiante">
+    <div class="fut"><span class="d">próximo passo</span><p>Designação de relator na CCJ, ainda sem nome. A base defende relatoria própria para evitar alteração de mérito que force o retorno à Câmara. A oposição disputa a função.</p></div>
+    <div class="fut"><span class="d">31 de agosto a 4 de setembro</span><p>Esforço concentrado, última janela deliberativa antes do primeiro turno. A proposta alternativa da oposição tramitará com o mesmo relator.</p><span class="proc">PEC 221/2019 · PEC 12/2026</span></div>
+    <div class="fut"><span class="d">se aprovada</span><p>Sessenta dias após a promulgação, 42 horas semanais e escala 5x2. Quatorze meses após a promulgação, 40 horas. Vedada a redução salarial, inclusive de pisos.</p><span class="proc">alteração do art. 7º da Constituição</span></div>
+    <div class="fut"><span class="d">avaliação corrente</span><p>Predomina no Senado a expectativa de votação apenas depois das eleições. A estratégia patronal noticiada é obter alteração que force o retorno à Câmara e adie a discussão.</p></div>
+  </div>
+  <p class="atras-rot">como chegamos até aqui</p>
+  <div class="rail">
+    <div class="ev"><span class="d">2019 e 2025</span><p>Proposta do deputado Reginaldo Lopes, com 36 horas. Proposta da deputada Erika Hilton, com escala 4x3. A mobilização leva o tema à pauta.</p><span class="proc">PEC 221/2019 · PEC 8/2025</span></div>
+    <div class="ev key"><span class="d">27 de maio de 2026</span><p>A Câmara aprova em dois turnos: 472 a 22 e 461 a 19. Quarenta horas semanais, escala 5x2, sem redução salarial.</p></div>
+    <div class="ev"><span class="d">28 de maio de 2026</span><p>O texto chega ao Senado. No mesmo dia, e antes dele, é despachada à CCJ a proposta alternativa do senador Rogério Marinho, apoiada por quarenta senadores.</p><span class="proc">PEC 12/2026</span></div>
+    <div class="ev key"><span class="d">14 de agosto de 2026</span><p>Após três encontros entre Lula e Alcolumbre, a PEC é finalmente despachada à CCJ, depois de dois meses e meio parada.</p></div>
+  </div>
+</section>
+
+<section class="tema">
+  <div class="tema-head"><h3>Regulamentação do trabalho em plataformas</h3><span class="seal s-suspenso">paralisado</span></div>
+  <p class="tema-sub">PLP 12/2024. A via legislativa que poderia dispensar a via judicial. Relatoria do deputado Augusto Coutinho, de Pernambuco.</p>
+  <div class="adiante">
+    <div class="fut"><span class="d">previsão</span><p>Sem perspectiva de retomada antes das eleições. Se o Supremo afastar o vínculo em 27 de agosto, a pressão por uma terceira via legislativa retorna com força em 2027, e o desenho em disputa será o do texto hoje engavetado.</p><span class="proc">PLP 12/2024</span></div>
+  </div>
+  <p class="atras-rot">como chegamos até aqui</p>
+  <div class="rail">
+    <div class="ev"><span class="d">2024 e 2025</span><p>O Executivo envia o projeto com urgência, retirada em abril de 2024. Comissão especial com dezesseis reuniões e oitenta convidados.</p></div>
+    <div class="ev key"><span class="d">abril de 2026</span><p>O segundo substitutivo retira a tarifa mínima por entrega e os adicionais. Votação adiada a pedido do governo, com protestos em dez capitais, inclusive Recife. O relator declara o texto inviabilizado.</p></div>
+    <div class="ev"><span class="d">agosto de 2026</span><p>Análise acadêmica sustenta que o projeto formaliza a precariedade, com remuneração efetiva de cerca de oito reais por hora.</p><span class="proc">Unicamp, Texto para Discussão n. 498</span></div>
+  </div>
+</section>
+
+<p class="group">No plano internacional</p>
+
+<section class="tema">
+  <div class="tema-head"><h3>Convenção 193 da OIT</h3><span class="seal s-pendente">adotada, não vigente</span></div>
+  <p class="tema-sub">Trabalho decente na economia de plataformas. Trinta e três artigos, lidos no texto autêntico. Não há versão autêntica em português.</p>
+  <div class="adiante">
+    <div class="fut"><span class="d">em 27 de agosto</span><p>O Supremo julgará com a Convenção como argumento, não como norma. O tratado admite a decisão judicial como meio da sua própria implementação, uma vez ratificado.</p><span class="proc">C193, art. 24, § 1</span></div>
+    <div class="fut"><span class="d">vigência</span><p>Entra em vigor doze meses após o registro de duas ratificações. Para cada Membro posterior, doze meses da sua própria. Ainda não vigora no plano internacional.</p><span class="proc">C193, art. 27, § 2</span></div>
+    <div class="fut"><span class="d">rito interno</span><p>Mensagem do Executivo, decreto legislativo, ratificação e promulgação. A CUT defende que o Brasil esteja entre os primeiros a ratificar.</p><span class="proc">art. 49, I, e art. 84, VIII, da Constituição</span></div>
+    <div class="fut"><span class="d">novembro de 2026</span><p>Sessão do Conselho de Administração à qual foi remetida a Recomendação, que não chegou a ser adotada em Genebra por esgotamento do tempo de negociação.</p></div>
+  </div>
+  <p class="atras-rot">o que o texto diz, e o que se disse errado sobre ele</p>
+  <div class="rail">
+    <div class="ev key"><span class="d">12 de junho de 2026</span><p>Adotada por 406 votos a 8, com 36 abstenções, e voto favorável do Brasil. Primeiro instrumento internacional dedicado ao trabalho por plataformas.</p><span class="proc">ILC.114/Convenção n. 193</span></div>
+    <div class="ev key"><span class="d">artigo 9</span><p>Classificação correta quanto à existência ou inexistência de relação de emprego, guiando-se principalmente pelos fatos da execução do trabalho. Manda decidir pelos fatos e não cria presunção de vínculo.</p><span class="proc">C193, art. 9 · tradução livre</span></div>
+    <div class="ev"><span class="d">artigos 12 e 23</span><p>Proteção não menos favorável do que a de outros trabalhadores com a mesma classificação de vínculo. Nivela por dentro de cada categoria, não entre categorias.</p></div>
+    <div class="ev"><span class="d">artigos 13 a 15</span><p>Primeira disciplina vinculante da gestão algorítmica: informação prévia ao trabalhador e ao sindicato, explicação escrita das decisões adversas, revisão e envolvimento humano.</p></div>
+    <div class="ev"><span class="d">duas correções</span><p>Não assegura salário mínimo independentemente da classificação: o piso é reservado aos empregados. E a Recomendação noticiada como acompanhante não foi adotada.</p><span class="proc">C193, art. 10, §§ 2 e 3</span></div>
+  </div>
+</section>
+
+<p class="group">Em acompanhamento</p>
+
+<section class="tema">
+  <div class="tema-head"><h3>Frentes correlatas</h3></div>
+  <p class="tema-sub">O que corre por fora dos dois temas de repercussão geral e ainda assim pesa no semestre.</p>
+  <div class="adiante">
+    <div class="fut"><span class="d">4 e 25 de outubro de 2026</span><p>Eleições gerais. Depois delas, Congresso de composição nova e agenda reaberta, com a reforma da jornada e a regulamentação das plataformas na fila.</p></div>
+    <div class="fut"><span class="d">ainda em pauta no Supremo</span><p>Constam da pauta do Plenário itens sobre gratuidade de justiça no processo do trabalho, capital estrangeiro em plataformas digitais e transporte por aplicativo, no caso Buser.</p></div>
+  </div>
+  <p class="atras-rot">como chegamos até aqui</p>
+  <div class="rail">
+    <div class="ev"><span class="d">3 de junho de 2026</span><p>A Câmara aprova o decreto legislativo relativo à Convenção 187 da OIT, sobre segurança e saúde no trabalho.</p><span class="proc">PDL 720/2024</span></div>
+    <div class="ev"><span class="d">junho de 2026</span><p>A medida provisória do FGTS e do saque-aniversário caduca sem conversão em lei. Os saques feitos na vigência permanecem válidos.</p><span class="proc">MP 1.331/2025</span></div>
+    <div class="ev"><span class="d">11 de agosto de 2026</span><p>O projeto que regulamenta a negociação coletiva no serviço público tem votação adiada, em disputa sobre exclusividade sindical.</p><span class="proc">PL 1893/2026 · Convenção 151 da OIT</span></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>O chão de fatos</h2>
+  <div class="grid">
+    <div class="cell"><span class="n">1 em 9</span><span class="l">Das 2.078.553 ações trabalhistas ajuizadas no país em 2025, 240.624 registram reconhecimento de relação de emprego, ou 11,6%.</span></div>
+    <div class="cell"><span class="n">1,6% <small>→</small> 9,9%</span><span class="l">Peso dessas ações no TRT da 6ª Região, de 2015 a 2026. Sextuplicou. O litígio migrou do conteúdo do contrato para a existência dele.</span></div>
+    <div class="cell"><span class="n">−49%</span><span class="l">Queda do rito ordinário no TRT6 de 2017 para 2018. No mesmo movimento o sumaríssimo dobrou. A reforma encolheu as ações antes de reduzi-las.</span></div>
+    <div class="cell"><span class="n">0 <small>→</small> 203</span><span class="l">Acórdãos do TST com a expressão subordinação algorítmica: inexistente até 2021, duzentos e três apenas em 2025. A linguagem consolidou-se em dois anos.</span></div>
+    <div class="cell"><span class="n">zero</span><span class="l">Códigos na tabela processual unificada para trabalho em plataforma. A uberização é invisível nos metadados do Judiciário: só o texto das decisões a alcança.</span></div>
+    <div class="cell"><span class="n">3,5 mi</span><span class="l">Agravos de instrumento em recurso de revista no acervo histórico do TST, contra 585 mil recursos de revista. É o problema que a política de precedentes quer resolver.</span></div>
+  </div>
+</section>
+
+<section class="raiz">
+  <h2>De onde viemos, em seis marcos</h2>
+  <p class="intro">Pano de fundo, para quem quiser puxar a linha. Em trinta e dois anos, a intermediação de mão de obra passou de fraude presumida a forma lícita de organizar a produção, e a autonomia coletiva passou a poder afastar direitos legais. Sem esse arco, nada do que se decide em 2026 se entende.</p>
+  <div class="rail">
+    <div class="ev"><span class="d">1993</span><p>O TST edita a Súmula 331, sucedendo a Súmula 256 de 1986. O item I declara ilegal a contratação por empresa interposta, formando-se vínculo com o tomador.</p><span class="proc">Súmula 331 do TST</span></div>
+    <div class="ev"><span class="d">2017</span><p>As Leis 13.429 e 13.467 alteram a Lei 6.019/1974 e admitem a terceirização de qualquer atividade, inclusive a principal. A lei contradiz a súmula.</p><span class="proc">Lei 6.019/1974, art. 4º-A</span></div>
+    <div class="ev key"><span class="d">30 de agosto de 2018</span><p>É lícita a terceirização de toda e qualquer atividade, meio ou fim, mantida a responsabilidade subsidiária. O item I da Súmula 331 fica materialmente esvaziado.</p><span class="proc">ADPF 324, rel. Barroso · RE 958.252/MG, Tema 725, rel. Fux</span></div>
+    <div class="ev"><span class="d">11 de outubro de 2018</span><p>O entendimento é reafirmado em novo recurso com repercussão geral, com trânsito em julgado em março de 2019.</p><span class="proc">RE 791.932</span></div>
+    <div class="ev key"><span class="d">2 de junho de 2022</span><p>São constitucionais os acordos e convenções coletivas que afastam direitos trabalhistas, respeitados os absolutamente indisponíveis. Sete a dois, vencidos Fachin e Rosa Weber.</p><span class="proc">ARE 1.121.633, Tema 1.046, rel. Gilmar Mendes</span></div>
+    <div class="ev"><span class="d">30 de junho de 2025</span><p>Só então o TST cancela formalmente o item I da Súmula 331. Sete anos de sobrevida de um enunciado já esvaziado pelo Supremo.</p><span class="proc">Resolução TST 225/2025</span></div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Fontes primárias lidas em texto integral:</b> Organização Internacional do Trabalho, Convention concerning decent work in the platform economy, ILC.114/Convention No. 193, 12 jun. 2026. Tribunal Superior do Trabalho, Resolução n. 225, de 30 de junho de 2025, DEJT n. 4253. <b>Bases consultadas diretamente:</b> DataJud, API Pública do Conselho Nacional de Justiça, Portaria CNJ n. 160/2020, cobertura até 31 jul. 2026; base de jurisprudência do Tribunal Superior do Trabalho.</p>
+  <p><b>Fontes secundárias:</b> portais do STF, do TST, da Câmara e do Senado, Agência Brasil, Agência Senado, Consultor Jurídico, JOTA, Migalhas, Congresso em Foco, Exame, CNN Brasil, Ministério Público do Trabalho, Public Services International, ITUC Ásia-Pacífico, WIEGO, Instituto de Economia da Unicamp. Material didático gerado em 18 de agosto de 2026. Traduções do inglês são livres, dado que a Convenção 193 não tem versão autêntica em português.</p>
+</footer>
+
+</div>
+</body>
+</html>

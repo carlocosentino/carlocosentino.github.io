@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terceirização, pejotização, plataformização — chave de identificação, pontes e crítica</title>
+<style>
+  :root{
+    --paper:#E9ECF1; --card:#F7F9FC; --ink:#14203A; --soft:#4E5A74; --faint:#6E7A90;
+    --rule:#C2CAD8; --julgado:#1C5B45; --pendente:#7C5A0B; --suspenso:#5B667C;
+    --cancelado:#8A2B2B; --signal:#A21167;
+    --t1:#1C4E80; --t2:#7A3E9D; --t3:#0F6B6B;
+    --t1w:#E7EEF7; --t2w:#F1EAF7; --t3w:#E3F1F1;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:"Avenir Next","Avenir","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"Menlo","SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    --sc:1;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+       line-height:1.58;font-size:calc(18px*var(--sc))}
+  .wrap{max-width:1240px;margin:0 auto;padding:30px 24px 90px}
+  a{color:var(--t1)}
+  :focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+  /* cabeçalho */
+  header.top{border-bottom:2px solid var(--ink);padding-bottom:20px;margin-bottom:22px}
+  .eyebrow{font-family:var(--mono);font-size:calc(13.1px*var(--sc));letter-spacing:.13em;
+           text-transform:uppercase;color:var(--faint)}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(33px,4.8vw,54px);line-height:1.06;
+     margin:12px 0 10px;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:var(--signal)}
+  .dek{font-size:calc(19.1px*var(--sc));color:var(--soft);max-width:70ch}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:16px;font-family:var(--mono);
+        font-size:calc(13.1px*var(--sc));letter-spacing:.03em;color:var(--faint)}
+
+  /* navegação */
+  nav.idx{position:sticky;top:0;z-index:40;background:rgba(233,236,241,.96);
+          backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);margin:0 -24px 28px;
+          padding:10px 24px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+  nav.idx a{font-family:var(--mono);font-size:calc(13.1px*var(--sc));letter-spacing:.02em;
+            text-decoration:none;color:var(--soft);border:1px solid var(--rule);border-radius:2px;
+            padding:5px 9px;background:var(--card)}
+  nav.idx a:hover{border-color:var(--ink);color:var(--ink)}
+  nav.idx button{margin-left:auto;font-family:var(--mono);font-size:calc(13.1px*var(--sc));
+                 background:var(--ink);color:var(--card);border:0;border-radius:2px;padding:6px 12px;cursor:pointer}
+
+  /* seções */
+  section{margin:0 0 48px;scroll-margin-top:60px}
+  .snum{font-family:var(--mono);font-size:calc(13.1px*var(--sc));letter-spacing:.14em;
+        color:var(--faint);text-transform:uppercase}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.2vw,39px);line-height:1.13;
+     margin:7px 0 8px;letter-spacing:-.005em}
+  h3{font-family:var(--sans);font-weight:600;font-size:calc(17.4px*var(--sc));margin:26px 0 9px}
+  h4{font-family:var(--mono);font-weight:400;font-size:calc(13.1px*var(--sc));letter-spacing:.11em;
+     text-transform:uppercase;color:var(--faint);margin:0 0 8px}
+  p{margin:0 0 12px;max-width:80ch}
+  .lede{font-family:var(--serif);font-size:calc(21.3px*var(--sc));line-height:1.44;max-width:68ch}
+  .sub{color:var(--soft)}
+  .sm{font-size:calc(16.4px*var(--sc))}
+
+  /* cartões */
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:18px 20px}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media (max-width:980px){.g2,.g3{grid-template-columns:1fr}}
+
+  /* etiquetas */
+  .selo{display:inline-flex;align-items:center;font-family:var(--mono);font-size:calc(12.5px*var(--sc));
+        letter-spacing:.06em;text-transform:uppercase;border:1px solid;border-radius:2px;
+        padding:2px 7px;white-space:nowrap}
+  .s-julgado{color:var(--julgado);border-color:var(--julgado);background:#EAF2EF}
+  .s-pendente{color:var(--pendente);border-color:var(--pendente);background:#F7F1E2}
+  .s-pautado{color:var(--signal);border-color:var(--signal);background:#FAEAF2}
+  .s-suspenso{color:var(--suspenso);border-color:var(--suspenso);background:#EDEFF3}
+  .fonte{font-family:var(--mono);font-size:calc(12.0px*var(--sc));letter-spacing:.05em;color:var(--faint);
+         border:1px dotted var(--rule);border-radius:2px;padding:1px 5px;white-space:nowrap}
+
+  /* tabelas */
+  table{width:100%;border-collapse:collapse;font-size:calc(16.4px*var(--sc));margin:10px 0 4px}
+  th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+  thead th{font-family:var(--mono);font-size:calc(12.5px*var(--sc));letter-spacing:.08em;
+           text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--ink)}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);
+                font-size:calc(15.3px*var(--sc));white-space:nowrap}
+  tbody tr:hover{background:#EFF3F8}
+  caption{caption-side:bottom;text-align:left;font-size:calc(13.6px*var(--sc));color:var(--faint);
+          padding-top:9px;font-family:var(--mono);line-height:1.5}
+
+  /* fichas */
+  .ficha{border:1px solid var(--rule);border-top:5px solid var(--ink);border-radius:3px;
+         background:var(--card);overflow:hidden;margin-bottom:8px}
+  .ficha.f1{border-top-color:var(--t1)} .ficha.f2{border-top-color:var(--t2)} .ficha.f3{border-top-color:var(--t3)}
+  .ficha .cab{padding:16px 20px 14px;border-bottom:1px solid var(--rule)}
+  .ficha.f1 .cab{background:var(--t1w)} .ficha.f2 .cab{background:var(--t2w)} .ficha.f3 .cab{background:var(--t3w)}
+  .ficha .cab .kicker{font-family:var(--mono);font-size:calc(12.5px*var(--sc));letter-spacing:.11em;
+                      text-transform:uppercase;color:var(--soft)}
+  .ficha .cab .nome{font-family:var(--serif);font-size:calc(27.3px*var(--sc));line-height:1.14;margin-top:6px}
+  .ficha .cab .uma{font-size:calc(16.4px*var(--sc));color:var(--soft);margin-top:8px;max-width:60ch}
+  .ficha .corpo{padding:8px 20px 18px}
+  .campo{border-bottom:1px dotted var(--rule);padding:11px 0}
+  .campo:last-child{border-bottom:0}
+  .campo .rot{font-family:var(--mono);font-size:calc(12.5px*var(--sc));letter-spacing:.09em;
+              text-transform:uppercase;color:var(--faint)}
+  .campo .val{font-size:calc(16.4px*var(--sc));margin-top:4px}
+  .campo .val ul{margin:5px 0 0;padding-left:19px}
+  .campo .val li{margin-bottom:5px}
+  .esquema{background:#FFF;border-bottom:1px solid var(--rule);padding:12px 14px}
+  .esquema svg{display:block;width:100%;height:auto}
+
+  /* chave */
+  .chave{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:16px 18px}
+  .chave svg{display:block;width:100%;height:auto}
+
+  /* pontes */
+  .ponte{border:1px solid var(--rule);border-left:5px solid var(--signal);background:var(--card);
+         border-radius:3px;padding:17px 20px;margin-bottom:16px}
+  .ponte .tit{font-family:var(--serif);font-size:calc(22.9px*var(--sc));line-height:1.22;margin-bottom:6px}
+  .ponte .liga{font-family:var(--mono);font-size:calc(12.5px*var(--sc));letter-spacing:.09em;
+               text-transform:uppercase;color:var(--signal)}
+  blockquote.lei{margin:10px 0;padding:12px 16px;background:#FFF;border:1px solid var(--rule);
+                 border-left:3px solid var(--t1);font-family:var(--serif);
+                 font-size:calc(17.4px*var(--sc));line-height:1.48}
+  blockquote.lei cite{display:block;font-family:var(--mono);font-style:normal;
+                      font-size:calc(12.5px*var(--sc));letter-spacing:.06em;color:var(--faint);
+                      margin-top:9px;text-transform:uppercase}
+
+  /* figuras */
+  figure{margin:14px 0 8px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-family:var(--mono);font-size:calc(13.1px*var(--sc));color:var(--faint);
+             margin-top:8px;letter-spacing:.02em;line-height:1.55}
+
+  /* barras em HTML: não há sobreposição possível */
+  .bars{margin:12px 0 4px}
+  .brow{display:grid;grid-template-columns:minmax(150px,260px) 1fr max-content;
+        gap:14px;align-items:center;padding:6px 0}
+  .blab{font-size:calc(16.4px*var(--sc));line-height:1.3}
+  .btrack{background:#DDE3EC;border-radius:2px;height:19px;position:relative}
+  .bfill{height:19px;border-radius:2px;min-width:5px;background:var(--soft)}
+  .bfill.c1{background:var(--t1)} .bfill.c2{background:var(--t2)} .bfill.c3{background:var(--t3)}
+  .bval{font-family:var(--mono);font-size:calc(15.3px*var(--sc));text-align:right;
+        font-variant-numeric:tabular-nums;white-space:nowrap}
+  .bnote{font-family:var(--mono);font-size:calc(13.1px*var(--sc));color:var(--faint);margin-top:8px;line-height:1.55}
+  @media (max-width:700px){
+    .brow{grid-template-columns:1fr auto;grid-template-areas:"lab val" "bar bar";gap:4px 10px}
+    .blab{grid-area:lab} .bval{grid-area:val} .btrack{grid-area:bar}
+  }
+
+  /* avisos */
+  .nota{border:1px solid var(--rule);border-left:4px solid var(--pendente);background:#FBF7EC;
+        padding:13px 16px;border-radius:2px;font-size:calc(16.4px*var(--sc));margin:14px 0}
+  .contra{border:1px solid var(--rule);border-left:4px solid var(--suspenso);background:#EFF1F5;
+          padding:13px 16px;border-radius:2px;font-size:calc(16.4px*var(--sc));margin:14px 0}
+  .achado{border:1px solid var(--signal);background:#FAEAF2;padding:14px 17px;border-radius:2px;
+          font-size:calc(16.4px*var(--sc));margin:14px 0}
+  .achado .lab{font-family:var(--mono);font-size:calc(12.5px*var(--sc));letter-spacing:.1em;
+               text-transform:uppercase;color:var(--signal);display:block;margin-bottom:5px}
+  .nota p:last-child,.contra p:last-child,.achado p:last-child,.card p:last-child{margin-bottom:0}
+
+  ol.mov{counter-reset:m;list-style:none;padding:0;margin:10px 0 0}
+  ol.mov li{counter-increment:m;position:relative;padding:11px 0 11px 46px;
+            border-bottom:1px dotted var(--rule);font-size:calc(16.4px*var(--sc))}
+  ol.mov li:last-child{border-bottom:0}
+  ol.mov li:before{content:counter(m,decimal-leading-zero);position:absolute;left:0;top:12px;
+                   font-family:var(--mono);font-size:calc(13.6px*var(--sc));color:var(--signal);letter-spacing:.05em}
+
+  .legenda{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:10px;
+           font-family:var(--mono);font-size:calc(13.1px*var(--sc));color:var(--soft)}
+  .legenda span{display:inline-flex;align-items:center;gap:7px}
+  .legenda i{width:13px;height:13px;border-radius:2px;display:inline-block;border:1px solid var(--rule)}
+
+  footer.end{border-top:2px solid var(--ink);padding-top:18px;margin-top:38px;
+             font-size:calc(15.8px*var(--sc));color:var(--soft)}
+
+  @media print{
+    :root{--sc:.9}
+    body{background:#FFF}
+    nav.idx{display:none}
+    section,.ficha,.ponte,.card,figure{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">UFPE · Faculdade de Direito do Recife · Teoria Geral do Direito do Trabalho e Direito Individual do Trabalho</div>
+  <h1>Três formas de retirar trabalho do contrato de emprego:<br><em>terceirização, pejotização, plataformização</em></h1>
+  <p class="dek">Material de aula. Primeiro cada categoria é apresentada isoladamente, na mesma grade de análise. Depois se estabelecem as pontes que a lei, a dogmática, a jurisprudência e a estatística criam entre elas. Só então vem a crítica, que sem a distinção prévia não se sustenta.</p>
+  <div class="meta">
+    <span>Estado em 18 de agosto de 2026</span>
+    <span>Falcão · CSJT/TRT9 · consulta direta</span>
+    <span>DataJud · CNJ · Portaria 160/2020</span>
+  </div>
+</header>
+
+<nav class="idx" aria-label="Índice">
+  <a href="#ler">Como ler</a>
+  <a href="#chave">1 Chave</a>
+  <a href="#f1">2 Terceirização</a>
+  <a href="#f2">3 Pejotização</a>
+  <a href="#f3">4 Plataformização</a>
+  <a href="#sinotico">5 Quadro</a>
+  <a href="#pontes">6 Pontes</a>
+  <a href="#critica">7 Crítica</a>
+  <a href="#conjunto">8 27 de agosto</a>
+  <a href="#contraponto">9 Contraponto</a>
+  <a href="#dados">10 Dados</a>
+  <a href="#aula">11 Aula</a>
+  <button id="proj" type="button" aria-pressed="false">Modo projeção</button>
+</nav>
+
+<section id="ler">
+  <div class="snum">Advertência preliminar</div>
+  <h2>Como ler este material</h2>
+  <div class="grid g2">
+    <div class="card">
+      <h4>Procedência de cada afirmação</h4>
+      <p class="sm"><span class="fonte">FP</span> fonte primária: texto de lei, tese fixada, número colhido por consulta direta à base.</p>
+      <p class="sm"><span class="fonte">FS</span> fonte secundária: notícia institucional, doutrina, repercussão em veículo especializado.</p>
+      <p class="sm"><span class="fonte">SD</span> síntese própria: leitura, inferência, hipótese. Onde houver <span class="fonte">SD</span>, há espaço legítimo para discordar.</p>
+      <p class="sm sub">Nenhuma citação foi fabricada.</p>
+    </div>
+    <div class="card">
+      <h4>Selos de status da jurisprudência</h4>
+      <p class="sm"><span class="selo s-julgado">julgado</span> &nbsp;tese fixada e vigente</p>
+      <p class="sm"><span class="selo s-pendente">pendente</span> &nbsp;sem tese de mérito</p>
+      <p class="sm"><span class="selo s-pautado">pautado 27/08/2026</span> &nbsp;data designada</p>
+      <p class="sm"><span class="selo s-suspenso">suspensão</span> &nbsp;ordem de sobrestamento em vigor</p>
+      <p class="sm sub">Os selos valem para o dia 18 de agosto de 2026, data da coleta.</p>
+    </div>
+  </div>
+</section>
+
+<section id="chave">
+  <div class="snum">1</div>
+  <h2>A chave de identificação</h2>
+  <p class="lede">Antes de perguntar se é lícito, é preciso saber o que é. As três figuras se distinguem por uma pergunta só: quantas pessoas jurídicas existem entre quem trabalha e quem se apropria do trabalho, e quem exerce o comando.</p>
+
+  <div class="chave">
+    <svg viewBox="0 0 1000 420" role="img" aria-label="Chave dicotômica de identificação das três categorias">
+      <defs>
+        <marker id="mk1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+          <path d="M0,0 L9,4.5 L0,9 z" fill="#4E5A74"/>
+        </marker>
+      </defs>
+      <style>
+        .kq{fill:#FFF;stroke:#14203A;stroke-width:1.6}
+        .kt{font:600 16.8px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+        .ks{font:15.1px "Avenir Next",Avenir,sans-serif;fill:#4E5A74}
+        .kl{stroke:#4E5A74;stroke-width:1.5;fill:none;marker-end:url(#mk1)}
+        .ky{font:400 13.4px Menlo,monospace;fill:#6E7A90;letter-spacing:.07em}
+        .kn{font:400 13.4px Menlo,monospace;letter-spacing:.09em}
+        .kr{font:400 22.4px "Iowan Old Style",Palatino,Georgia,serif;fill:#14203A}
+      </style>
+
+      <rect class="kq" x="20" y="20" width="330" height="78" rx="3"/>
+      <text class="kt" x="38" y="46">1. Há empresa interposta</text>
+      <text class="ks" x="38" y="68">entre quem trabalha e quem</text>
+      <text class="ks" x="38" y="88">se apropria do trabalho?</text>
+
+      <path class="kl" d="M350 48 H 430"/>
+      <text class="ky" x="364" y="38">SIM</text>
+      <rect class="kq" x="440" y="18" width="330" height="66" rx="3" fill="#E7EEF7" stroke="#1C4E80"/>
+      <text class="kn" x="458" y="40" fill="#1C4E80">FIGURA A</text>
+      <text class="kr" x="458" y="68">Terceirização</text>
+      <text class="kn" x="666" y="40" fill="#6E7A90">3 SUJEITOS</text>
+
+      <path class="kl" d="M185 98 V 140"/>
+      <text class="ky" x="196" y="124">NÃO</text>
+      <rect class="kq" x="20" y="148" width="330" height="96" rx="3"/>
+      <text class="kt" x="38" y="174">2. Quem trabalha foi</text>
+      <text class="ks" x="38" y="196">convertido em pessoa jurídica,</text>
+      <text class="ks" x="38" y="216">ou contratado como autônomo</text>
+      <text class="ks" x="38" y="236">por instrumento civil formal?</text>
+
+      <path class="kl" d="M350 180 H 430"/>
+      <text class="ky" x="364" y="170">SIM</text>
+      <rect class="kq" x="440" y="150" width="330" height="66" rx="3" fill="#F1EAF7" stroke="#7A3E9D"/>
+      <text class="kn" x="458" y="172" fill="#7A3E9D">FIGURA B</text>
+      <text class="kr" x="458" y="200">Pejotização</text>
+      <text class="kn" x="666" y="172" fill="#6E7A90">2 SUJEITOS</text>
+
+      <path class="kl" d="M185 244 V 286"/>
+      <text class="ky" x="196" y="270">NÃO</text>
+      <rect class="kq" x="20" y="294" width="330" height="96" rx="3"/>
+      <text class="kt" x="38" y="320">3. O comando é exercido</text>
+      <text class="ks" x="38" y="342">por programação, sobre</text>
+      <text class="ks" x="38" y="362">infraestrutura digital de quem</text>
+      <text class="ks" x="38" y="382">distribui o trabalho?</text>
+
+      <path class="kl" d="M350 326 H 430"/>
+      <text class="ky" x="364" y="316">SIM</text>
+      <rect class="kq" x="440" y="296" width="330" height="66" rx="3" fill="#E3F1F1" stroke="#0F6B6B"/>
+      <text class="kn" x="458" y="318" fill="#0F6B6B">FIGURA C</text>
+      <text class="kr" x="458" y="346">Plataformização</text>
+      <text class="kn" x="630" y="318" fill="#6E7A90">2 + PROGRAMA</text>
+    </svg>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card">
+      <h4>Três advertências de uso</h4>
+      <p class="sm">As figuras podem combinar-se. Plataforma que exige do entregador a abertura de CNPJ reúne as figuras B e C.</p>
+      <p class="sm">A chave é descritiva: identifica a forma, não decide a licitude. Esta depende sempre do artigo 9º da CLT e da prova produzida.</p>
+      <p class="sm">Cada figura tem precedente próprio no Supremo. Trocar a figura troca o precedente aplicável, e nisso consiste o erro examinado na seção 7. <span class="fonte">SD</span></p>
+    </div>
+    <div class="card">
+      <h4>Ordem de verificação, para prova e para petição</h4>
+      <ol class="mov" style="margin-top:2px">
+        <li>Quantos sujeitos figuram no contrato escrito?</li>
+        <li>Quantos sujeitos figuram na execução real?</li>
+        <li>Quem define preço, jornada, avaliação e sanção?</li>
+        <li>Quem é proprietário do instrumento de trabalho?</li>
+        <li>Quem suporta o risco da atividade?</li>
+        <li>Houve dispensa anterior seguida de recontratação sob outra forma?</li>
+      </ol>
+      <p class="sm sub" style="margin-top:10px">A sexta pergunta remete à quarentena de dezoito meses, tratada na ponte 6.1: o único lugar em que a lei brasileira liga expressamente duas destas figuras.</p>
+    </div>
+  </div>
+</section>
+
+<section id="f1">
+  <div class="snum">2 · Figura A</div>
+  <h2>Terceirização</h2>
+  <p class="lede">Externalização de fase ou de função do processo produtivo a outra pessoa jurídica. O trabalho continua sob contrato de emprego; o que muda é quem ocupa o polo empregador.</p>
+
+  <div class="ficha f1">
+    <div class="cab">
+      <div class="kicker">Estrutura trilateral · três sujeitos, dois contratos de natureza distinta</div>
+      <div class="nome">O vínculo não desaparece: muda de titular</div>
+      <div class="uma">Quem contrata o serviço não é empregador. Quem é empregador não se apropria diretamente do resultado. A separação entre esses dois papéis é a definição da figura.</div>
+    </div>
+    <div class="esquema">
+      <svg viewBox="0 0 820 250" role="img" aria-label="Esquema da terceirização: contratante, prestadora e trabalhador">
+        <defs>
+          <marker id="mA1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#1C4E80"/></marker>
+          <marker id="mA2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#14203A"/></marker>
+        </defs>
+        <style>
+          .e1b{fill:#E7EEF7;stroke:#1C4E80;stroke-width:1.6}
+          .e1c{fill:#FFF;stroke:#1C4E80;stroke-width:1.6}
+          .e1t{font:600 17.9px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+          .e1s{font:15.1px "Avenir Next",Avenir,sans-serif;fill:#4E5A74}
+          .e1l{font:400 14.0px Menlo,monospace;fill:#1C4E80;letter-spacing:.05em}
+          .e1p{font:400 14.0px Menlo,monospace;fill:#A21167;letter-spacing:.05em}
+          .e1civ{stroke:#1C4E80;stroke-width:1.8;fill:none;stroke-dasharray:7 4}
+          .e1emp{stroke:#14203A;stroke-width:2.4;fill:none}
+          .e1cmd{stroke:#A21167;stroke-width:1.6;fill:none;stroke-dasharray:3 4}
+        </style>
+        <rect class="e1b" x="20" y="30" width="230" height="70" rx="3"/>
+        <text class="e1t" x="40" y="60">Contratante</text>
+        <text class="e1s" x="40" y="84">tomadora do serviço</text>
+
+        <rect class="e1b" x="420" y="30" width="230" height="70" rx="3"/>
+        <text class="e1t" x="440" y="60">Prestadora</text>
+        <text class="e1s" x="440" y="84">empregadora de direito</text>
+
+        <rect class="e1c" x="420" y="160" width="230" height="64" rx="3"/>
+        <text class="e1t" x="440" y="190">Trabalhador</text>
+        <text class="e1s" x="440" y="212">empregado da prestadora</text>
+
+        <path class="e1civ" d="M250 62 H 412" marker-end="url(#mA1)"/>
+        <text class="e1l" x="258" y="50">contrato civil</text>
+
+        <path class="e1emp" d="M535 100 V 154" marker-end="url(#mA2)"/>
+        <text class="e1l" x="550" y="132" fill="#14203A">contrato de emprego</text>
+
+        <path class="e1cmd" d="M130 100 C 130 200, 230 214, 412 200"/>
+        <text class="e1p" x="46" y="240">comando de fato: onde a prova decide</text>
+      </svg>
+    </div>
+    <div class="corpo">
+      <div class="campo"><div class="rot">Operação econômica</div><div class="val">Divisão do trabalho entre empresas. Reduz custo pela substituição do padrão normativo de uma categoria pelo de outra, e desloca a negociação coletiva para sindicato distinto do da atividade principal. <span class="fonte">SD</span></div></div>
+      <div class="campo"><div class="rot">Sede normativa</div><div class="val"><span class="fonte">FP</span>
+        <ul>
+          <li>Lei 6.019/1974, art. 4º-A: transferência da execução de quaisquer atividades, inclusive a atividade principal, a pessoa jurídica prestadora com capacidade econômica compatível. Redação das Leis 13.429/2017 e 13.467/2017.</li>
+          <li>Art. 5º-A, § 5º: responsabilidade subsidiária da contratante pelas obrigações do período da prestação.</li>
+          <li>Art. 5º-C e art. 5º-D: as duas quarentenas de dezoito meses. Ver ponte 6.1.</li>
+          <li>Súmula 331 do TST: superada quanto à ilicitude da terceirização de atividade-fim; subsiste no que trata de responsabilidade e de administração pública. <span class="fonte">SD</span></li>
+        </ul></div></div>
+      <div class="campo"><div class="rot">Precedente</div><div class="val">
+        <span class="selo s-julgado">julgado 30/08/2018</span> &nbsp;ADPF 324 e RE 958.252, Tema 725.<br>
+        Tese: é lícita a terceirização, ou qualquer outra forma de divisão do trabalho entre pessoas jurídicas distintas, independentemente do objeto social das empresas envolvidas, mantida a responsabilidade subsidiária da contratante. <span class="fonte">FS</span></div></div>
+      <div class="campo"><div class="rot">Questão jurídica central</div><div class="val">Não é a existência do vínculo, que é incontroversa, mas a atribuição de responsabilidade entre as duas empresas, e a licitude do arranjo. <span class="fonte">SD</span></div></div>
+      <div class="campo"><div class="rot">Como se prova a ilicitude</div><div class="val">Demonstrando intermediação de mão de obra em lugar de prestação de serviço especializado: pessoalidade e subordinação diretas ao tomador, prestadora sem estrutura própria, trabalhador integrado ao processo do tomador. <span class="fonte">SD</span></div></div>
+      <div class="campo"><div class="rot">Rótulo próprio no DataJud</div><div class="val">Existe e é populoso: 912.781 processos sob os rótulos de terceirização e tomador de serviços nos 24 TRTs e no TST. <span class="fonte">FP</span></div></div>
+      <div class="campo"><div class="rot">Presença no Falcão</div><div class="val">1.678.586 acórdãos empregam a palavra. Litigância de massa consolidada, três ordens de grandeza acima das demais figuras. <span class="fonte">FP</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="f2">
+  <div class="snum">3 · Figura B</div>
+  <h2>Pejotização</h2>
+  <p class="lede">Conversão de quem trabalha em empresa. Não há terceiro interposto: há uma só relação, e o que se altera é a qualificação jurídica que se lhe dá.</p>
+
+  <div class="ficha f2">
+    <div class="cab">
+      <div class="kicker">Estrutura bilateral · um sujeito com duas personalidades</div>
+      <div class="nome">O polo empregador é suprimido, não deslocado</div>
+      <div class="uma">A mesma pessoa física comparece como parte contratante. O CNPJ não acrescenta sujeito algum à relação: subtrai um regime jurídico dela.</div>
+    </div>
+    <div class="esquema">
+      <svg viewBox="0 0 820 260" role="img" aria-label="Esquema da pejotização: contratante e trabalhador convertido em pessoa jurídica">
+        <defs><marker id="mB1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#7A3E9D"/></marker></defs>
+        <style>
+          .e2b{fill:#F1EAF7;stroke:#7A3E9D;stroke-width:1.6}
+          .e2c{fill:#FFF;stroke:#7A3E9D;stroke-width:1.4}
+          .e2t{font:600 17.9px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+          .e2u{font:600 15.7px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+          .e2s{font:15.1px "Avenir Next",Avenir,sans-serif;fill:#4E5A74}
+          .e2l{font:400 14.0px Menlo,monospace;fill:#7A3E9D;letter-spacing:.05em}
+          .e2civ{stroke:#7A3E9D;stroke-width:1.8;fill:none;stroke-dasharray:7 4}
+          .e2gh{fill:none;stroke:#B6BFCE;stroke-width:1.6;stroke-dasharray:3 5}
+        </style>
+        <rect class="e2b" x="20" y="88" width="230" height="70" rx="3"/>
+        <text class="e2t" x="40" y="118">Contratante</text>
+        <text class="e2s" x="40" y="142">exerce o comando de fato</text>
+
+        <rect class="e2b" x="420" y="30" width="250" height="182" rx="3"/>
+        <text class="e2l" x="436" y="54">MESMA PESSOA, DUAS VESTES</text>
+        <rect class="e2c" x="436" y="66" width="218" height="58" rx="2"/>
+        <text class="e2u" x="452" y="90">Pessoa jurídica</text>
+        <text class="e2s" x="452" y="112">contratada: CNPJ ou MEI</text>
+        <rect class="e2c" x="436" y="134" width="218" height="58" rx="2"/>
+        <text class="e2u" x="452" y="158">Pessoa física</text>
+        <text class="e2s" x="452" y="180">quem trabalha de fato</text>
+
+        <path class="e2civ" d="M250 118 H 412" marker-end="url(#mB1)"/>
+        <text class="e2l" x="258" y="106">contrato civil</text>
+
+        <path class="e2gh" d="M130 158 C 130 228, 300 234, 500 212"/>
+        <text class="e2s" x="46" y="252" fill="#6E7A90">o contrato de emprego que a forma nega</text>
+      </svg>
+    </div>
+    <div class="corpo">
+      <div class="campo"><div class="rot">Por que não é terceirização</div><div class="val">Na terceirização há duas empresas reais e um empregado de uma delas. Aqui a segunda empresa é o próprio trabalhador. Não há a quem imputar responsabilidade subsidiária, porque não existe empregador intermediário. Discute-se existência do vínculo, não repartição de responsabilidade. <span class="fonte">SD</span></div></div>
+      <div class="campo"><div class="rot">Operação econômica</div><div class="val">Transferência integral do custo social ao trabalhador, que passa a recolher tributo próprio, arcar com afastamento e férias e responder pelo risco. Não há ganho de especialização; há transferência de encargo. <span class="fonte">SD</span></div></div>
+      <div class="campo"><div class="rot">Sede normativa</div><div class="val"><span class="fonte">FP</span>
+        <ul>
+          <li>CLT, art. 3º: elementos da relação de emprego. Art. 9º: nulidade dos atos praticados para desvirtuar a aplicação dos preceitos trabalhistas.</li>
+          <li>CLT, art. 442-B: a contratação do autônomo, cumpridas as formalidades legais, com ou sem exclusividade, de forma contínua ou não, afasta a qualidade de empregado. Dispositivo central da controvérsia.</li>
+          <li>Tipos contratuais próprios: Lei 11.442/2007, transportador autônomo de cargas; Lei 13.352/2016, parceria em salão de beleza; regime do microempreendedor individual.</li>
+          <li>Lei 6.019/1974, art. 5º-C: vedação de contratar como pessoa jurídica quem foi empregado nos dezoito meses anteriores. Ver ponte 6.1.</li>
+        </ul></div></div>
+      <div class="campo"><div class="rot">Precedentes</div><div class="val">
+        <span class="selo s-julgado">julgado 15/04/2020</span> &nbsp;ADC 48 e ADI 3.961: constitucionalidade da Lei 11.442/2007; preenchidos os requisitos legais, configura-se relação comercial de natureza civil. <span class="fonte">FS</span><br><br>
+        <span class="selo s-julgado">julgado</span> &nbsp;ADI 5.625: é constitucional o contrato de parceria em salão de beleza, e é nulo esse mesmo contrato quando utilizado para dissimular relação de emprego. A tese tem duas partes, e a segunda costuma ser omitida na citação. <span class="fonte">FS</span><br><br>
+        <span class="selo s-pendente">pendente</span> <span class="selo s-suspenso">suspensão desde abr/2025</span><br>Tema 1.389, ARE 1.532.603, relatoria do Ministro Gilmar Mendes. Três questões: licitude da contratação de autônomo ou de pessoa jurídica, inclusive para atividade-fim; competência para julgar a alegação de fraude; e distribuição do ônus da prova. <span class="fonte">FS</span></div></div>
+      <div class="campo"><div class="rot">Questão jurídica central</div><div class="val">Qualificação: a mesma relação é contrato civil ou contrato de emprego dissimulado. E, decorrência prática mais importante que a primeira, a quem incumbe provar. <span class="fonte">SD</span></div></div>
+      <div class="campo"><div class="rot">Rótulo próprio no DataJud</div><div class="val">Não existe. Verificado por agregação com expressão regular sobre o campo de assuntos em quatro acervos: não há rótulo para pejotização. O mais próximo é trabalhador autônomo não especificado, com 10.231 processos. A fraude não se declara na autuação. <span class="fonte">FP</span></div></div>
+      <div class="campo"><div class="rot">Presença no Falcão</div><div class="val">34.916 acórdãos, 34.027 sentenças e 8.906 decisões monocráticas. A categoria circula com intensidade, ainda que não exista na estatística. <span class="fonte">FP</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="f3">
+  <div class="snum">4 · Figura C</div>
+  <h2>Plataformização</h2>
+  <p class="lede">Não é forma contratual, e por isso não se compara às duas anteriores no mesmo plano. É modo de organizar, controlar e apropriar trabalho, que pode revestir-se de qualquer forma contratual, inclusive das duas anteriores.</p>
+
+  <div class="ficha f3">
+    <div class="cab">
+      <div class="kicker">Estrutura bilateral com mediação técnica · o comando é programado</div>
+      <div class="nome">A subordinação não desaparece: muda de instrumento</div>
+      <div class="uma">Preço, distribuição da tarefa, avaliação e sanção passam a ser definidos por programa. O poder diretivo não se enfraquece por ser exercido assim: torna-se contínuo e menos visível.</div>
+    </div>
+    <div class="esquema">
+      <svg viewBox="0 0 820 270" role="img" aria-label="Esquema da plataformização: plataforma, programa de gestão, trabalhador e usuário">
+        <defs>
+          <marker id="mC1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#0F6B6B"/></marker>
+          <marker id="mC2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A21167"/></marker>
+        </defs>
+        <style>
+          .e3b{fill:#E3F1F1;stroke:#0F6B6B;stroke-width:1.6}
+          .e3c{fill:#FFF;stroke:#0F6B6B;stroke-width:1.6}
+          .e3t{font:600 17.9px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+          .e3s{font:15.1px "Avenir Next",Avenir,sans-serif;fill:#4E5A74}
+          .e3l{font:400 14.0px Menlo,monospace;fill:#0F6B6B;letter-spacing:.05em}
+          .e3p{font:400 14.0px Menlo,monospace;fill:#A21167;letter-spacing:.05em}
+          .e3f{stroke:#0F6B6B;stroke-width:1.7;fill:none}
+          .e3cmd{stroke:#A21167;stroke-width:2.4;fill:none}
+        </style>
+        <rect class="e3b" x="20" y="30" width="230" height="70" rx="3"/>
+        <text class="e3t" x="40" y="60">Plataforma</text>
+        <text class="e3s" x="40" y="84">infraestrutura e dados</text>
+
+        <rect class="e3b" x="330" y="30" width="230" height="70" rx="3"/>
+        <text class="e3t" x="350" y="60">Programa de gestão</text>
+        <text class="e3s" x="350" y="84">preço, oferta, avaliação</text>
+
+        <rect class="e3c" x="330" y="176" width="230" height="66" rx="3"/>
+        <text class="e3t" x="350" y="206">Trabalhador</text>
+        <text class="e3s" x="350" y="228">dono do instrumento</text>
+
+        <rect class="e3c" x="630" y="176" width="170" height="66" rx="3"/>
+        <text class="e3t" x="650" y="206">Usuário final</text>
+        <text class="e3s" x="650" y="228">paga e avalia</text>
+
+        <path class="e3f" d="M250 64 H 322" marker-end="url(#mC1)"/>
+        <path class="e3cmd" d="M445 102 V 170" marker-end="url(#mC2)"/>
+        <text class="e3p" x="458" y="158">comando por programação</text>
+        <path class="e3f" d="M560 208 H 622" marker-end="url(#mC1)"/>
+        <path class="e3f" d="M715 176 V 136 H 125 V 102" marker-end="url(#mC1)"/>
+        <text class="e3l" x="150" y="128">pagamento e reputação</text>
+      </svg>
+    </div>
+    <div class="corpo">
+      <div class="campo"><div class="rot">O teste dogmático</div><div class="val">Artigo 6º, parágrafo único, da CLT: os meios telemáticos e informatizados de comando, controle e supervisão equiparam-se aos pessoais e diretos. O dispositivo aparece em 88% dos 93 acórdãos que tratam de gerenciamento algorítmico. É o eixo real da fundamentação. <span class="fonte">FP</span></div></div>
+      <div class="campo"><div class="rot">Operação econômica</div><div class="val">Apropriação do trabalho sem contratação, por controle da infraestrutura e da informação. Remuneração por tarefa, disponibilidade transferida ao trabalhador, risco externalizado, disciplina exercida por bloqueio. <span class="fonte">SD</span></div></div>
+      <div class="campo"><div class="rot">Sede normativa</div><div class="val"><span class="fonte">FP</span>
+        <ul>
+          <li>CLT, art. 6º, parágrafo único.</li>
+          <li>Lei 12.009/2009 e Lei 14.297/2022, quanto a motofretistas e entregadores.</li>
+          <li>Convenção 193 da Organização Internacional do Trabalho, aprovada em 12/06/2026, primeira norma internacional específica sobre trabalho em plataformas. Ainda não incorporada. <span class="fonte">FS</span></li>
+        </ul></div></div>
+      <div class="campo"><div class="rot">Precedente</div><div class="val">
+        <span class="selo s-pendente">pendente</span> <span class="selo s-pautado">pautado 27/08/2026</span><br>
+        Tema 1.291, RE 1.446.336, relatoria do Ministro Edson Fachin. Reconhecimento de vínculo entre motorista de aplicativo e a empresa que administra a plataforma. Será julgado em conjunto com a Rcl 64.018, da Rappi. <span class="fonte">FS</span><br><br>
+        Não há suspensão nacional própria deste tema. Em agosto de 2025 assentou-se que as causas de plataforma não estão abrangidas pela suspensão do Tema 1.389. <span class="fonte">FS</span></div></div>
+      <div class="campo"><div class="rot">Questão jurídica central</div><div class="val">Se o comando programado satisfaz a subordinação do artigo 3º da CLT, lido com o artigo 6º, parágrafo único. É questão de qualificação, como na pejotização, mas o objeto da prova é diverso: não o instrumento contratual, e sim o funcionamento do programa. <span class="fonte">SD</span></div></div>
+      <div class="campo"><div class="rot">Rótulo próprio no DataJud</div><div class="val">Existe desde pouco e é quase vazio: o assunto 13755, trabalho sob aplicativos e plataformas digitais, reúne 479 processos em todo o país e só começa a ser usado em 2023. Nenhum rótulo para uberização, motorista de aplicativo ou entregador. <span class="fonte">FP</span></div></div>
+      <div class="campo"><div class="rot">Distinção terminológica útil</div><div class="val">Plataformização designa o processo econômico e organizacional amplo, que alcança empresas tradicionais que se plataformizam. Uberização designa a forma específica de gestão do trabalho por autogerenciamento subordinado. Convém não usar as duas como sinônimos. <span class="fonte">SD</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sinotico">
+  <div class="snum">5</div>
+  <h2>Quadro sinótico</h2>
+  <p>A mesma pauta de dez perguntas, aplicada às três figuras. Lê-se na vertical para conhecer uma categoria e na horizontal para compará-las.</p>
+  <div class="card" style="padding:12px 16px;overflow-x:auto">
+  <table>
+    <thead>
+      <tr><th style="min-width:180px">Critério</th>
+          <th style="min-width:220px;color:var(--t1)">Terceirização</th>
+          <th style="min-width:220px;color:var(--t2)">Pejotização</th>
+          <th style="min-width:220px;color:var(--t3)">Plataformização</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Sujeitos na relação</td><td>Três</td><td>Dois</td><td>Dois, com mediação técnica</td></tr>
+      <tr><td>Pessoas jurídicas envolvidas</td><td>Duas empresas reais</td><td>Uma empresa real e uma que é o próprio trabalhador</td><td>Uma empresa real; a forma do trabalhador varia</td></tr>
+      <tr><td>O que se altera</td><td>Quem ocupa o polo empregador</td><td>A qualificação jurídica da mesma relação</td><td>O instrumento de exercício do poder diretivo</td></tr>
+      <tr><td>Vínculo de emprego</td><td>Subsiste, com a prestadora</td><td>Negado pela forma societária</td><td>Negado pela alegação de simples intermediação</td></tr>
+      <tr><td>Natureza da figura</td><td>Forma de organização empresarial</td><td>Forma contratual, e possível fraude</td><td>Modo de organizar e controlar o trabalho</td></tr>
+      <tr><td>Sede normativa principal</td><td>Lei 6.019/1974, arts. 4º-A e 5º-A</td><td>CLT, arts. 3º, 9º e 442-B</td><td>CLT, art. 6º, parágrafo único</td></tr>
+      <tr><td>Precedente do Supremo</td><td>ADPF 324 e Tema 725<br><span class="selo s-julgado">julgado</span></td><td>ADC 48, ADI 5.625 e Tema 1.389<br><span class="selo s-pendente">pendente</span></td><td>Tema 1.291<br><span class="selo s-pautado">27/08/2026</span></td></tr>
+      <tr><td>Questão central em juízo</td><td>Atribuição de responsabilidade</td><td>Existência do vínculo e ônus da prova</td><td>Natureza da subordinação</td></tr>
+      <tr><td>Rótulo próprio no DataJud</td><td class="num">912.781</td><td>não existe</td><td class="num">479</td></tr>
+      <tr><td>Acórdãos no Falcão</td><td class="num">1.678.586</td><td class="num">34.916</td><td class="num">1.679</td></tr>
+    </tbody>
+    <caption>Falcão e DataJud, consulta de 18/08/2026. Contagens exatas obtidas pelas facetas, que não sofrem a saturação do campo de total. <span class="fonte">FP</span></caption>
+  </table>
+  </div>
+  <div class="nota">Erro frequente em prova, e também em petição: tratar a plataformização como espécie de terceirização, porque em ambas alguém trabalha para quem não o contratou como empregado. A diferença é decisiva. Na terceirização existe um empregador, e a discussão é sobre responsabilidade. Na plataformização nega-se que exista empregador, e a discussão é sobre subordinação. <span class="fonte">SD</span></div>
+</section>
+
+<section id="pontes">
+  <div class="snum">6</div>
+  <h2>As pontes entre as três figuras</h2>
+  <p class="lede">Distinguir não é isolar. Há cinco lugares em que as categorias se tocam: a lei, a dogmática, a jurisprudência, o léxico das decisões e a ausência de classificação. Cada ponte funciona de modo próprio, e confundi-las é a origem do erro examinado na seção seguinte.</p>
+
+  <div class="ponte" id="p61">
+    <div class="liga">Ponte 6.1 · legal e explícita · terceirização e pejotização</div>
+    <div class="tit">A quarentena de dezoito meses: a lei da terceirização legisla contra a pejotização</div>
+    <p>É o único lugar do direito positivo brasileiro em que duas destas figuras aparecem expressamente ligadas. A reforma de 2017, ao liberar a terceirização, previu que a liberação seria usada para converter empregados em prestadores, e criou dois anteparos distintos, que a doutrina costuma confundir.</p>
+
+    <div class="grid g2" style="margin:14px 0">
+      <div>
+        <blockquote class="lei">Não pode figurar como contratada, nos termos do art. 4º-A desta Lei, a pessoa jurídica cujos titulares ou sócios tenham, nos últimos dezoito meses, prestado serviços à contratante na qualidade de empregado ou trabalhador sem vínculo empregatício, exceto se os referidos titulares ou sócios forem aposentados.
+        <cite>Lei 6.019/1974, art. 5º-C, acrescido pela Lei 13.467/2017 · <span class="fonte">FP</span></cite></blockquote>
+        <p class="sm sub"><b>Anteparo contra a pejotização.</b> Proíbe que a empresa contrate, como pessoa jurídica, quem foi seu empregado. Alcança também quem prestou serviços sem vínculo, o que amplia o dispositivo para além da dispensa formal. A ressalva do aposentado revela a finalidade: o que se quer impedir é a substituição do emprego, não a contratação de quem já se retirou do mercado. <span class="fonte">SD</span></p>
+      </div>
+      <div>
+        <blockquote class="lei" style="border-left-color:var(--t2)">O empregado que for demitido não poderá prestar serviços para esta mesma empresa na qualidade de empregado de empresa prestadora de serviços antes do decurso de prazo de dezoito meses, contados a partir da demissão do empregado.
+        <cite>Lei 6.019/1974, art. 5º-D, acrescido pela Lei 13.467/2017 · <span class="fonte">FP</span></cite></blockquote>
+        <p class="sm sub"><b>Anteparo contra a substituição por terceirização.</b> Aqui o trabalhador volta como empregado de outra empresa, e não como empresa. É dispositivo sobre terceirização, não sobre pejotização. <span class="fonte">SD</span></p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:18px">Por que a distinção entre os dois dispositivos importa</h3>
+    <p>O 5º-C veda a contratação da pessoa jurídica; o 5º-D veda a prestação pelo ex-empregado como empregado de terceiro. Um proíbe transformar o empregado em empresa; o outro, transformá-lo em terceirizado. Boa parte da literatura de divulgação cita o 5º-C com a redação do 5º-D, o que é sintomático: a própria doutrina amalgama as duas figuras no exato ponto em que a lei as separou. <span class="fonte">SD</span></p>
+
+    <h3>O que a jurisprudência faz com esse dispositivo</h3>
+    <div class="grid g2">
+      <div class="card" style="padding:12px 16px">
+        <table style="margin:0">
+          <thead><tr><th>Medida no Falcão, acórdãos</th><th class="num">n</th></tr></thead>
+          <tbody>
+            <tr><td>Mencionam o dispositivo, grafia abreviada</td><td class="num">1.785</td></tr>
+            <tr><td>Mencionam o dispositivo, grafia por extenso</td><td class="num">1.112</td></tr>
+            <tr><td>Destes, tratam de terceirização</td><td class="num">602</td></tr>
+            <tr><td>Destes, citam a ADPF 324</td><td class="num">166</td></tr>
+            <tr><td>Destes, tratam de pejotização</td><td class="num">113</td></tr>
+            <tr><td>Empregam a expressão quarentena de dezoito meses</td><td class="num">2</td></tr>
+          </tbody>
+          <caption>As duas grafias não se somam, sob pena de dupla contagem: a pontuação não é normalizada pelo índice, e cada forma devolve conjunto próprio e parcialmente sobreposto. Piso: 1.785. <span class="fonte">FP</span></caption>
+        </table>
+      </div>
+      <div>
+        <div class="achado" style="margin-top:0">
+          <span class="lab">Achado</span>
+          Existem 34.916 acórdãos que discutem pejotização. Em 113 deles, isto é, em 0,3%, aparece o dispositivo que a lei escreveu justamente para coibi-la. A ponte legal existe e está praticamente inutilizada. <span class="fonte">FP</span> <span class="fonte">SD</span>
+        </div>
+        <p class="sm">Quando é usada, funciona como argumento de distinção: há ementa que afasta a aplicação da ADPF 324 ao caso concreto porque a contratação violou frontalmente o artigo 5º-C, e conclui pela nulidade com fundamento no artigo 9º da CLT. <span class="fonte">FS</span></p>
+        <p class="sm">A defesa dispõe de resposta pronta: a inobservância do dispositivo seria infração administrativa, a ser resolvida pela fiscalização do trabalho, sem impor por si o reconhecimento do vínculo quando ausentes pessoalidade e subordinação. O debate está posto nesses termos. <span class="fonte">FS</span></p>
+      </div>
+    </div>
+    <div class="nota" style="margin-bottom:0"><b>Para a aula.</b> A quarentena serve de porta de entrada didática, porque obriga o aluno a distinguir as figuras antes de opinar: ela só faz sentido para quem já entendeu que converter empregado em empresa é operação diversa de contratar outra empresa. E serve de porta de entrada crítica, porque a lei que liberou a terceirização é a mesma que reconheceu a pejotização como risco a ser contido. <span class="fonte">SD</span></div>
+  </div>
+
+  <div class="ponte" id="p62">
+    <div class="liga">Ponte 6.2 · dogmática · as três figuras</div>
+    <div class="tit">O teste é sempre o mesmo: forma contra realidade</div>
+    <p>Qualquer das três figuras se resolve pelo mesmo instrumento: o artigo 9º da CLT, que fulmina de nulidade os atos praticados para desvirtuar a aplicação dos preceitos trabalhistas, operado pelo princípio da primazia da realidade. O que muda de figura para figura é o objeto da prova.</p>
+    <div class="card" style="padding:12px 16px;margin-top:10px;overflow-x:auto">
+      <table style="margin:0">
+        <thead><tr><th>Figura</th><th>O que se prova</th><th>Dispositivo de apoio</th><th class="num">No corpus de 93 acórdãos</th></tr></thead>
+        <tbody>
+          <tr><td style="color:var(--t1)">Terceirização</td><td>Intermediação de mão de obra em lugar de serviço especializado</td><td>Súmula 331 do TST, no que subsiste</td><td class="num">Súmula 331 em 8%</td></tr>
+          <tr><td style="color:var(--t2)">Pejotização</td><td>Pessoalidade e subordinação sob a veste societária</td><td>CLT, arts. 3º, 9º e 442-B</td><td class="num">art. 9º em 19%</td></tr>
+          <tr><td style="color:var(--t3)">Plataformização</td><td>Funcionamento do programa: preço, oferta, avaliação, sanção</td><td>CLT, art. 6º, parágrafo único</td><td class="num">art. 6º em 88%</td></tr>
+        </tbody>
+        <caption>Corpus completo dos 93 acórdãos que empregam a expressão gerenciamento algorítmico, com leitura do inteiro teor. Primazia da realidade em 70%; artigo 3º da CLT em 78%. <span class="fonte">FP</span></caption>
+      </table>
+    </div>
+    <p style="margin-top:12px">Note-se o que esses números revelam: nos casos de plataforma os tribunais não constroem categoria nova. Aplicam a subordinação telemática que a lei já previa. A novidade é do fenômeno, não do fundamento. <span class="fonte">SD</span></p>
+  </div>
+
+  <div class="ponte" id="p63">
+    <div class="liga">Ponte 6.3 · jurisprudencial · a cadeia de precedentes</div>
+    <div class="tit">Como uma tese sobre transporte de cargas chegou ao trabalho por aplicativo</div>
+    <figure>
+      <svg viewBox="0 0 1160 268" role="img" aria-label="Cadeia de precedentes do Supremo, de 2018 a 2026">
+        <defs><marker id="mD1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A21167"/></marker></defs>
+        <style>
+          .cy{font:400 13.4px Menlo,monospace;fill:#6E7A90;letter-spacing:.06em}
+          .ct{font:600 14.6px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+          .cd{font:13.4px "Avenir Next",Avenir,sans-serif;fill:#4E5A74}
+          .cax{stroke:#14203A;stroke-width:1.3}
+          .ctk{stroke:#C2CAD8;stroke-width:1}
+          .nJ{fill:#EAF2EF;stroke:#1C5B45;stroke-width:1.6}
+          .nP{fill:#F7F1E2;stroke:#7C5A0B;stroke-width:1.6}
+          .nS{fill:#FAEAF2;stroke:#A21167;stroke-width:2}
+          .cmig{stroke:#A21167;stroke-width:1.8;fill:none;stroke-dasharray:6 4}
+          .cnote{font:400 14.0px Menlo,monospace;fill:#A21167;letter-spacing:.04em}
+        </style>
+
+        <text class="cnote" x="330" y="26">a migração medida na ponte 6.3</text>
+        <path class="cmig" d="M255 106 C 340 52, 900 46, 1010 104" marker-end="url(#mD1)"/>
+
+        <rect class="nJ" x="20" y="110" width="175" height="74" rx="3"/>
+        <text class="ct" x="34" y="132">ADPF 324</text>
+        <text class="cd" x="34" y="152">Tema 725 · 2018</text>
+        <text class="cd" x="34" y="170">terceirização lícita</text>
+
+        <rect class="nJ" x="207" y="110" width="175" height="74" rx="3"/>
+        <text class="ct" x="221" y="132">ADC 48</text>
+        <text class="cd" x="221" y="152">ADI 3.961 · 2020</text>
+        <text class="cd" x="221" y="170">transporte é civil</text>
+
+        <rect class="nJ" x="394" y="110" width="175" height="74" rx="3"/>
+        <text class="ct" x="408" y="132">ADI 5.625</text>
+        <text class="cd" x="408" y="152">salão parceiro</text>
+        <text class="cd" x="408" y="170">nula se dissimula</text>
+
+        <rect class="nJ" x="581" y="110" width="175" height="74" rx="3"/>
+        <text class="ct" x="595" y="132">Tema 1.232</text>
+        <text class="cd" x="595" y="152">grupo econômico</text>
+        <text class="cd" x="595" y="170">julgado out/2025</text>
+
+        <rect class="nP" x="768" y="110" width="175" height="74" rx="3"/>
+        <text class="ct" x="782" y="132">Tema 1.389</text>
+        <text class="cd" x="782" y="152">pejotização</text>
+        <text class="cd" x="782" y="170">sem tese · suspenso</text>
+
+        <rect class="nS" x="955" y="110" width="185" height="74" rx="3"/>
+        <text class="ct" x="969" y="132">Tema 1.291</text>
+        <text class="cd" x="969" y="152">plataformas · 27/08</text>
+        <text class="cd" x="969" y="170">com a Rcl 64.018</text>
+
+        <line class="cax" x1="20" y1="210" x2="1140" y2="210"/>
+        <g class="cy">
+          <line class="ctk" x1="107" y1="206" x2="107" y2="216"/><text x="91" y="234">2018</text>
+          <line class="ctk" x1="294" y1="206" x2="294" y2="216"/><text x="278" y="234">2020</text>
+          <line class="ctk" x1="481" y1="206" x2="481" y2="216"/><text x="465" y="234">2023</text>
+          <line class="ctk" x1="668" y1="206" x2="668" y2="216"/><text x="652" y="234">2025</text>
+          <line class="ctk" x1="1047" y1="206" x2="1047" y2="216"/><text x="1031" y="234">2026</text>
+        </g>
+      </svg>
+      <figcaption>Cadeia de precedentes. A seta superior indica a migração medida abaixo. Falcão, coleção de acórdãos, 18/08/2026. <span class="fonte">FP</span> quanto aos números; <span class="fonte">FS</span> quanto às teses e à pauta.</figcaption>
+    </figure>
+    <div class="legenda" style="margin-bottom:14px">
+      <span><i style="background:#EAF2EF;border-color:#1C5B45"></i> julgado, tese vigente</span>
+      <span><i style="background:#F7F1E2;border-color:#7C5A0B"></i> pendente de mérito</span>
+      <span><i style="background:#FAEAF2;border-color:#A21167"></i> pautado para 27 de agosto de 2026</span>
+    </div>
+
+    <div class="grid g2">
+      <div class="achado" style="margin-top:0">
+        <span class="lab">Achado que corrige a crítica corrente</span>
+        A doutrina crítica atribui ao Supremo a expansão indevida da ADPF 324. A medição não sustenta o dispositivo, e sustenta o diagnóstico. Dos 161.107 acórdãos que citam a ADPF 324, 94,7% tratam de terceirização: o precedente permanece confinado ao seu objeto.
+        <br><br>Quem migra é a ADC 48. Dos seus 27.053 acórdãos: 64,9% mencionam motorista, 40,6% mencionam transporte de cargas e 40,1% mencionam aplicativo. <span class="fonte">FP</span>
+      </div>
+      <div>
+        <h4>Por que a ADC 48 é a porta de entrada</h4>
+        <p class="sm">Porque a sua tese não trata de repartir responsabilidade entre empresas, como a da terceirização, e sim de qualificar como comercial uma relação de trabalho pessoal, uma vez preenchidos os requisitos de uma lei especial. É essa estrutura argumentativa, e não a da terceirização, que serve ao trabalho por plataforma. <span class="fonte">SD</span></p>
+        <div class="contra" style="margin-bottom:0"><b>Advertência de leitura.</b> A palavra aplicativo é polissêmica: pode designar o aplicativo de mensagens juntado como prova ou o próprio sistema processual. A proximidade entre os números vale como indício forte, não como medida exata. <span class="fonte">SD</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ponte" id="p64">
+    <div class="liga">Ponte 6.4 · lexical · como as decisões misturam as três</div>
+    <div class="tit">As categorias circulam juntas no mesmo texto</div>
+    <div class="bars">
+      <div class="brow"><div class="blab">pejotização e terceirização</div><div class="btrack"><div class="bfill c2" style="width:49.9%"></div></div><div class="bval">49,9% · 17.431</div></div>
+      <div class="brow"><div class="blab">plataformização e uberização</div><div class="btrack"><div class="bfill c3" style="width:71.6%"></div></div><div class="bval">71,6% · 1.203</div></div>
+      <div class="brow"><div class="blab">subordinação algorítmica e uberização</div><div class="btrack"><div class="bfill c3" style="width:58.3%"></div></div><div class="bval">58,3% · 4.042</div></div>
+      <div class="brow"><div class="blab">plataformização e pejotização</div><div class="btrack"><div class="bfill c3" style="width:56.8%"></div></div><div class="bval">56,8% · 953</div></div>
+      <div class="brow"><div class="blab">uberização e pejotização</div><div class="btrack"><div class="bfill c2" style="width:52.4%"></div></div><div class="bval">52,4% · 3.349</div></div>
+      <div class="brow"><div class="blab">subordinação algorítmica e pejotização</div><div class="btrack"><div class="bfill c3" style="width:33.7%"></div></div><div class="bval">33,7% · 2.338</div></div>
+      <div class="brow"><div class="blab">uberização e terceirização</div><div class="btrack"><div class="bfill c1" style="width:25.2%"></div></div><div class="bval">25,2% · 1.611</div></div>
+      <div class="bnote">Interseções em acórdãos, calculadas por exclusão do complemento, porque o índice não admite conjunção. A percentagem é sempre sobre o universo da primeira expressão. O método foi validado nos dois sentidos: a interseção entre uberização e pejotização deu 3.349 por um caminho e pelo outro. <span class="fonte">FP</span></div>
+    </div>
+    <p style="margin-top:14px">Metade dos acórdãos que falam de pejotização também fala de terceirização. Sete de cada dez que falam de plataformização falam de uberização. As três categorias convivem no mesmo texto, com frequência alta.</p>
+    <div class="contra" style="margin-bottom:0"><b>Leitura honesta.</b> Isso não é erro. Decisão que descreve o quadro da precarização antes de qualificar o caso menciona naturalmente as três figuras. O amálgama que compromete a técnica não é o do vocabulário descritivo: é o da premissa normativa, medido na ponte 6.3. Confundir os dois é a armadilha simétrica em que a crítica costuma cair. <span class="fonte">SD</span></div>
+  </div>
+
+  <div class="ponte" id="p65">
+    <div class="liga">Ponte 6.5 · pela ausência · a taxonomia oficial</div>
+    <div class="tit">O que a estatística do Judiciário não sabe contar</div>
+    <div class="bars">
+      <div class="brow"><div class="blab">Reconhecimento de Relação de Emprego</div><div class="btrack"><div class="bfill c1" style="width:95.9%"></div></div><div class="bval">2.090.089</div></div>
+      <div class="brow"><div class="blab">Terceirização e tomador de serviços</div><div class="btrack"><div class="bfill c2" style="width:88.0%"></div></div><div class="bval">912.781</div></div>
+      <div class="brow"><div class="blab">Trabalhador Autônomo Não Especificado</div><div class="btrack"><div class="bfill" style="width:44.7%"></div></div><div class="bval">10.231</div></div>
+      <div class="brow"><div class="blab">Contrato Intermitente</div><div class="btrack"><div class="bfill" style="width:37.6%"></div></div><div class="bval">4.943</div></div>
+      <div class="brow"><div class="blab">Trabalho sob Aplicativos e Plataformas</div><div class="btrack"><div class="bfill c3" style="width:15.1%"></div></div><div class="bval">479</div></div>
+      <div class="bnote">DataJud, acervo dos 24 TRTs e do TST, 18/08/2026. Escala logarítmica: em escala linear a última barra desapareceria. Não há rótulo algum para pejotização, uberização, motorista de aplicativo, entregador ou gestão algorítmica. <span class="fonte">FP</span></div>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="achado" style="margin:0">
+        <span class="lab">Achado</span>
+        A taxonomia tem código para o que a lei nomeia e não tem código para a fraude. Terceirização, autorizada por lei, tem 912.781 processos. Contrato intermitente, criado pela reforma, ganhou rótulo. A pejotização, que é qualificação de fraude, não tem código algum, porque fraude não se declara na autuação. <span class="fonte">FP</span> <span class="fonte">SD</span>
+      </div>
+      <div class="achado" style="margin:0">
+        <span class="lab">Discrepância a explicar</span>
+        Noticiou-se que a tese do Tema 1.291 poderá afetar mais de dez mil processos suspensos. A base oficial classifica 479 como trabalho em plataforma, em todos os graus. Três explicações não excludentes: absorção das causas no rótulo genérico de vínculo; universo diverso na estimativa; lacuna de alimentação, e há indício dela, pois o TRT19 registra 663 processos de vínculo contra 39.675 do TRT6. <span class="fonte">FP</span> <span class="fonte">FS</span> <span class="fonte">SD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="critica">
+  <div class="snum">7</div>
+  <h2>A crítica, em três níveis e duas direções</h2>
+  <p class="lede">Feita a distinção e mapeadas as pontes, a crítica pode ser formulada sem retórica. Ela tem três níveis de gravidade crescente e, o que a literatura em geral não separa, duas direções contrárias conforme a instância.</p>
+
+  <h3>7.1 Os três níveis</h3>
+  <div class="grid g3">
+    <div class="card">
+      <h4>Nível 1 · confusão de estruturas</h4>
+      <p class="sm">A formulação oficial do Tema 1.389 indaga se é legal contratar autônomo ou pessoa jurídica à luz do entendimento firmado no julgamento sobre terceirização de atividade-fim. <span class="fonte">FS</span></p>
+      <p class="sm">A premissa normativa de um problema bilateral foi colhida em precedente trilateral. O Tema 725 autoriza dividir trabalho entre pessoas jurídicas distintas; a pejotização suprime a distinção entre as duas. <span class="fonte">SD</span></p>
+    </div>
+    <div class="card">
+      <h4>Nível 2 · da validade do tipo à qualificação do caso</h4>
+      <p class="sm">As teses invocadas não autorizam fraude. A ADI 5.625 ressalva a nulidade do contrato dissimulado; a ADC 48 condiciona a natureza civil ao preenchimento dos requisitos legais. <span class="fonte">FS</span></p>
+      <p class="sm">Na via da reclamação, porém, esses precedentes servem para desconstituir juízos de fato sobre fraude. O vício não está nas teses: está no uso expansivo delas, que converte a validação de tipos determinados em cláusula geral de liberdade de forma. <span class="fonte">SD</span></p>
+    </div>
+    <div class="card">
+      <h4>Nível 3 · supressão da questão de fato</h4>
+      <p class="sm">Decidir por reclamação implica revalorar prova produzida em instrução trabalhista sem contraditório probatório equivalente.</p>
+      <p class="sm">A assimetria é notável: o Supremo veda o reexame de prova em recurso extraordinário, pela Súmula 279, e o realiza na reclamação, cujo objeto deveria limitar-se à aderência estrita ao paradigma. A expressão aderência estrita comparece em 42.536 acórdãos trabalhistas. <span class="fonte">FP</span> <span class="fonte">SD</span></p>
+    </div>
+  </div>
+
+  <h3>7.2 As duas direções, e um terceiro plano</h3>
+  <figure>
+    <svg viewBox="0 0 1120 292" role="img" aria-label="As duas direções do amálgama e o plano da infraestrutura classificatória">
+      <defs>
+        <marker id="mE1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A21167"/></marker>
+        <marker id="mE2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6E7A90"/></marker>
+      </defs>
+      <style>
+        .pn{fill:#F7F9FC;stroke:#C2CAD8;stroke-width:1.5}
+        .pk{font:400 13.4px Menlo,monospace;letter-spacing:.08em}
+        .pt2{font:600 17.9px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+        .ps{font:14.6px "Avenir Next",Avenir,sans-serif;fill:#4E5A74}
+        .pa{stroke:#A21167;stroke-width:2.2;fill:none}
+        .pg{stroke:#6E7A90;stroke-width:1.7;fill:none;stroke-dasharray:5 4}
+        .pb{font:600 16.8px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+      </style>
+
+      <rect class="pn" x="20" y="20" width="340" height="120" rx="3"/>
+      <text class="pk" x="40" y="44" fill="#6E7A90">PLANO 1 · JUSTIÇA DO TRABALHO</text>
+      <text class="pt2" x="40" y="72">Amálgama descritivo</text>
+      <text class="ps" x="40" y="98">as categorias convivem no texto,</text>
+      <text class="ps" x="40" y="120">sem transporte de premissa</text>
+
+      <rect class="pn" x="390" y="20" width="340" height="120" rx="3" fill="#FAEAF2" stroke="#A21167"/>
+      <text class="pk" x="410" y="44" fill="#A21167">PLANO 2 · SUPREMO TRIBUNAL FEDERAL</text>
+      <text class="pt2" x="410" y="72">Amálgama normativo</text>
+      <text class="ps" x="410" y="98">a premissa é transportada,</text>
+      <text class="ps" x="410" y="120">e o veículo é a ADC 48</text>
+
+      <rect class="pn" x="760" y="20" width="340" height="120" rx="3"/>
+      <text class="pk" x="780" y="44" fill="#6E7A90">PLANO 3 · INFRAESTRUTURA</text>
+      <text class="pt2" x="780" y="72">Amálgama por ausência</text>
+      <text class="ps" x="780" y="98">a taxonomia não tem código</text>
+      <text class="ps" x="780" y="120">para a fraude</text>
+
+      <path class="pa" d="M560 142 V 182" marker-end="url(#mE1)"/>
+      <path class="pg" d="M190 142 C 190 172, 380 178, 500 182" marker-end="url(#mE2)"/>
+      <path class="pg" d="M930 142 C 930 172, 740 178, 620 182" marker-end="url(#mE2)"/>
+
+      <rect class="pn" x="230" y="192" width="660" height="78" rx="3" fill="#EFF3F8" stroke="#14203A"/>
+      <text class="pb" x="252" y="222">Efeito comum: a qualificação deixa de depender do que se prova</text>
+      <text class="ps" x="252" y="246">e passa a depender do tipo contratual escolhido por quem redigiu o contrato.</text>
+      <text class="ps" x="252" y="264">O ônus da prova inverte-se sem que nenhuma tese o tenha declarado.</text>
+    </svg>
+    <figcaption>Síntese analítica a partir das medidas das pontes 6.3, 6.4 e 6.5. O plano 2 é o único em que se pode falar de escolha; nos planos 1 e 3, de operação estrutural. <span class="fonte">SD</span></figcaption>
+  </figure>
+
+  <h3>7.3 Ignorância ou intenção?</h3>
+  <p>A hipótese da incompreensão técnica é a mais frágil das três, e conviria abandoná-la em sala, por três razões documentadas. Em agosto de 2025 assentou-se que as causas de plataforma não estão abrangidas pela suspensão do Tema 1.389, porque serão examinadas no Tema 1.291. Na Reclamação 86.571 manteve-se decisão que negara a suspensão, ao entendimento de que a controvérsia não versava validade de contrato civil nem pejotização, mas verificação concreta dos requisitos da relação de emprego. E a imprensa especializada registra a distinção entre os dois temas. <span class="fonte">FS</span></p>
+  <p>Quem distingue quando lhe convém domina a distinção. Restam duas hipóteses mais consistentes, que podem operar juntas: a funcional, em que o amálgama opera como generalizador, transportando autorização concedida a tipos determinados para o gênero das formas alternativas ao emprego; e a institucional, em que a amplitude do sobrestamento serve à gestão do acervo. Esta última tem medida: 14.468 decisões monocráticas invocam o Tema 1.389, e 87% delas trazem o léxico da suspensão. <span class="fonte">FP</span> <span class="fonte">SD</span></p>
+</section>
+
+<section id="conjunto">
+  <div class="snum">8</div>
+  <h2>O julgamento conjunto de 27 de agosto de 2026</h2>
+  <p class="lede">Serão apreciados na mesma assentada dois processos de natureza diversa: um recurso extraordinário com repercussão geral e uma reclamação constitucional. São operações inversas, e reuni-las tem consequência técnica precisa.</p>
+
+  <figure>
+    <svg viewBox="0 0 1120 292" role="img" aria-label="Comparação entre as funções processuais do recurso extraordinário e da reclamação">
+      <defs>
+        <marker id="mF1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#4E5A74"/></marker>
+        <marker id="mF2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A21167"/></marker>
+      </defs>
+      <style>
+        .vb{fill:#F7F9FC;stroke:#14203A;stroke-width:1.6}
+        .vk{font:400 13.4px Menlo,monospace;letter-spacing:.06em}
+        .vt{font:600 17.9px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+        .vs{font:14.6px "Avenir Next",Avenir,sans-serif;fill:#4E5A74}
+        .vr{stroke:#4E5A74;stroke-width:1.7;fill:none}
+        .vp{stroke:#A21167;stroke-width:2.2;fill:none}
+        .vbb{font:600 16.8px "Avenir Next",Avenir,sans-serif;fill:#14203A}
+      </style>
+
+      <rect class="vb" x="20" y="24" width="480" height="126" rx="3"/>
+      <text class="vk" x="40" y="48" fill="#7C5A0B">RE 1.446.336 · TEMA 1.291</text>
+      <text class="vs" x="40" y="70">relatoria do Ministro Edson Fachin</text>
+      <text class="vt" x="40" y="100">Função prospectiva</text>
+      <text class="vs" x="40" y="124">fixa tese obrigatória para o futuro</text>
+      <text class="vs" x="40" y="144">pergunta: o que é este trabalho?</text>
+
+      <rect class="vb" x="600" y="24" width="500" height="126" rx="3"/>
+      <text class="vk" x="620" y="48" fill="#5B667C">RCL 64.018 · RAPPI</text>
+      <text class="vs" x="620" y="70">relatoria noticiada: Ministro Alexandre de Moraes</text>
+      <text class="vt" x="620" y="100">Função retrospectiva</text>
+      <text class="vs" x="620" y="124">verifica se um paradigma anterior cobre o caso</text>
+      <text class="vs" x="620" y="144">pergunta: o precedente antigo alcança isto?</text>
+
+      <path class="vp" d="M500 92 H 594" marker-end="url(#mF2)"/>
+      <text class="vk" x="506" y="82" fill="#A21167">a premissa</text>
+
+      <path class="vr" d="M260 150 V 190" marker-end="url(#mF1)"/>
+      <path class="vr" d="M850 150 V 190" marker-end="url(#mF1)"/>
+
+      <rect class="vb" x="230" y="198" width="660" height="76" rx="3" fill="#FAEAF2" stroke="#A21167"/>
+      <text class="vbb" x="252" y="228">A resposta da reclamação torna-se premissa da tese do recurso</text>
+      <text class="vs" x="252" y="252">decide-se se o precedente cobre o caso ao mesmo tempo</text>
+      <text class="vs" x="252" y="270">que se decide, originariamente, o que o caso é</text>
+    </svg>
+    <figcaption>Composição do julgamento e sua consequência lógica. Mais de dez mil processos aguardam a definição, e a Procuradoria-Geral da República manifestou-se contra o reconhecimento do vínculo, ao argumento de que a imposição do regime celetista afrontaria a livre iniciativa. Dados de pauta e de relatoria: <span class="fonte">FS</span>. Leitura: <span class="fonte">SD</span>.</figcaption>
+  </figure>
+
+  <div class="grid g2">
+    <div class="card">
+      <h4>Quatro efeitos técnicos da reunião</h4>
+      <ol class="mov" style="margin-top:2px">
+        <li><b>Heterogeneidade fática.</b> Transporte de passageiros e entrega de mercadorias têm processos de trabalho, marcos regulatórios e técnicas de controle distintos. Tese única sobre objetos heterogêneos tende ao critério mais abstrato e menos verificável.</li>
+        <li><b>Deslocamento do ônus da prova.</b> Decidido o tipo em abstrato, os fatos deixam de ser decisivos, e passa a incumbir a quem alega fraude demonstrar que o caso escapa ao tipo validado.</li>
+        <li><b>Fragmentação da competência.</b> Absorvido o problema pelo direito civil, abre-se o risco de deslocamento à Justiça Comum, como já ocorreu em reclamações sobre transportador autônomo e sobre profissional contratado por pessoa jurídica.</li>
+        <li><b>Pressão de acervo.</b> Dez mil processos sobrestados criam incentivo a tese ampla. O critério de correção técnica cede ao de rendimento decisório.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h4>O que uma técnica correta exigiria</h4>
+      <ol class="mov" style="margin-top:2px">
+        <li>Julgamento separado por objeto, com paradigmas próprios para cada figura.</li>
+        <li>Tese que preserve expressamente o primado do exame concreto, pela incidência do artigo 9º da CLT.</li>
+        <li>Enfrentamento autônomo da Convenção 193 da OIT como marco internacional específico, e não como argumento lateral.</li>
+        <li>Distinção explícita, na própria tese, entre validade do tipo contratual e qualificação do caso concreto.</li>
+      </ol>
+      <div class="nota" style="margin-bottom:0"><b>Efeito colateral já mensurável.</b> Os acórdãos que falam de uberização caem de 2.565 em 2024 para 289 em 2026, decorridos dois terços do ano, com o índice atualizado até a data da coleta. A tese incidirá sobre jurisprudência que deixou de produzir fundamentação própria. <span class="fonte">FP</span> <span class="fonte">SD</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contraponto">
+  <div class="snum">9</div>
+  <h2>Contraponto</h2>
+  <p>Material de aula que apresenta só um lado não resiste a arguição. Os melhores argumentos contrários são estes, e convém que o aluno os conheça na melhor formulação possível.</p>
+  <div class="grid g2">
+    <div class="contra">
+      <h4 style="margin-top:0">Em defesa da reunião dos julgamentos</h4>
+      <p class="sm"><b>Coerência sistêmica.</b> Teses contraditórias sobre fenômenos adjacentes produziriam insegurança maior que a abstração de uma tese ampla.</p>
+      <p class="sm"><b>Economia decisória.</b> O volume sobrestado impõe solução única; decidir em separado multiplica o tempo de espera de quem litiga.</p>
+      <p class="sm"><b>Discernimento demonstrado.</b> O tribunal distinguiu os temas quando provocado, o que refuta a versão forte da crítica.</p>
+    </div>
+    <div class="contra">
+      <h4 style="margin-top:0">Em defesa da licitude das formas alternativas</h4>
+      <p class="sm"><b>Livre iniciativa.</b> A proteção constitucional do trabalho não exige que toda prestação remunerada configure emprego, argumento assentado na ADC 48 e reiterado pelo Ministério Público Federal. A expressão livre iniciativa aparece em 62% do corpus examinado, e o artigo 170 em 58%: o argumento não é estranho às decisões, é parte do debate. <span class="fonte">FP</span></p>
+      <p class="sm"><b>Amálgama inverso.</b> Parte da doutrina imputa à jurisprudência trabalhista o vício simétrico, de tratar toda autonomia como fraude presumida. A objeção é legítima e deve ser respondida com prova, não com retórica.</p>
+    </div>
+  </div>
+</section>
+
+<section id="dados">
+  <div class="snum">10</div>
+  <h2>O painel de dados</h2>
+
+  <h3>10.1 O universo de cada categoria</h3>
+  <div class="bars">
+    <div class="brow"><div class="blab">terceirização</div><div class="btrack"><div class="bfill c1" style="width:96.4%"></div></div><div class="bval">1.678.586</div></div>
+    <div class="brow"><div class="blab">pejotização</div><div class="btrack"><div class="bfill c2" style="width:62.1%"></div></div><div class="bval">34.916</div></div>
+    <div class="brow"><div class="blab">subordinação algorítmica</div><div class="btrack"><div class="bfill c3" style="width:47.8%"></div></div><div class="bval">6.932</div></div>
+    <div class="brow"><div class="blab">uberização</div><div class="btrack"><div class="bfill c3" style="width:47.1%"></div></div><div class="bval">6.394</div></div>
+    <div class="brow"><div class="blab">plataformização</div><div class="btrack"><div class="bfill c3" style="width:35.2%"></div></div><div class="bval">1.679</div></div>
+    <div class="brow"><div class="blab">gerenciamento algorítmico</div><div class="btrack"><div class="bfill" style="width:9.6%"></div></div><div class="bval">93</div></div>
+    <div class="bnote">Falcão, coleção de acórdãos, 18/08/2026. Escala logarítmica: em escala linear as cinco últimas barras desapareceriam. <span class="fonte">FP</span></div>
+  </div>
+
+  <h3>10.2 A série anual, e a queda de 2026</h3>
+  <figure>
+    <svg viewBox="0 0 1000 300" role="img" aria-label="Série anual de acórdãos por categoria, de 2019 a 2026">
+      <style>
+        .sax{stroke:#14203A;stroke-width:1.3}
+        .sgr{stroke:#C2CAD8;stroke-width:1;stroke-dasharray:2 3}
+        .syl{font:400 13.4px Menlo,monospace;fill:#6E7A90}
+        .sln{fill:none;stroke-width:2.6}
+        .san{font:400 13.4px Menlo,monospace;fill:#A21167;letter-spacing:.04em}
+      </style>
+      <line class="sax" x1="100" y1="250" x2="975" y2="250"/>
+      <line class="sax" x1="100" y1="250" x2="100" y2="26"/>
+      <g class="syl">
+        <line class="sgr" x1="100" y1="30" x2="975" y2="30"/><text x="52" y="34">9.000</text>
+        <line class="sgr" x1="100" y1="79" x2="975" y2="79"/><text x="52" y="83">7.000</text>
+        <line class="sgr" x1="100" y1="128" x2="975" y2="128"/><text x="52" y="132">5.000</text>
+        <line class="sgr" x1="100" y1="177" x2="975" y2="177"/><text x="52" y="181">3.000</text>
+        <line class="sgr" x1="100" y1="226" x2="975" y2="226"/><text x="52" y="230">1.000</text>
+        <text x="82" y="274">2019</text><text x="205" y="274">2020</text><text x="328" y="274">2021</text>
+        <text x="451" y="274">2022</text><text x="573" y="274">2023</text><text x="696" y="274">2024</text>
+        <text x="819" y="274">2025</text><text x="942" y="274">2026</text>
+      </g>
+      <polyline class="sln" stroke="#7A3E9D" points="100,203 223,206 346,203 469,188 591,148 714,40 837,97 960,148"/>
+      <polyline class="sln" stroke="#0F6B6B" points="100,250 223,250 346,249 469,245 591,227 714,187 837,192 960,232"/>
+      <polyline class="sln" stroke="#1C4E80" points="100,250 223,249 346,249 469,241 591,223 714,187 837,202 960,243"/>
+      <polyline class="sln" stroke="#6E7A90" points="100,250 223,250 346,250 469,249 591,244 714,234 837,235 960,247"/>
+      <line x1="960" y1="26" x2="960" y2="250" stroke="#A21167" stroke-width="1" stroke-dasharray="3 3"/>
+      <text class="san" x="770" y="22">coleta em 18 de agosto</text>
+    </svg>
+    <div class="legenda">
+      <span><i style="background:#7A3E9D;border-color:#7A3E9D"></i> pejotização</span>
+      <span><i style="background:#0F6B6B;border-color:#0F6B6B"></i> subordinação algorítmica</span>
+      <span><i style="background:#1C4E80;border-color:#1C4E80"></i> uberização</span>
+      <span><i style="background:#6E7A90;border-color:#6E7A90"></i> plataformização</span>
+    </div>
+    <figcaption>Acórdãos por ano, filtro sobre a data de juntada, que é o campo indexado. Conferida a atualidade do índice: acórdãos atualizados entre 8 e 18 de agosto de 2026, conforme o tribunal, de modo que a queda de 2026 não é defasagem de indexação. <span class="fonte">FP</span></figcaption>
+  </figure>
+
+  <h3>10.3 O corpus de fundamentação: 93 acórdãos lidos por inteiro</h3>
+  <div class="grid g2">
+    <div class="card" style="padding:12px 16px">
+      <table style="margin:0">
+        <thead><tr><th>Elemento presente no inteiro teor</th><th class="num">n</th><th class="num">%</th></tr></thead>
+        <tbody>
+          <tr><td>Art. 6º, parágrafo único, da CLT</td><td class="num">82</td><td class="num">88</td></tr>
+          <tr><td>Art. 3º da CLT</td><td class="num">73</td><td class="num">78</td></tr>
+          <tr><td>Uberização</td><td class="num">69</td><td class="num">74</td></tr>
+          <tr><td>Primazia da realidade</td><td class="num">66</td><td class="num">70</td></tr>
+          <tr><td>Subordinação algorítmica</td><td class="num">62</td><td class="num">67</td></tr>
+          <tr><td>Livre iniciativa</td><td class="num">58</td><td class="num">62</td></tr>
+          <tr><td>Art. 170 da Constituição</td><td class="num">54</td><td class="num">58</td></tr>
+          <tr><td>Pejotização</td><td class="num">44</td><td class="num">47</td></tr>
+          <tr><td>Organização Internacional do Trabalho</td><td class="num">42</td><td class="num">45</td></tr>
+          <tr><td>Terceirização</td><td class="num">23</td><td class="num">25</td></tr>
+          <tr><td>Art. 9º da CLT</td><td class="num">18</td><td class="num">19</td></tr>
+          <tr><td>ADC 48</td><td class="num">16</td><td class="num">17</td></tr>
+          <tr><td>Plataformização</td><td class="num">13</td><td class="num">14</td></tr>
+          <tr><td>Súmula 331 do TST</td><td class="num">7</td><td class="num">8</td></tr>
+          <tr><td>ADPF 324</td><td class="num">3</td><td class="num">3</td></tr>
+          <tr><td>Tema 725</td><td class="num">2</td><td class="num">2</td></tr>
+          <tr><td>Tema 1.291</td><td class="num">1</td><td class="num">1</td></tr>
+          <tr><td>Tema 1.389 · Convenção 193 · neotaylorismo</td><td class="num">0</td><td class="num">0</td></tr>
+        </tbody>
+        <caption>Universo completo, sem truncamento. Tamanho médio do inteiro teor: 140 mil caracteres. <span class="fonte">FP</span></caption>
+      </table>
+    </div>
+    <div>
+      <div class="card">
+        <h4>Replicação: o número que importa é 67, não 93</h4>
+        <p class="sm">85 processos distintos, 16 tribunais, 31 órgãos julgadores, 38 magistrados e 67 formulações textualmente distintas. O maior grupo replicado reúne 18 documentos do TST, quase todos julgados em 25 de fevereiro de 2025, o que sugere pauta temática concentrada numa só sessão. <span class="fonte">FP</span></p>
+        <p class="sm">Cautela correlata: dos 6.932 acórdãos que falam de subordinação algorítmica, 3.064, ou 44%, são de um único tribunal, concentrados em duas turmas, e 4.618 pertencem à classe de recurso ordinário em rito sumaríssimo. Concentração dessa ordem indica litigância de massa com voto padronizado, não intensidade de debate. <span class="fonte">FP</span> <span class="fonte">SD</span></p>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h4>Três leituras para a aula</h4>
+        <p class="sm"><b>O eixo é o artigo 6º.</b> Os tribunais não criam categoria nova: aplicam a subordinação telemática que a lei já previa.</p>
+        <p class="sm"><b>A crítica penetra de modo desigual.</b> Uberização e subordinação algorítmica atravessam para a fundamentação; plataformização fica em 14% e neotaylorismo em nenhum documento. Categoria que não aparece é informação, não falta de dado: mede o alcance efetivo do vocabulário da teoria social crítica no discurso judicial.</p>
+        <p class="sm"><b>A Convenção 193 é argumento disponível e não utilizado.</b> Nenhum dos 93 acórdãos a menciona; apenas quatro foram julgados em 2026.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>10.4 O que o Tema 1.389 faz hoje na Justiça do Trabalho</h3>
+  <div class="card" style="padding:12px 16px;overflow-x:auto">
+    <table style="margin:0">
+      <thead><tr><th>Medida</th><th class="num">n</th><th>Leitura</th></tr></thead>
+      <tbody>
+        <tr><td>Decisões monocráticas que o citam</td><td class="num">14.468</td><td>quase o dobro dos acórdãos</td></tr>
+        <tr><td>Destas, com o termo suspensão</td><td class="num">12.588</td><td>87,0%</td></tr>
+        <tr><td>Destas, com o termo sobrestamento</td><td class="num">8.572</td><td>59,2%</td></tr>
+        <tr><td>Monocráticas juntadas em 2025 e em 2026</td><td class="num">9.619 · 4.849</td><td>a máquina em funcionamento</td></tr>
+        <tr><td>Acórdãos que o citam</td><td class="num">8.269</td><td>destes, 74,3% mencionam pessoa jurídica</td></tr>
+        <tr><td>Acórdãos que o citam e mencionam aplicativo</td><td class="num">1.436</td><td>17,4%: a distinção vaza na prática</td></tr>
+        <tr><td>Sentenças que o citam</td><td class="num">8.218</td><td>o primeiro grau também o invoca</td></tr>
+      </tbody>
+      <caption>Falcão, 18/08/2026. O tema pendente atua, hoje, menos como referência doutrinária que como dispositivo processual de sobrestamento. <span class="fonte">FP</span> <span class="fonte">SD</span></caption>
+    </table>
+  </div>
+</section>
+
+<section id="aula">
+  <div class="snum">11</div>
+  <h2>Roteiro de aula e exercício</h2>
+  <div class="grid g2">
+    <div class="card">
+      <h4>Cinco movimentos, cinquenta minutos</h4>
+      <ol class="mov" style="margin-top:2px">
+        <li><b>Abrir pela ausência, não pela doutrina</b> · 6 min. Projetar a ponte 6.5. A taxonomia oficial não tem código para a pejotização e tem 479 processos de plataforma. A pergunta que fica no ar: se o Judiciário não sabe contar o fenômeno, como o classifica?</li>
+        <li><b>A chave de identificação</b> · 10 min. Seção 1. Construir as três figuras a partir de uma pergunta única, sobre o número de sujeitos e o titular do comando. Só depois nomear.</li>
+        <li><b>As três fichas</b> · 15 min. Seções 2 a 4, com os esquemas projetados. Insistir num ponto: na terceirização discute-se responsabilidade; nas outras duas, existência.</li>
+        <li><b>A quarentena como dobradiça</b> · 9 min. Ponte 6.1. Ler os dois dispositivos em voz alta e pedir que a turma diga qual deles trata de pejotização. O erro será majoritário, e é o mesmo da doutrina de divulgação.</li>
+        <li><b>A crítica e o contraponto</b> · 10 min. Seções 7 e 9, com a medida da ADC 48. Fechar com a pergunta em aberto: por que a lei escreveu um anteparo que a jurisprudência usa em 0,3% dos casos?</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h4>Exercício de identificação</h4>
+      <p class="sm">Entregar os cinco casos abaixo com os fatos embaralhados. Pedir que apliquem a chave e, só depois, indiquem o precedente aplicável. Não é para acertar de primeira: o erro reproduz, em miniatura, o erro que se imputa aos tribunais.</p>
+      <ol class="mov" style="margin-top:4px">
+        <li>Médica atende em hospital por escala fixa, com CNPJ aberto a pedido da instituição, três meses após ter sido dispensada de emprego no mesmo hospital.</li>
+        <li>Empresa de telefonia contrata central de atendimento que emprega quatrocentas pessoas em prédio próprio, com supervisores próprios.</li>
+        <li>Entregador recebe por corrida, é avaliado por nota do cliente, tem o cadastro bloqueado após três recusas e usa a própria motocicleta.</li>
+        <li>Motorista de carga transporta em caminhão próprio para uma só embarcadora, com contrato firmado nos termos da Lei 11.442/2007 e rota definida pela contratante.</li>
+        <li>Cabeleireira atua em salão sob contrato de parceria, com horário fixado pelo salão, uso de material do salão e retenção de percentual.</li>
+      </ol>
+      <p class="sm sub" style="margin-top:12px">Na ordem: pejotização com violação da quarentena; terceirização provavelmente lícita; plataformização; pejotização por tipo legal específico, com discussão de fraude; e o tipo da ADI 5.625, cuja tese já prevê a nulidade em caso de dissimulação.</p>
+    </div>
+  </div>
+</section>
+
+<section id="fontes">
+  <div class="snum">Aparato</div>
+  <h2>Fontes, método e vocabulário</h2>
+  <div class="grid g3">
+    <div class="card">
+      <h4>Fontes primárias</h4>
+      <p class="sm">Lei 6.019/1974, arts. 4º-A, 5º-A, 5º-C e 5º-D, na redação das Leis 13.429/2017 e 13.467/2017. CLT, arts. 3º, 6º, 9º e 442-B. Lei 11.442/2007. Lei 13.352/2016. Lei 12.009/2009. Lei 14.297/2022.</p>
+      <p class="sm">Falcão, repositório oficial de jurisprudência da Justiça do Trabalho, Resolução CSJT 401/2024. DataJud, base pública de metadados do Conselho Nacional de Justiça, Portaria 160/2020.</p>
+    </div>
+    <div class="card">
+      <h4>Notas de método</h4>
+      <p class="sm">As contagens vêm da faceta de coleção, que devolve valor exato e não sofre a saturação do campo de total em dez mil.</p>
+      <p class="sm">As interseções vêm da exclusão do complemento, porque o índice não admite conjunção, e foram validadas nos dois sentidos.</p>
+      <p class="sm">A pontuação não é normalizada pelo índice: a busca por Tema 1.389, com ponto, devolve zero documentos. Grafias diversas do mesmo dispositivo não se somam.</p>
+      <p class="sm">Os filtros de data incidem sobre a juntada, não sobre o julgamento.</p>
+    </div>
+    <div class="card">
+      <h4>Vocabulário mínimo</h4>
+      <p class="sm"><b>Repercussão geral.</b> Filtro de admissibilidade que transforma um recurso em paradigma nacional; a tese fixada vincula as demais instâncias.</p>
+      <p class="sm"><b>Reclamação.</b> Ação de competência originária que preserva a autoridade de decisão anterior do tribunal; exige aderência estrita ao paradigma invocado.</p>
+      <p class="sm"><b>Sobrestamento.</b> Suspensão da tramitação até que o tema seja julgado.</p>
+      <p class="sm"><b>Distinção.</b> Demonstração de que os fatos do caso não se ajustam à razão de decidir do precedente, o que afasta a sua aplicação.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="end">
+  <p>Material didático elaborado em 18 de agosto de 2026, a partir de consulta direta ao Falcão e ao DataJud. Os selos de jurisprudência valem para essa data.</p>
+  <p style="margin-bottom:0">Nenhuma citação foi fabricada. Onde há inferência, há a marca <span class="fonte">SD</span>; onde há número, há a marca <span class="fonte">FP</span> e a consulta que o produziu.</p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var b = document.getElementById('proj');
+  if(!b) return;
+  var on = false;
+  b.addEventListener('click', function(){
+    on = !on;
+    document.documentElement.style.setProperty('--sc', on ? '1.2' : '1');
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.textContent = on ? 'Tamanho normal' : 'Modo projeção';
+  });
+  var links = document.querySelectorAll('nav.idx a');
+  var secs = [].map.call(links, function(a){ return document.querySelector(a.getAttribute('href')); });
+  function mark(){
+    var y = window.scrollY + 96, cur = -1;
+    secs.forEach(function(s,i){ if(s && s.offsetTop <= y) cur = i; });
+    links.forEach(function(a,i){
+      a.style.borderColor = (i===cur) ? '#14203A' : '';
+      a.style.color = (i===cur) ? '#14203A' : '';
+    });
+  }
+  window.addEventListener('scroll', mark, {passive:true});
+  mark();
+})();
+</script>
+</body>
+</html>
