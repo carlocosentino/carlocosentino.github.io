@@ -3,6 +3,7 @@ title: 'Notícias'
 date: 2026-06-04
 aliases:
   - /posts/
+  - /events/
 type: landing
 
 sections:
