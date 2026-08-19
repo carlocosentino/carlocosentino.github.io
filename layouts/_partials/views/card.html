@@ -119,8 +119,8 @@
       {{ end }}
 
       {{ if and $item.Params.tags (gt (len $item.Params.tags) 0) }}
-      <div class="flex items-center gap-2">
-        {{ with index ($item.GetTerms "tags") 0 }}
+      <div class="flex flex-wrap items-center gap-2">
+        {{ range $item.GetTerms "tags" }}
         <a href="{{ .RelPermalink }}">
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-900/40 dark:text-primary-300">
             {{ .Page.LinkTitle }}
