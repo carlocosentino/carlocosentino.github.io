@@ -17,7 +17,7 @@ sections:
         .page-body section.hbb-section .flex.flex-col.gap-3{gap:.15rem!important}
         .page-body section.hbb-section p{margin-top:0!important;margin-bottom:.2rem!important}
         </style>
-        Novidades, lançamentos e registros da produção acadêmica e da atuação de Carlo Cosentino.
+        Registro das atividades acadêmicas e profissionais.
     design:
       columns: '1'
   - block: collection
