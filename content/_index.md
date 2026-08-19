@@ -68,6 +68,26 @@ sections:
         <p class="more-row"><a class="more-link" href="/publication/">Ver todas as publicações →</a></p>
     design:
       columns: '1'
+  - block: collection
+    id: eventos
+    content:
+      title: 'Palestras & Eventos'
+      count: 4
+      sort_by: Date
+      order: desc
+      filters:
+        folders:
+          - events
+        featured_only: true
+    design:
+      view: article-grid
+      columns: 2
+  - block: markdown
+    content:
+      text: |
+        <p class="more-row"><a class="more-link" href="/events/">Ver todos os eventos →</a></p>
+    design:
+      columns: '1'
   - block: markdown
     content:
       title: 'Podcast'
