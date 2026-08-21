@@ -105,7 +105,7 @@ sections:
       text: |-
         Planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho e Direito Sindical.
 
-        <p class="more-row"><a class="more-link" href="/materiais/">Ver o material didático →</a></p>
+        <p class="more-row"><a class="more-link" href="/materiais/">Ver as aulas →</a></p>
     design:
       columns: '1'
   - block: markdown
