@@ -1,7 +1,7 @@
 ---
 title: "ALÉM DO HORIZONTE DIGITAL: explorando o crowdwork e suas implicações na sociedade do trabalho"
 authors:
-  - "THAÍS"
+  - "Thaís Lima de Oliveira Silva"
   - "me"
 date: "2023-01-01"
 publication_types: ["paper-conference"]
