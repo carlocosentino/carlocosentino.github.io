@@ -18,12 +18,19 @@ main:
   - name: Podcast
     url: /podcast/
     weight: 60
-  - name: Material Didático
-    url: /materiais/
+  # Agrupador sem página própria: vira dropdown (o tema renderiza pais
+  # com filhos como botão suspenso, sem link)
+  - name: Acadêmico
+    identifier: academico
     weight: 70
+  - name: Aulas
+    url: /materiais/
+    parent: academico
+    weight: 71
   - name: Grupo de Pesquisa
     url: /projects/
-    weight: 80
+    parent: academico
+    weight: 72
   - name: Consultoria Jurídica
     url: /advocacia/
     weight: 85

@@ -1,12 +1,12 @@
 ---
-title: 'Material Didático'
+title: 'Aulas'
 date: 2026-06-04
 type: landing
 
 sections:
   - block: markdown
     content:
-      title: 'Material Didático'
+      title: 'Aulas'
       text: |-
         <style>
         .mat-intro{font-size:.97rem;line-height:1.6;color:#c9ced6;max-width:62ch;text-align:justify}
@@ -33,8 +33,7 @@ sections:
         .mat-viewer iframe{width:100%;height:78vh;min-height:520px;border:0;background:#fff;display:block}
         @media(max-width:640px){.mat-item{flex-wrap:wrap}.mat-actions{align-self:flex-start;margin-top:.4rem}}
         </style>
-        <p class="mat-intro">Espaço dedicado ao compartilhamento de materiais de apoio ao ensino e à pesquisa – planos de curso, roteiros de leitura, slides de aula e textos de referência em Direito do Trabalho.</p>
-        <p class="mat-intro">Os materiais são disponibilizados progressivamente. Para solicitações específicas, escreva para <a href="mailto:contato@carlocosentino.com.br">contato@carlocosentino.com.br</a>.</p>
+        <p class="mat-intro">Aulas em formato navegável, organizadas por tema.</p>
 
         <div class="mat-disc">
           <div class="mat-disc__title">Aula inaugural de 2026.2 da Liga de Direito do Trabalho da FDR/UFPE</div>
