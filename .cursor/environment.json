@@ -1,0 +1,12 @@
+{
+  "name": "carlocosentino.github.io",
+  "user": "ubuntu",
+  "install": "set -euo pipefail; script=; for candidate in .cursor/install.sh repos/carlocosentino.github.io/.cursor/install.sh carlocosentino.github.io/.cursor/install.sh; do if [ -f \"$candidate\" ]; then script=$candidate; break; fi; done; test -n \"$script\"; bash \"$script\"",
+  "start": "set -euo pipefail; script=; for candidate in .cursor/start.sh repos/carlocosentino.github.io/.cursor/start.sh carlocosentino.github.io/.cursor/start.sh; do if [ -f \"$candidate\" ]; then script=$candidate; break; fi; done; test -n \"$script\"; bash \"$script\"",
+  "ports": [
+    {
+      "name": "hugo",
+      "port": 1313
+    }
+  ]
+}
